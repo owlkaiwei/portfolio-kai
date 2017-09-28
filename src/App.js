@@ -302,6 +302,10 @@ class App extends Component {
       }
   }
 
+  conponentWillMount() {
+    console.log('before app mounts!');
+  }
+
   componentDidMount() {
     setTimeout(() => {
       //document.getElementById('load-parent').removeChild(document.getElementById('load-child'));
@@ -335,8 +339,7 @@ class App extends Component {
               <Route path="/work" component={()=><Work/>}/>
             </div>
         </div>
-          )}}
-        />
+          )}}/>
 
 
 
