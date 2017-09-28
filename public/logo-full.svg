@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='400' height='300' viewBox="0 0 246.72 236.23">
+	<defs>
+		<style>
+			.cls-1{fill:#3fa9f5; visibility: hidden;}.cls-2{fill:#8ae5ff;}.cls-3{fill:#8ae5ff;}.cls-4{fill:#8ad2ff;visibility: hidden;}
+			@keyframes flipUpper {
+			  from {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px);
+			  }
+
+			  5% {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    -moz-transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    /*fill: #93d6f0;*/
+
+			  }
+
+			  10% {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 30deg);
+			    opacity: 1;
+			    fill: #8ae5ff;
+			  }
+
+			  20% {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    -moz-transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    /*fill: #93d6f0;*/
+
+			  }
+			  30% {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    -moz-transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    opacity: 1;
+			    fill: #8ae5ff;
+			  }
+
+			  /*70% {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    -moz-transform: perspective(1200px) rotate3d(1, 0, 0, 60deg);
+			    opacity: 0.7;
+			  }*/
+
+			  to {
+			    transform-origin: bottom;
+			    -moz-transform-origin: 100% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    -moz-transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    opacity: 1;
+			  }
+			}
+
+			.flipUpper {
+			  backface-visibility: visible !important;
+			  animation: flipUpper 2s infinite;
+			}
+
+			@keyframes flipLower {
+			  from {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px);
+			  }
+
+			  5% {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, -90deg);
+			    /*fill: #93d6f0;*/
+
+			  }
+
+			  10% {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, -45deg);
+			    opacity: 1;
+			    fill: #8ae5ff;
+			  }
+
+			  20% {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, -90deg);
+			    /*fill: #93d6f0;*/
+
+			  }
+			  30% {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    opacity: 1;
+			    fill: #8ae5ff;
+			  }
+
+			  /*70% {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, -90deg);
+			    opacity: 0.7;
+			  }*/
+
+			  to {
+			    transform-origin: top;
+			    -moz-transform-origin: 0% 50%;
+			    transform: perspective(1200px) rotate3d(1, 0, 0, 0);
+			    opacity: 1;
+			  }
+
+
+			}
+
+			.flipLower {
+			  backface-visibility: visible !important;
+			  animation: flipLower 2s infinite;
+			}
+		</style>
+	</defs>
+	<title>Asset 6</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="Layer_1-2" data-name="Layer 1">
+			<path class="cls-1" d="M0,205.13V8.55a4,4,0,0,1,4-4H76a4,4,0,0,1,4,4V236.23"/>
+			<path class="cls-2 flipUpper" d="M80.2,117.55,186.67,1.3a4,4,0,0,1,5.65-.25l53.1,48.63a4,4,0,0,1,.25,5.65l-57,62.22Z"/>
+			<path class="cls-3 flipLower" d="M245.42,185.42l-53.1,48.63a4,4,0,0,1-5.65-.25L80.2,117.55H188.68l57,62.22A4,4,0,0,1,245.42,185.42Z"/>
+			<polygon class="cls-4" points="80.14 117.62 0 205.13 80 236.23 134.41 176.81 80.14 117.62"/>
+		</g>
+	</g>
+</svg>
