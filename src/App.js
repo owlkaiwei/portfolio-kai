@@ -10,6 +10,7 @@ import 'jquery.easing';
 import Loader from './components/Loader';
 import logo from './logo.svg';
 import './App.css';
+import './responsive.css';
 
 var Scroll  = require('react-scroll');
 
@@ -24,7 +25,6 @@ var isFirstTime = true;
 
 
 const toWork = (history) => {
-  //console.log(currentPath);
   switch(history.location.pathname){
         case '/': {
           $('.after-animation').toggleClass('after-animation');
@@ -35,7 +35,7 @@ const toWork = (history) => {
         case '/work': {
           break;
         }   
-        case '/playground': {
+        case '/happy-birthday-yiran': {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/work') ;},500);
@@ -55,7 +55,7 @@ const toHome = (history) => {
         case '/': {
           break;
         }   
-        case '/playground': {
+        case '/happy-birthday-yiran': {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/') ;},500);
@@ -70,16 +70,17 @@ const toPlayground = (history) => {
         case '/work': {
           $('.after-animation').toggleClass('after-animation');
           $('#work-content').animate({opacity: '0'}, 500); 
-          setTimeout(()=>{history.push('/playground') ;},500);
+          setTimeout(()=>{history.push('/happy-birthday-yiran') ;},500);
           break;
         }   
-        case '/playground': {
+        case '/happy-birthday-yiran': {
           break;
         }   
         case '/': {
           $('.after-animation').toggleClass('after-animation');
-          $('#home-content').animate({opacity: '0'}, 500); 
-          setTimeout(()=>{history.push('/playground') ;},500);
+          $('#home-content').removeClass('home-content-show')
+          $('#home-content').addClass('home-content-hidden')
+          setTimeout(()=>{history.push('/happy-birthday-yiran') ;},500);
           break;
         }    
 
@@ -89,8 +90,8 @@ const toPlayground = (history) => {
 const WingToWork = withRouter(
     ({history}) => (
       <g id='wing' onClick={()=>{toWork(history)}} >
-              <path id='upperWing' className="cls-2 flipUpper"  fill='#8ae5ff' opacity='1' d="M80.2,117.55,186.67,1.3a4,4,0,0,1,5.65-.25l53.1,48.63a4,4,0,0,1,.25,5.65l-57,62.22Z"/>
-              <path id='lowerWing' className="cls-3 flipLower"  fill='#8ae5ff' opacity='1' d="M245.42,185.42l-53.1,48.63a4,4,0,0,1-5.65-.25L80.2,117.55H188.68l57,62.22A4,4,0,0,1,245.42,185.42Z"/>
+              <path id='upperWing' className="flipUpper" fill='#8ae5ff' opacity='1' d="M126.2,153,232.67,36.75a4,4,0,0,1,5.65-.25l53.1,48.63a4,4,0,0,1,.25,5.65l-57,62.22Z"/>
+              <path id='lowerWing' className="flipLower"  fill='#8ae5ff' opacity='1' d="M291.42,220.87l-53.1,48.63a4,4,0,0,1-5.65-.25L126.2,153H234.68l57,62.22A4,4,0,0,1,291.42,220.87Z"/>
             </g>
       )
   )
@@ -115,55 +116,87 @@ class Content extends Component {
   }
 
   componentDidMount() {
-    console.log('a');
+    $('#work-btn').removeClass('after-animation');
+    $('#playground-btn').removeClass('after-animation');
     $('#home-btn').toggleClass('after-animation');
+    $('#vertical-line-left').addClass('vertical-line-left-home');
+    $('#vertical-line-right').removeClass('vertical-line-right-playground');
+    $('#vertical-line-right').removeClass('vertical-line-right-work');
+    $('#vertical-line-right').addClass('vertical-line-right-home');
+    $('#vertical-line-left').removeClass('vertical-line-left-playground');
+    $('#vertical-line-left').removeClass('vertical-line-left-work');
+    $('#vertical-line-left').addClass('vertical-line-left-home');
+    setTimeout(()=>{
+      $('#home-content').removeClass('home-content-hidden')
+      $('#home-content').addClass('home-content-show')
+    }, 500)
     $('#home-content').scroll((function(event) {
       if (!this.state.isScrolling) {
         if(this.state.section===1 && $('#home-content').scrollTop() > this.state.scrollTop) {
-          $('.letter-k').toggleClass('letter-k-show');
-          $('#home-img').toggleClass('home-img-show'); 
-          //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
           this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true});
-          $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 500, (()=>{this.setState({isScrolling:false})}).bind(this));
+          $('.letter-k').removeClass('letter-k-show');
+          $('.letter-k').addClass('letter-k-hidden');
+          $('#intro').toggleClass('intro-show'); 
+          //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
+          $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
         }
 
         else if (this.state.section===2 && $('#home-content').scrollTop() < this.state.scrollTop) {
-          $('.letter-k').toggleClass('letter-k-show');
-          $('#home-img').toggleClass('home-img-show'); 
           this.setState({section:1, scrollTop:0, isScrolling: true});
-          $('#home-content').animate({scrollTop:0}, 500, (()=>{this.setState({isScrolling:false})}).bind(this));
+          $('.letter-k').removeClass('letter-k-hidden');
+          $('.letter-k').addClass('letter-k-show');
+          $('#intro').toggleClass('intro-show'); 
+          $('#home-content').animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
         }
     }
     }).bind(this));
-  }
 
-  handleScroll(event) {
-    console.log(event);
-    $('.letter-k').toggleClass('letter-k-show');
-    $('#home-img').toggleClass('home-img-show'); 
+    $('#home-content').mousemove((event)=>{
+      var rightX = - (event.pageX - ($('#home-content').width())/2)/50;
+      var rightY = - (event.pageY - ($('#home-content').height())/2)/70;
+      var leftX = - (event.pageX - ($('#home-content').width())/2)/120;
+      var leftY = - (event.pageY - ($('#home-content').height())/2)/120;
+      $('#right-part').css({'transform' : 'translate(' + rightX +'px, ' + rightY + 'px)'});
+      $('#left-part').css({'transform' : 'translate(' + leftX +'px, ' + leftY + 'px)'});
+      //$('#right-part').css({'display' : 'none'});
+    });
   }
-
 
 
   render() {
     return (
-      <div id='home-content'>
+      <div id='home-content' className='home-content-hidden'>
+        <div id='home-scroll-helper'/>
         <div id='home-scroll-wrapper'>
-          <svg className='letter-k letter-k-show' xmlns="http://www.w3.org/2000/svg" width='400' height='300' viewBox="0 0 246.72 236.23">
+          <svg className='letter-k letter-k-show' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 314">
+          <defs>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+          </defs>
             <g id="Layer_2" data-name="Layer 2">
               <g id="Layer_1-2" data-name="Layer 1">
                 <g id='left-part'>
-                  <path className="cls-1" fill='#3fa9f5' d="M0,205.13V8.55a4,4,0,0,1,4-4H76a4,4,0,0,1,4,4V236.23"/>
-                  <polygon className="cls-4" fill='#8ad2ff' points="80.14 117.62 0 205.13 80 236.23 134.41 176.81 80.14 117.62"/>
+                  <path className="cls-1" fill='#3fa9f5' d="M46,240.58V44a4,4,0,0,1,4-4h72a4,4,0,0,1,4,4V271.67"/>
+                  <polygon className="cls-3" fill='#8ad2ff' points="126.14 153.06 46 240.58 126 271.68 180.41 212.26 126.14 153.06"/>
                 </g>
-                <g className='right-part-reappear'>
+                <g id='right-part' className='right-part-reappear'>
                   <WingToWork />
                 </g>
               </g>
             </g>
           </svg>
 
-          <img id='home-img' width='300px' src={require('./img/IMG_7129.JPG')} />
+          <div id='intro'>
+            <img id='portrait' width='200px' src={require('./img/portrait-2.jpg')} />
+            <span>Hmm construction going on here.</span>
+            <span>Check back later!</span>
+
+          </div>
         </div>
       </div>
     );
@@ -197,58 +230,154 @@ const NavBar = withRouter(({history}) => {
 
 
 const Back = withRouter(({history})=>{
-              var path = history.location.pathname;
-              if (path === '/') {
-                return (
-                  <div>
-                    <div id='background-1' style={{opacity:'1'}}/>
-                    <div id='background-2' style={{opacity:'0'}}/>
-                    <div id='background-3' style={{opacity:'0'}}/>
-                  </div>
-                )
-              }
-              else if (path === '/work') {
-                return (
-                  <div>
-                    <div id='background-1' style={{opacity:'0'}}/>
-                    <div id='background-2' style={{opacity:'1'}}/>
-                    <div id='background-3' style={{opacity:'0'}}/>
-                  </div>
-                )
-              }
-              else if (path === '/playground') {
-                return (
-                  <div>
-                    <div id='background-1' style={{opacity:'0'}}/>
-                    <div id='background-2' style={{opacity:'0'}}/>
-                    <div id='background-3' style={{opacity:'1'}}/>
-                  </div>
-                )
-              }
+  var path = history.location.pathname;
+  if (path === '/') {
+    return (
+      <div>
+        <div id='background-1' style={{opacity:'1'}}/>
+        <div id='background-2' style={{opacity:'0'}}/>
+        <div id='background-3' style={{opacity:'0'}}/>
+      </div>
+    )
+  }
+  else if (path === '/work') {
+    return (
+      <div>
+        <div id='background-1' style={{opacity:'0'}}/>
+        <div id='background-2' style={{opacity:'1'}}/>
+        <div id='background-3' style={{opacity:'0'}}/>
+      </div>
+    )
+  }
+  else if (path === '/happy-birthday-yiran') {
+    return (
+      <div>
+        <div id='background-1' style={{opacity:'0'}}/>
+        <div id='background-2' style={{opacity:'0'}}/>
+        <div id='background-3' style={{opacity:'1'}}/>
+      </div>
+    )
+  }
 
-            })
+})
 
 class Work extends Component {
   componentWillMount() {
     $('#work-btn').toggleClass('after-animation');
+    $('#home-btn').removeClass('after-animation');
+    $('#playground-btn').removeClass('after-animation');
+
+    $('#vertical-line-right').removeClass('vertical-line-right-playground');
+    $('#vertical-line-right').removeClass('vertical-line-right-home');
+    $('#vertical-line-right').addClass('vertical-line-right-work');
+
+    $('#vertical-line-left').removeClass('vertical-line-left-playground');
+    $('#vertical-line-left').removeClass('vertical-line-left-home');
+    $('#vertical-line-left').addClass('vertical-line-left-work');
   }
   render() {
     return (
     <div id='work-content'>
-      <img width='300px' style={{position: 'fixed', top: '300px'}} src={require('./img/IMG_7129.JPG')} />
     </div>
     )
   }
 }
 
-class Playground extends Component {
-  componentWillMount() {
-    $('#playground-btn').toggleClass('after-animation');
+class Face extends Component {
+   constructor() {
+      super();
+      this.state = {
+        num: 1
+      };
+
   }
+
+  componentDidMount() {
+    $('#avatar-'+this.props.name).mouseenter(()=>{
+      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-1')
+      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-2')
+      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-1')
+      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-2')
+    })
+    $('#avatar-'+this.props.name).click(()=>{
+      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-1')
+      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-2')
+      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-1')
+      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-2')
+
+
+
+      if (this.state.num === 1) {
+        $('#text-container-inner-'+this.props.name+'-bd').toggleClass('text-animation-1')
+        $('#text-container-inner-'+this.props.name+'-bd').toggleClass('text-animation-2')
+        //randomization goes here
+        this.setState({num: 2})
+      }
+      else if (this.state.num === 2) {
+        $('#text-container-inner-'+this.props.name+'-xyx').toggleClass('text-animation-1')
+        $('#text-container-inner-'+this.props.name+'-xyx').toggleClass('text-animation-2')
+        this.setState({num: 1})
+      }
+    })
+  }
+
+
+
+  render() {
+    return (
+         <svg className='face-svg' xmlns="http://www.w3.org/2000/svg"viewBox="0 0 328 314">
+          <g id={'avatar-'+this.props.name} >
+            <g className='head-container-outer' transform='translate(68, 50)'>
+              <g id={'head-container-inner-'+this.props.name} className='head-animation-1'>
+                <image id={'head-'+this.props.name} width='200px' height='200px' className='head' xlinkHref={require('./img/faces/' + this.props.name + '/head.png')} />
+              </g>
+            </g>
+            <g className='face-container-outer' transform='translate(130, 135)'>
+              <g id={'face-container-inner-'+this.props.name} className='face-animation-1'>
+                <image id={'face-'+this.props.name} width='75px' height='75px' className='face' xlinkHref={require('./img/faces/' + this.props.name + '/face.png')} />
+              </g>
+            </g>
+            { (this.props.name === 'ym') &&
+            <g>
+              <g className='text-container-outer' transform='translate(70, -20)'>
+                <g id={'text-container-inner-'+this.props.name+'-bd'} className='text-animation-1'>
+                  <image id={'text-'+this.props.name} width='200px' height='75px' className='text' xlinkHref={require('./img/faces/' + this.props.name + '/text-bd.svg')} />
+                </g>
+              </g>
+              <g className='text-container-outer' transform='translate(115, 0)'>
+                <g id={'text-container-inner-'+this.props.name+'-xyx'} className='text-animation-1'>
+                  <image id={'text-'+this.props.name} width='100px' height='50px' className='text' xlinkHref={require('./img/faces/' + this.props.name + '/text-xyx.svg')} />
+                </g>
+              </g>
+            </g>
+            }
+          </g>
+      </svg>
+      )
+  }
+}
+
+class Playground extends Component {
+
+  componentWillMount() {
+    $('#work-btn').removeClass('after-animation');
+    $('#home-btn').removeClass('after-animation');
+    $('#playground-btn').toggleClass('after-animation');
+
+    $('#vertical-line-right').removeClass('vertical-line-right-work');
+    $('#vertical-line-right').removeClass('vertical-line-right-home');
+    $('#vertical-line-right').addClass('vertical-line-right-playground');
+
+    $('#vertical-line-left').removeClass('vertical-line-left-work');
+    $('#vertical-line-left').removeClass('vertical-line-left-home');
+    $('#vertical-line-left').addClass('vertical-line-left-playground');
+  }
+
+
   render() {
     return (
     <div id='playground-content'>
-      <img width='300px' style={{position: 'fixed', top: '300px'}} src={require('./img/IMG_7130.JPG')} />
+      <Face name='ym' />
     </div>
     )
   }
@@ -329,22 +458,14 @@ class App extends Component {
             <Back />
             <div>
               <NavBar/>
-
+              <div id='vertical-line-left' className='vertical-line'/>
+              <div id='vertical-line-right' className='vertical-line'/>
               <Route exact path="/" component={Content}/>
-
-              <Route path="/playground" component={()=><Playground/>}/>
-
-
-
+              <Route path="/happy-birthday-yiran" component={()=><Playground/>}/>
               <Route path="/work" component={()=><Work/>}/>
             </div>
         </div>
-          )}}/>
-
-
-
-
-        
+          )}}/> 
       </Router>
     );
   }
