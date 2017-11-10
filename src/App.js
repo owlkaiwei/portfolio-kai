@@ -3,6 +3,8 @@ import {
   HashRouter as Router,
   Route,
   withRouter,
+  Redirect,
+  Switch,
   Link
 } from 'react-router-dom';
 import $ from 'jquery';
@@ -11,6 +13,12 @@ import Loader from './components/Loader';
 import logo from './logo.svg';
 import './App.css';
 import './responsive.css';
+import AOS from 'aos'; 
+import '../node_modules/aos/dist/aos.css'; 
+
+import {Intro} from './intro'
+
+import TapTile from './taptile'
 
 var Scroll  = require('react-scroll');
 
@@ -35,7 +43,7 @@ const toWork = (history) => {
         case '/work': {
           break;
         }   
-        case '/happy-birthday-yiran': {
+        case '/playground': {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/work') ;},500);
@@ -55,7 +63,7 @@ const toHome = (history) => {
         case '/': {
           break;
         }   
-        case '/happy-birthday-yiran': {
+        case '/playground': {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/') ;},500);
@@ -70,7 +78,7 @@ const toPlayground = (history) => {
         case '/work': {
           $('.after-animation').toggleClass('after-animation');
           $('#work-content').animate({opacity: '0'}, 500); 
-          setTimeout(()=>{history.push('/happy-birthday-yiran') ;},500);
+          setTimeout(()=>{history.push('/playground') ;},500);
           break;
         }   
         case '/happy-birthday-yiran': {
@@ -80,7 +88,7 @@ const toPlayground = (history) => {
           $('.after-animation').toggleClass('after-animation');
           $('#home-content').removeClass('home-content-show')
           $('#home-content').addClass('home-content-hidden')
-          setTimeout(()=>{history.push('/happy-birthday-yiran') ;},500);
+          setTimeout(()=>{history.push('/playground') ;},500);
           break;
         }    
 
@@ -96,6 +104,25 @@ const WingToWork = withRouter(
       )
   )
 
+class ScrollIndicator extends Component {
+
+  render() {
+    return (
+      <div id='scroll-indicator-container-outer' className='center-container'>
+        <div id='scroll-indicator-container-inner' onClick={this.props.handleClick}>
+          <div className='center-container'>
+            <div id='greeting-text' className={this.props.greetingClass}>H I </div>
+          </div>
+          <div id='highlight' className='center-container'>
+            <img id='down-arrow' className={this.props.arrowClass} src={require('./img/down-arrow.png')} />
+          </div>
+          
+        </div>
+    </div>
+    )
+  }
+}
+
 class Content extends Component {
 
   constructor() {
@@ -108,11 +135,30 @@ class Content extends Component {
         rightPart: secondPartClass,
         section: 1,
         scrollTop: 0,
-        isScrolling: false
+        isScrolling: false,
+        arrowClass: 'arrow-down',
+        greetingClass: 'greeting-show',
+        buttonFunc: this.buttonScrollDown
       };
       if (isFirstTime === true) {
         isFirstTime = false;
       };
+  }
+
+  buttonScrollDown() {
+    $('.letter-k').removeClass('letter-k-show');
+    $('.letter-k').addClass('letter-k-hidden');
+    $('#intro').addClass('intro-show'); 
+    $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo');
+    this.setState({arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'})
+  }
+
+  buttonScrollUp() {
+    $('.letter-k').removeClass('letter-k-hidden');
+    $('.letter-k').addClass('letter-k-show');
+    $('#intro').removeClass('intro-show'); 
+    $('#home-content').animate({scrollTop:0}, 700, 'easeInOutExpo');
+    this.setState({arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'})
   }
 
   componentDidMount() {
@@ -132,24 +178,30 @@ class Content extends Component {
     }, 500)
     $('#home-content').scroll((function(event) {
       if (!this.state.isScrolling) {
-        if(this.state.section===1 && $('#home-content').scrollTop() > this.state.scrollTop) {
-          this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true});
+        if(this.state.section===1 && $('#home-content').scrollTop() > this.state.scrollTop + 10) {
+          this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true, arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'});
           $('.letter-k').removeClass('letter-k-show');
           $('.letter-k').addClass('letter-k-hidden');
-          $('#intro').toggleClass('intro-show'); 
+          $('#intro').addClass('intro-show'); 
           //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
           $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
         }
 
-        else if (this.state.section===2 && $('#home-content').scrollTop() < this.state.scrollTop) {
-          this.setState({section:1, scrollTop:0, isScrolling: true});
+        else if (this.state.section===2 && $('#home-content').scrollTop() < this.state.scrollTop - 20) {
+          this.setState({section:1, scrollTop:0, isScrolling: true, arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'});
           $('.letter-k').removeClass('letter-k-hidden');
           $('.letter-k').addClass('letter-k-show');
-          $('#intro').toggleClass('intro-show'); 
+          $('#intro').removeClass('intro-show'); 
           $('#home-content').animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
         }
     }
     }).bind(this));
+
+    /*$('#home-content').on('scroll mousewheel touchmove', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+    });*/
 
     $('#home-content').mousemove((event)=>{
       var rightX = - (event.pageX - ($('#home-content').width())/2)/50;
@@ -165,6 +217,9 @@ class Content extends Component {
 
   render() {
     return (
+      <div>
+              <ScrollIndicator handleClick={this.state.buttonFunc.bind(this)} arrowClass={this.state.arrowClass} greetingClass={this.state.greetingClass}/>
+
       <div id='home-content' className='home-content-hidden'>
         <div id='home-scroll-helper'/>
         <div id='home-scroll-wrapper'>
@@ -176,6 +231,14 @@ class Content extends Component {
                     <feMergeNode in="coloredBlur"/>
                     <feMergeNode in="SourceGraphic"/>
                 </feMerge>
+            </filter>
+            <filter id="dropshadow" height="130%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+              <feOffset dx="0" dy="2" result="offsetblur"/>
+              <feMerge> 
+                <feMergeNode/> 
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
             </filter>
           </defs>
             <g id="Layer_2" data-name="Layer 2">
@@ -192,39 +255,43 @@ class Content extends Component {
           </svg>
 
           <div id='intro'>
-            <img id='portrait' width='200px' src={require('./img/portrait-2.jpg')} />
-            <span>Hmm construction going on here.</span>
-            <span>Check back later!</span>
+            <Intro/>
 
           </div>
         </div>
+      </div>
       </div>
     );
   }
 }
 
-const NavBar = withRouter(({history}) => {
-  return (
-  <div id='navbar'>
-    <a
-      id='work-btn'
-      onClick={()=>{toWork(history)}}>
-      W O R K
-    </a>
-    <a
-      id='home-btn'
-      onClick={()=>{toHome(history)}}
-    >
-      H O M E
-    </a>
-    <a
-      id='playground-btn'
-      onClick={()=>{toPlayground(history)}}
-    >
-      P L A Y G R O U N D
-    </a>
-  </div>
-)})
+
+class NavBar extends Component {
+  render() {
+    var history = this.props.history
+      return (
+      <div id='navbar'>
+        <a
+          id='work-btn'
+          onClick={()=>{toWork(history)}}>
+          W O R K
+        </a>
+        <a
+          id='home-btn'
+          onClick={()=>{toHome(history)}}
+        >
+          H O M E
+        </a>
+        <a
+          id='playground-btn'
+          onClick={()=>{toPlayground(history)}}
+        >
+          P L A Y G R O U D.
+        </a>
+      </div>
+      )
+  }
+}
 
 
 
@@ -249,7 +316,7 @@ const Back = withRouter(({history})=>{
       </div>
     )
   }
-  else if (path === '/happy-birthday-yiran') {
+  else if (path === '/playground') {
     return (
       <div>
         <div id='background-1' style={{opacity:'0'}}/>
@@ -262,7 +329,7 @@ const Back = withRouter(({history})=>{
 })
 
 class Work extends Component {
-  componentWillMount() {
+  componentDidMount() {
     $('#work-btn').toggleClass('after-animation');
     $('#home-btn').removeClass('after-animation');
     $('#playground-btn').removeClass('after-animation');
@@ -359,7 +426,7 @@ class Face extends Component {
 
 class Playground extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     $('#work-btn').removeClass('after-animation');
     $('#home-btn').removeClass('after-animation');
     $('#playground-btn').toggleClass('after-animation');
@@ -388,37 +455,112 @@ class Background extends Component {
     //detect route first
     super();
     this.state = {
-      index: 1
+      gradients: [
+          'linear-gradient(20deg, #4cecf8, #0071df)',
+          'linear-gradient(20deg, rgb(251, 237, 201), #0071E3)',
+          'linear-gradient(20deg, #89C8FC, #50b0ff)'
+        ],
+      homeGradient: null,
+      gradientShouldChange: true
     }
   }
 
+  getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-  componentDidMount() {
-    for (var i = 1; i < 4; i++) {
-      if (this.state.index === i) {$('#background-' + i).css('opacity', '1');}
-      else {$('#background-' + i).css('opacity', '0');}
-    }
+  componentWillMount() {
+    this.setState ({
+        homeGradient: this.state.gradients[this.getRandomInt(0, 2)],
+      })
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.index !== undefined && nextProps.index !== this.state.index) {
-      this.setState({index: nextProps.index});
-      for (var i = 1; i < 4; i++) {
-        if (nextProps.index === i) {$('#background-' + i).css('opacity', '1');}
-        else {$('#background-' + i).css('opacity', '0');}
+    if (this.props.pathname !== nextProps.pathname) {
+      if (nextProps.pathname === '/') {
+      if (this.state.gradientShouldChange) {
+        this.setState ({
+        homeGradient: this.state.gradients[this.getRandomInt(0, 2)],
+        gradientShouldChange: false
+      })
       }
+    }
+
+    else if (nextProps.pathname === '/work') {
+      if (!this.state.gradientShouldChange) {
+        this.setState ({
+        gradientShouldChange: true
+      })}
+      }
+
+       else if (nextProps.pathname === '/playground') {
+      if (!this.state.gradientShouldChange) {
+        this.setState ({
+        gradientShouldChange: true
+      })}
+      }
+
     }
   }
 
+
+
   render() {
-    return (
-    <div>
-    <div id='background-1'/>
-    <div id='background-2'/>
-    <div id='background-3'/>
-    </div>
-  )
+    var path = this.props.pathname;
+
+    if (path === '/') {
+      return (
+        <div>
+          <div id='background-1' style={{opacity:'1', background: this.state.homeGradient}}/>
+          <div id='background-2' style={{opacity:'0'}}/>
+          <div id='background-3' style={{opacity:'0'}}/>
+        </div>
+      )
+    }
+    else if (path === '/work') {
+      return (
+        <div>
+          <div id='background-1' style={{opacity:'0', background: this.state.homeGradient}}/>
+          <div id='background-2' style={{opacity:'1'}}/>
+          <div id='background-3' style={{opacity:'0'}}/>
+        </div>
+      )
+    }
+    else if (path === '/playground') {
+      return (
+        <div>
+          <div id='background-1' style={{opacity:'0', background: this.state.homeGradient}}/>
+          <div id='background-2' style={{opacity:'0'}}/>
+          <div id='background-3' style={{opacity:'1'}}/>
+        </div>
+      )
+    }
+    else {
+      return null
+    }
+
 }
+}
+
+
+
+class Main extends Component {
+  render() {
+    var pathname = this.props.location.pathname
+    return (
+      (pathname === '/' || pathname === '/work' || pathname === '/playground') &&
+      <div>
+        <Background pathname={pathname}/>
+        <NavBar history={this.props.history}/>
+        <div id='vertical-line-left' className='vertical-line'/>
+        <div id='vertical-line-right' className='vertical-line'/>
+      </div>
+    
+
+    )
+  }
 }
 
 
@@ -448,24 +590,17 @@ class App extends Component {
   }
 
 
-
   render() {
+    console.log('app is re-rendered!')
     return (
       <Router>
-        <Route render={({location}) => {
-            return(
-            <div className={this.state.display}>
-            <Back />
-            <div>
-              <NavBar/>
-              <div id='vertical-line-left' className='vertical-line'/>
-              <div id='vertical-line-right' className='vertical-line'/>
-              <Route exact path="/" component={Content}/>
-              <Route path="/happy-birthday-yiran" component={()=><Playground/>}/>
-              <Route path="/work" component={()=><Work/>}/>
-            </div>
+        <div className={this.state.display}>
+          <Route path='/' component={Main}/>
+          <Route exact path="/" component={Content}/>
+          <Route  exact path="/work" component={()=><Work/>}/>
+          <Route  path="/playground" component={()=><Playground/>}/>
+          <Route  path="/work/taptile" component={TapTile}/>
         </div>
-          )}}/> 
       </Router>
     );
   }

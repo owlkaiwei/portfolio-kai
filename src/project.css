@@ -1,0 +1,167 @@
+.active {
+	color: yellow;
+}
+
+.container-center-inside {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+}
+
+.project h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: rgb(196, 128, 0);
+}
+
+.project p {
+	font-family: 'Avenir';
+	font-size: 1.2rem;
+}
+
+.project .title {
+	font-weight: 600;
+}
+
+.project .title:before {
+	content: '';
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: block;
+    /* padding-top: 100%; */
+    position: absolute;
+    z-index: -1;
+    background-color: #FFEF76;
+    transform: translate(-50%, -50%);
+}
+
+.project .quote {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #0089ec;
+}
+
+.project .important {
+	font-weight: 600;
+	font-style: italic;
+}
+
+.margin-top-1 {
+	margin-top: 8rem;
+}
+
+.margin-top-2 {
+	margin-top: 5rem;
+}
+
+@media (max-width : 992px) {
+	.margin-top-1 {
+		margin-top: 4rem;
+	}
+
+	.margin-top-2 {
+		margin-top: 2.5rem;
+	}
+}
+
+.width-90 {
+	width: 90%;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.img-max-width {
+	max-width: 500px;
+}
+
+
+body {
+	background-color: #F7F7F7
+}
+
+.page-container-tt {
+	background-color: #F7F7F7
+}
+
+
+.banner-container-tt {
+	height: 70vh;
+	/*background-color: #ffe381;*/
+	overflow: hidden;
+	position: relative;
+}
+
+.banner-img-tt {
+	/*height: 90%;*/
+	height: 90%;
+	/*max-width: 90%;*/
+	position: absolute;
+	display: inline-block;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.banner-text-tt {
+	display: inline-block;
+	background-color: rgba(255, 207, 20, 0.61);
+	border-radius: 0.5rem;
+    /*padding: 0 1.5rem 0 1.5rem;*/
+    padding: 0 6rem 0 6rem;
+    z-index: 2;
+}
+
+.banner-text-tt h1 {
+	font-family: 'Playfair Display', serif;
+	display: inline-block;
+	color: rgb(196, 128, 0);
+	margin: 1.5rem 0 1.5rem 0;
+
+}
+
+.banner-text-tt p {
+	font-family: 'Playfair Display', serif;
+	color: rgb(196, 128, 0);
+	font-size: 2rem;
+	margin: 1.5rem 0 1.5rem 0;
+}
+
+.logo-tt {
+	margin-left: 3rem;
+}
+
+.info-container-tt {
+	/*background-color: #ffe381;*/
+}
+
+.info-container-tt .label {
+	text-align: right;
+}
+
+.info-container-tt .content {
+	text-align: left;
+	font-weight: 500;
+}
+
+.info-container-tt p {
+	margin: 0rem 0 0rem 0;
+}
+
+.info-container-tt .row {
+	margin: 0.5em 0 0.5em 0;
+}
+
+.left-vertical-line {
+	padding-left: 1.6rem;
+	border-left: 0.8rem solid orange;
+}
+
+
