@@ -1,17 +1,19 @@
 {
-  "main.css": "static/css/main.c5a17cb1.css",
-  "main.css.map": "static/css/main.c5a17cb1.css.map",
-  "main.js": "static/js/main.c5a1b747.js",
-  "main.js.map": "static/js/main.c5a1b747.js.map",
+  "main.css": "static/css/main.77e4cf14.css",
+  "main.css.map": "static/css/main.77e4cf14.css.map",
+  "main.js": "static/js/main.69445e1d.js",
+  "main.js.map": "static/js/main.69445e1d.js.map",
   "static/media/Kaiwei_Wang_Resume.pdf": "static/media/Kaiwei_Wang_Resume.8342538c.pdf",
   "static/media/head.png": "static/media/head.e3a9ccfe.png",
   "static/media/highlevel_model.svg": "static/media/highlevel_model.0bd9118a.svg",
+  "static/media/imlc_thumbnail.png": "static/media/imlc_thumbnail.113ba4d3.png",
   "static/media/load.svg": "static/media/load.b660dd2b.svg",
   "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
   "static/media/people_on_phone.png": "static/media/people_on_phone.77b475b6.png",
   "static/media/portrait-2.jpg": "static/media/portrait-2.d534b0c9.jpg",
   "static/media/taptile_banner.svg": "static/media/taptile_banner.c841d1c6.svg",
   "static/media/taptile_logo.svg": "static/media/taptile_logo.c37d8860.svg",
+  "static/media/taptile_thumbnail.png": "static/media/taptile_thumbnail.67c10f47.png",
   "static/media/text-bd.svg": "static/media/text-bd.50ebc816.svg",
   "static/media/text-xyx.svg": "static/media/text-xyx.1312124f.svg"
 }
