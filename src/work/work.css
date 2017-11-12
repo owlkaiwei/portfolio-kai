@@ -1,0 +1,21 @@
+.work-container-outer {
+  position: abosolute;
+  width: 100%;
+  height: 200vh; }
+
+.work-scope .test {
+  background-color: red;
+  height: 300vh; }
+
+.work-scope .title {
+  font-family: 'Halant';
+  font-size: 3.8rem;
+  color: #0F3351; }
+
+.work-scope .text {
+  font-family: 'Halant';
+  font-size: 1.3rem;
+  color: #0F3351; }
+
+.work-scope .margin-top-page-start {
+  margin-top: 10rem; }

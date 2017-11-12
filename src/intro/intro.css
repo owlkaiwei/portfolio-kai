@@ -1,0 +1,138 @@
+.intro-outer-outer-container {
+  width: 100%;
+  height: 100%; }
+
+.intro-scope .intro-outer-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 15%;
+  height: calc(70%);
+  display: flex; }
+
+.intro-scope .intro-outer-container::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+.intro-scope .intro-inner-container {
+  height: 100%;
+  max-height: 1000px;
+  margin: auto; }
+
+.intro-scope .intro-margin-top-1 {
+  margin-top: 0rem; }
+
+.intro-scope .intro-margin-top-2 {
+  margin-top: 2rem; }
+
+.intro-scope .intro-margin-top-3 {
+  margin-top: 1rem; }
+
+.intro-scope .name {
+  color: #fff;
+  font-family: "Josefin Sans";
+  font-weight: 600; }
+
+.intro-scope .intro-text {
+  color: #0F3351;
+  font-family: "Halant";
+  font-weight: 400; }
+
+.intro-scope .intro-link {
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  font-style: italic; }
+
+.intro-scope .intro-link a {
+  color: #fff; }
+
+.intro-scope .intro-link span {
+  transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1); }
+
+.intro-scope .intro-link:hover span {
+  color: #364C5E; }
+
+.intro-scope .intro-text-size-1 {
+  font-size: 3.8rem; }
+
+.intro-scope .intro-text-size-2 {
+  font-size: 1.6rem; }
+
+.intro-scope .intro-text-size-3 {
+  font-size: 1.5rem; }
+
+.intro-scope #portrait {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  overflow: hidden; }
+
+.intro-scope .intro-left-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.intro-scope .intro-right-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+
+.intro-scope .intro-icon-container {
+  display: flex; }
+
+.intro-scope .intro-icon-container a {
+  font-size: 1.5rem;
+  color: #ffffff; }
+
+.intro-scope .intro-icon-left {
+  justify-content: space-between;
+  width: 50%; }
+
+.intro-scope .intro-icon-right {
+  width: 200px;
+  justify-content: space-between; }
+
+.intro-scope .intro-cr-container {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  transform: translateY(-100%);
+  font-family: 'halant';
+  display: none;
+  justify-content: center; }
+
+@media (max-width: 992px) {
+  .intro-scope .intro-right-container {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .intro-scope .intro-icon-left {
+    display: none; } }
+
+@media (max-height: 700px) {
+  .intro-scope .intro-text-size-2 {
+    font-size: 1.4rem; } }
+
+@media (max-width: 600px) {
+  .intro-scope .margin-top-1 {
+    margin-top: 1rem; }
+  .intro-scope .margin-top-2 {
+    margin-top: 0.5rem; }
+  .intro-scope .intro-text-size-1 {
+    font-size: 2.5rem; }
+  .intro-scope .intro-text-size-2 {
+    font-size: 1.2rem; } }
+
+@media (min-width: 1600px) {
+  .intro-scope .intro-text-size-1 {
+    font-size: 4.5rem; }
+  .intro-scope .intro-text-size-2 {
+    font-size: 2rem; } }

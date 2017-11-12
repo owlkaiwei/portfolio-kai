@@ -15,10 +15,13 @@ import './App.css';
 import './responsive.css';
 import AOS from 'aos'; 
 import '../node_modules/aos/dist/aos.css'; 
+import Headroom from 'react-headroom'
 
-import {Intro} from './intro'
+import {Intro} from './intro/intro.js'
 
-import TapTile from './taptile'
+import {Work} from './work/work.js'
+
+import TapTile from './projects/taptile/taptile'
 
 var Scroll  = require('react-scroll');
 
@@ -149,7 +152,7 @@ class Content extends Component {
     $('.letter-k').removeClass('letter-k-show');
     $('.letter-k').addClass('letter-k-hidden');
     $('#intro').addClass('intro-show'); 
-    $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo');
+    $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo');
     this.setState({arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'})
   }
 
@@ -157,8 +160,29 @@ class Content extends Component {
     $('.letter-k').removeClass('letter-k-hidden');
     $('.letter-k').addClass('letter-k-show');
     $('#intro').removeClass('intro-show'); 
-    $('#home-content').animate({scrollTop:0}, 700, 'easeInOutExpo');
+    $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo');
     this.setState({arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'})
+  }
+
+  mouseScroll(event) {
+    if (!this.state.isScrolling) {
+      if(this.state.section===1 && $(window).scrollTop() > this.state.scrollTop + 10) {
+        this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true, arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'});
+        $('.letter-k').removeClass('letter-k-show');
+        $('.letter-k').addClass('letter-k-hidden');
+        $('#intro').addClass('intro-show'); 
+        //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
+        $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
+      }
+
+      else if (this.state.section===2 && $(window).scrollTop() < this.state.scrollTop - 20) {
+        this.setState({section:1, scrollTop:0, isScrolling: true, arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'});
+        $('.letter-k').removeClass('letter-k-hidden');
+        $('.letter-k').addClass('letter-k-show');
+        $('#intro').removeClass('intro-show'); 
+        $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
+      }
+   }
   }
 
   componentDidMount() {
@@ -176,26 +200,7 @@ class Content extends Component {
       $('#home-content').removeClass('home-content-hidden')
       $('#home-content').addClass('home-content-show')
     }, 500)
-    $('#home-content').scroll((function(event) {
-      if (!this.state.isScrolling) {
-        if(this.state.section===1 && $('#home-content').scrollTop() > this.state.scrollTop + 10) {
-          this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true, arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'});
-          $('.letter-k').removeClass('letter-k-show');
-          $('.letter-k').addClass('letter-k-hidden');
-          $('#intro').addClass('intro-show'); 
-          //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
-          $('#home-content').animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
-        }
-
-        else if (this.state.section===2 && $('#home-content').scrollTop() < this.state.scrollTop - 20) {
-          this.setState({section:1, scrollTop:0, isScrolling: true, arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'});
-          $('.letter-k').removeClass('letter-k-hidden');
-          $('.letter-k').addClass('letter-k-show');
-          $('#intro').removeClass('intro-show'); 
-          $('#home-content').animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
-        }
-    }
-    }).bind(this));
+    $(window).on('scroll', this.mouseScroll.bind(this));
 
     /*$('#home-content').on('scroll mousewheel touchmove', function(e) {
           e.preventDefault();
@@ -212,6 +217,11 @@ class Content extends Component {
       $('#left-part').css({'transform' : 'translate(' + leftX +'px, ' + leftY + 'px)'});
       //$('#right-part').css({'display' : 'none'});
     });
+  }
+
+  componentWillUnmount() {
+    console.log('unmount')
+    $(window).off('scroll');
   }
 
 
@@ -266,7 +276,7 @@ class Content extends Component {
 }
 
 
-class NavBar extends Component {
+class NavBarKai extends Component {
   render() {
     var history = this.props.history
       return (
@@ -286,10 +296,74 @@ class NavBar extends Component {
           id='playground-btn'
           onClick={()=>{toPlayground(history)}}
         >
-          P L A Y G R O U D.
+          P L A Y G R O U N D.
         </a>
       </div>
       )
+  }
+}
+
+class NavBar extends Component {
+  constructor() {
+      super();
+      this.state = {
+        class: null,
+        disable: null
+      };
+  }
+
+  updateState(path) {
+    if (path === '/') {
+      this.setState({class: 'nav-home', disable: true}) 
+    }
+
+    else if (path === '/work') {
+      this.setState({class: 'nav-work', disable: false}) 
+    }
+
+    else {
+      this.setState({class: 'nav-work', disable: false}) 
+    }
+  }
+
+  conponentWillMount() {
+    var path = this.props.location.pathname
+    this.updateState(path)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    var path = nextProps.location.pathname
+    this.updateState(path)
+  }
+
+  render() {
+    var history = this.props.history
+    return(
+      <div>
+        <Headroom disableInlineStyles={true} disable={this.state.disable}>
+            <div id='navbar'>
+              <div id='nav-background' className={this.state.class}/>
+              <a
+                id='work-btn'
+                onClick={()=>{toWork(history)}}>
+                W O R K
+              </a>
+              <a
+                id='home-btn'
+                onClick={()=>{toHome(history)}}
+              >
+                H O M E
+              </a>
+              <a
+                id='playground-btn'
+                onClick={()=>{toPlayground(history)}}
+              >
+                P L A Y G R O U N D.
+              </a>
+            </div>
+        </Headroom>
+      </div>
+    )
   }
 }
 
@@ -328,27 +402,6 @@ const Back = withRouter(({history})=>{
 
 })
 
-class Work extends Component {
-  componentDidMount() {
-    $('#work-btn').toggleClass('after-animation');
-    $('#home-btn').removeClass('after-animation');
-    $('#playground-btn').removeClass('after-animation');
-
-    $('#vertical-line-right').removeClass('vertical-line-right-playground');
-    $('#vertical-line-right').removeClass('vertical-line-right-home');
-    $('#vertical-line-right').addClass('vertical-line-right-work');
-
-    $('#vertical-line-left').removeClass('vertical-line-left-playground');
-    $('#vertical-line-left').removeClass('vertical-line-left-home');
-    $('#vertical-line-left').addClass('vertical-line-left-work');
-  }
-  render() {
-    return (
-    <div id='work-content'>
-    </div>
-    )
-  }
-}
 
 class Face extends Component {
    constructor() {
@@ -553,7 +606,7 @@ class Main extends Component {
       (pathname === '/' || pathname === '/work' || pathname === '/playground') &&
       <div>
         <Background pathname={pathname}/>
-        <NavBar history={this.props.history}/>
+        <NavBar {...this.props}/>
         <div id='vertical-line-left' className='vertical-line'/>
         <div id='vertical-line-right' className='vertical-line'/>
       </div>
