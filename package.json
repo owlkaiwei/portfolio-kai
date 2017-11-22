@@ -14,7 +14,8 @@
     "react-dom": "^15.6.2",
     "react-headroom": "^2.2.2",
     "react-router-dom": "^4.2.2",
-    "react-scroll": "^1.6.1",
+    "react-scroll": "^1.6.4",
+    "react-scrollspy": "^3.3.4",
     "react-transition-group": "^1.2.1"
   },
   "devDependencies": {

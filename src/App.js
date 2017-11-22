@@ -23,6 +23,8 @@ import {Work} from './work/work.js'
 
 import TapTile from './projects/taptile/taptile'
 
+import Test from './projects/taptile/test'
+
 var Scroll  = require('react-scroll');
 
 var ScrollLink = Scroll.Link;
@@ -126,6 +128,8 @@ class ScrollIndicator extends Component {
   }
 }
 
+var isScrolling = false
+
 class Content extends Component {
 
   constructor() {
@@ -146,6 +150,7 @@ class Content extends Component {
       if (isFirstTime === true) {
         isFirstTime = false;
       };
+      isScrolling = false
   }
 
   buttonScrollDown() {
@@ -165,24 +170,31 @@ class Content extends Component {
   }
 
   mouseScroll(event) {
-    if (!this.state.isScrolling) {
-      if(this.state.section===1 && $(window).scrollTop() > this.state.scrollTop + 10) {
+    if (!isScrolling) {
+      if(this.state.section===1 && $(window).scrollTop() > this.state.scrollTop) {
+        isScrolling = true
         this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true, arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'});
         $('.letter-k').removeClass('letter-k-show');
         $('.letter-k').addClass('letter-k-hidden');
         $('#intro').addClass('intro-show'); 
         //$('#home-content').scrollTop($('#home-scroll-wrapper').height()*0.5, ()=>{console.log('callback!')});
-        $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
+        $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false}); isScrolling = false}).bind(this));
       }
 
-      else if (this.state.section===2 && $(window).scrollTop() < this.state.scrollTop - 20) {
+      else if (this.state.section===2 && $(window).scrollTop() < this.state.scrollTop) {
+        isScrolling = true
         this.setState({section:1, scrollTop:0, isScrolling: true, arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'});
         $('.letter-k').removeClass('letter-k-hidden');
         $('.letter-k').addClass('letter-k-show');
         $('#intro').removeClass('intro-show'); 
-        $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false})}).bind(this));
+        $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo', (()=>{this.setState({isScrolling:false}); isScrolling = false}).bind(this));
       }
    }
+  }
+
+  componentWillMount() {
+    $("html, body").scrollTop(0)
+    isScrolling = false
   }
 
   componentDidMount() {
@@ -197,8 +209,8 @@ class Content extends Component {
     $('#vertical-line-left').removeClass('vertical-line-left-work');
     $('#vertical-line-left').addClass('vertical-line-left-home');
     setTimeout(()=>{
-      $('#home-content').removeClass('home-content-hidden')
-      $('#home-content').addClass('home-content-show')
+      $('.letter-k').removeClass('home-content-hidden')
+      $('.letter-k').addClass('home-content-show')
     }, 500)
     $(window).on('scroll', this.mouseScroll.bind(this));
 
@@ -222,6 +234,7 @@ class Content extends Component {
   componentWillUnmount() {
     console.log('unmount')
     $(window).off('scroll');
+    $("html, body").scrollTop(0)
   }
 
 
@@ -230,10 +243,10 @@ class Content extends Component {
       <div>
               <ScrollIndicator handleClick={this.state.buttonFunc.bind(this)} arrowClass={this.state.arrowClass} greetingClass={this.state.greetingClass}/>
 
-      <div id='home-content' className='home-content-hidden'>
+      <div id='home-content' className=''>
         <div id='home-scroll-helper'/>
         <div id='home-scroll-wrapper'>
-          <svg className='letter-k letter-k-show' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 314">
+          <svg className='letter-k letter-k-show home-content-hidden' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 314">
           <defs>
             <filter id="glow">
                 <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
@@ -312,37 +325,30 @@ class NavBar extends Component {
       };
   }
 
-  updateState(path) {
+
+  getAttributes(path) {
     if (path === '/') {
-      this.setState({class: 'nav-home', disable: true}) 
+      return({class: 'nav-home', disable: true}) 
     }
 
     else if (path === '/work') {
-      this.setState({class: 'nav-work', disable: false}) 
+      return({class: 'nav-work', disable: false}) 
     }
 
     else {
-      this.setState({class: 'nav-work', disable: false}) 
+      return({class: 'nav-work', disable: false}) 
     }
   }
 
-  conponentWillMount() {
-    var path = this.props.location.pathname
-    this.updateState(path)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    var path = nextProps.location.pathname
-    this.updateState(path)
-  }
 
   render() {
     var history = this.props.history
+    var attr = this.getAttributes(this.props.location.pathname)
     return(
       <div>
-        <Headroom disableInlineStyles={true} disable={this.state.disable}>
+        <Headroom disableInlineStyles={true} disable={attr.disable}>
             <div id='navbar'>
-              <div id='nav-background' className={this.state.class}/>
+              <div id='nav-background' className={attr.class}/>
               <a
                 id='work-btn'
                 onClick={()=>{toWork(history)}}>
@@ -653,6 +659,7 @@ class App extends Component {
           <Route  exact path="/work" component={()=><Work/>}/>
           <Route  path="/playground" component={()=><Playground/>}/>
           <Route  path="/work/taptile" component={TapTile}/>
+          <Route  path="/work/test" component={Test}/>
         </div>
       </Router>
     );

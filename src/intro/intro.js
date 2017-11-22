@@ -32,41 +32,65 @@ export class Intro extends Component {
 						</div>
 						<div className='intro-link intro-text-size-2 intro-margin-top-2'>
 							<a href='#/work'>
-								Check out <span>My Work</span>
+								Check out My Work
 							</a>
 						</div>
 						<div className='intro-link intro-text-size-2'>
 							<a href={resume} target='_blank'>
-								Download <span>Resume</span>
+								Download Resume
 							</a>
 						</div>
 						<div className='intro-link intro-text-size-2'>
 							<a href='#/playground'>
-								Have Some <span>Fun! :D</span>
+								Have Some Fun! <span>:D</span>
 							</a>
 						</div>
 						<div className='intro-icon-container intro-icon-left intro-margin-top-2'>
-							<i className="fa fa-medium" aria-hidden="true"></i>
-							<i className="fa fa-linkedin" aria-hidden="true"></i>
-							<i className="fa fa-dribbble" aria-hidden="true"></i>
-							<i className="fa fa-envelope-o" aria-hidden="true"></i>
+							<div>
+								<a>
+									<i className="fa fa-medium" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='www.linkedin.com/in/kaiwei-wang' target='_blank'>
+									<i className="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://dribbble.com/kkkai' target='_blank'>
+									<i className="fa fa-dribbble" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='mailto:wangkw@gatech.edu'>
+									<i className="fa fa-envelope-o" aria-hidden="true"></i>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div className='col s3 push-s3 intro-right-container'>
 						<img id='portrait' src={portrait} />
 						<div className='intro-icon-container intro-icon-right'>
-							<a>
-								<i className="fa fa-medium" aria-hidden="true"></i>
-							</a>
-							<a>
-								<i className="fa fa-linkedin" aria-hidden="true"></i>
-							</a>
-							<a href='https://dribbble.com/kkkai' target='_blank'>
-								<i className="fa fa-dribbble" aria-hidden="true"></i>
-							</a>
-							<a>
-								<i className="fa fa-envelope-o" aria-hidden="true"></i>
-							</a>
+							<div>
+								<a>
+									<i className="fa fa-medium" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://www.linkedin.com/in/kaiwei-wang' target='_blank'>
+									<i className="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://dribbble.com/kkkai' target='_blank'>
+									<i className="fa fa-dribbble" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='mailto:wangkw@gatech.edu'>
+									<i className="fa fa-envelope-o" aria-hidden="true"></i>
+								</a>
+							</div>
 						</div>
 					</div>
 

@@ -6,6 +6,21 @@
 	height: 200vh
 }
 
+#work-content {
+	z-index: 5;
+	transition: all 1s ease-in-out
+}
+
+.hidden {
+	opacity: 0;
+	transform: translateY(1rem)
+}
+
+.show {
+	opacity: 1;
+	transform: translateY(0)
+}
+
 .work-scope {
 	.test {
 		background-color: red;
@@ -15,9 +30,10 @@
 
 .title {
 	font-family: 'Halant';
-	font-size: 3.8rem;
+	font-size: 3.5rem;
 	color: $color-primary
 }
+
 
 .text {
 	font-family: 'Halant';
@@ -26,7 +42,61 @@
 }
 
 .margin-top-page-start {
-	margin-top: 10rem
+	margin-top: 20vh
+}
+
+.margin-top-1 {
+	margin-top: 5rem
+}
+
+.margin-top-2 {
+	margin-top: 3rem
+}
+
+
+.thumbnail {
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+	transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
+}
+
+.thumbnail:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-text-container {
+	display: flex;
+	flex-direction: column;
+
+	div {
+		margin-left: 3rem
+	}
+
+	.title {
+		font-family: 'Josefin Sans';
+		font-size: 2rem;
+		color: $color-primary;
+	}
+
+	.text {
+		font-family: 'Halant';
+		font-size: 1.3rem;
+		color: $color-primary;
+	}
+}
+
+@media (max-width : 600px) {
+	.title {
+		font-family: 'Halant';
+		font-size: 3rem;
+		color: $color-primary
+	}
+
+	.hide-when-small {
+		display: none
+	}
 }
 
 }

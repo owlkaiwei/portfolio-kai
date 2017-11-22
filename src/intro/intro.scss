@@ -58,6 +58,7 @@
 	}
 
 	.intro-link a {
+		transition: all 0.75s cubic-bezier(0.1, 0.29, 0, 1);
 		color: $color-secondary
 	}
 
@@ -65,12 +66,28 @@
 		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
 	}
 
-	.intro-link:hover {
+	.intro-link span {
+		opacity: 0
 	}
 
-	.intro-link:hover span {
-		color: #364C5E;
+	.intro-link:hover span{
+		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
+		opacity: 1
+	}
 
+
+	.intro-link:hover a {
+		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
+	    padding: 1rem;
+	    box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
+	    border-radius: 10px
+	}
+
+	.intro-link:active a {
+		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
+	    padding: 1rem;
+	    box-shadow: none;
+	    border-radius: 10px
 	}
 
 	.intro-text-size-1 {
@@ -113,13 +130,48 @@
 
 
 	.intro-icon-container {
+		position: relative;
 		display: flex;
 	}
 
 	.intro-icon-container a {
+		position: relative;
 		font-size: 1.5rem;
 	    color: #ffffff;
 	}
+
+	.intro-icon-container i {
+		position: relative
+	}
+
+	.intro-icon-container i:after {
+		content: '';
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		display: block;
+		/* padding-top: 100%; */
+		position: absolute;
+		left: 50%;
+		top:50%;
+		z-index: -1;
+		background-color: black;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+		transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
+	}
+
+	.intro-icon-container div:hover i:after {
+		opacity: 0.1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	.intro-icon-container div:active i:after {
+		opacity: 0.2;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+
 
 	.intro-icon-left {
 		justify-content: space-between;
@@ -129,6 +181,10 @@
 	.intro-icon-right {
 		width: 200px;
 		justify-content: space-between;
+	}
+
+	.intro-icon-right a {
+		margin: 0 1rem 0 1rem
 	}
 
 	.intro-cr-container {
