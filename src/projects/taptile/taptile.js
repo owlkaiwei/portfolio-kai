@@ -8,8 +8,10 @@ import {
 import $ from 'jquery';
 import 'jquery.easing';
 import '../project.css';
+import './taptile.css';
 import AOS from 'aos'; 
 import '../../../node_modules/aos/dist/aos.css'; 
+import Headroom from 'react-headroom'
 
 var Scroll  = require('react-scroll');
 
@@ -26,8 +28,8 @@ class TapTile extends Component {
 		console.log('construct')
 		super(props, context); 
 		AOS.init({
-	        once: true,
-	        duration: 500
+	        once: false,
+	        duration: 300
      	}); 
 	} 
 
@@ -45,48 +47,79 @@ class TapTile extends Component {
 	 
 	  }
 
-  componentWillUnmount() {
-    Events.scrollEvent.remove('begin')
-    Events.scrollEvent.remove('end')
-  }
+	  scrollToTop() {
+	    scroll.scrollToTop();
+	  }
 
-  componentWillReceiveProps(nextProps) {
-  	console.log('will receive props')
-  	AOS.refresh();
-  }
+	componentWillUnmount() {
+		Events.scrollEvent.remove('begin')
+		Events.scrollEvent.remove('end')
+	}
 
-  foo() {
-  	console.log('hey')
-  }
+	componentWillReceiveProps(nextProps) {
+		console.log('will receive props')
+		AOS.refresh();
+	}
+
+	foo() {
+		console.log('hey')
+	}
 
 	render() {
 		return (
-			<div>
-			<div className='progress-container'>
-					<ScrollLink activeClass="scroll-active" to="overview" spy={true} smooth={true} duration={500} onSetActive={this.foo} >
-			          Overview
+			<div id='taptile-page' className='taptile-project-page page-container-tt'>
+				<Headroom disableInlineStyles={true}>
+		            <div className='project-navbar'>
+		              <div className='project-nav-background'/>
+		              <a href='#/work'>
+		                W O R K
+		              </a>
+		              <a href='#/'>
+		                H O M E
+		              </a>
+		              <a>
+		                N E X T : G T M O B I L E
+		              </a>
+		            </div>
+		        </Headroom>
+				<div className='progress-container progress-responsive-position'>
+					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
+			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="research" spy={true} smooth={true} duration={300} >
-			          User Research
+			        <ScrollLink activeClass="active" to="research" smooth={true} offset={-100} >
+			          <span className='label'>Research</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="test1" spy={true}  smooth={true} duration={300}>
-			          Ideation
+			        <ScrollLink activeClass="active" to="ideation" smooth={true} offset={-100}>
+			          <span className='label'>Ideation</span><span className='circle'></span>
 			        </ScrollLink>
-		        </div>
-			<div className='taptile-project-page page-container-tt'>
+			        <ScrollLink activeClass="active" to="solution" smooth={true} offset={-100}>
+			          <span className='label'>Solution</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="active" to="prototype" smooth={true} offset={-100}>
+			          <span className='label'>Prototype</span><span className='circle'></span>
+			        </ScrollLink>
+			        <a onClick={this.scrollToTop}>Back to Top</a>
 
-		        <Element name="banner" className="element container-center-inside banner-container-tt">
-		          <img className='banner-img-tt' src={require('./src/taptile_banner.svg')} />
-		          <div className='banner-text-tt'>
-		          	<div className='title-and-logo-tt'>
-			          	<h1>TapTile</h1>
-			          	<img className='logo-tt' src={require('./src/taptile_logo.svg')} />
-		          	</div>
-		          	<p>bringing people together in public space.</p>
-		          </div>
+		        </div>
+
+		        <Element name="banner" className="element banner-container-tt">
+		        	<div className='banner-container-inner container-center-inside'>
+		        		<img className='banner-img-tt' src={require('./src/taptile_banner.svg')} />
+		        	</div>
+		        	<div className='banner-container-inner container-center-inside'>
+		        		<div className='banner-text-tt'>
+			          	<div className='title-and-logo-tt'>
+				          	<h1>TapTile</h1>
+				          	<img className='logo-tt' src={require('./src/taptile_logo.svg')} />
+			          	</div>
+			          	<p>bringing people together in public space.</p>
+			          </div>
+		        	</div>
+		          
+		         
 		        </Element>
 
-		        <Element name="info" className="element info-container-tt margin-top-2">
+		        <Element name="info" className="element info-container-tt">
 		          <div className='row'>
 		          	<p className='col s4 label'>Role</p>
 		          	<p className='col s8 content'>
@@ -116,7 +149,7 @@ class TapTile extends Component {
 		        	<div className='row'>
 		        		<div className='col s12 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
-		        				<img className='width-90 img-max-width-2' src={require('./src/taptile_concept.gif')}/>
+		        				<img className='width-90' src={require('./src/taptile_concept.gif')}/>
 		        			</p>
 		        		</div>
 		        		<div className='col s12'>
@@ -127,7 +160,7 @@ class TapTile extends Component {
 		        	</div>
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12 l6'>
-			        		<p className='left-vertical-line'>Encouragibg collaboration and light competition</p>
+			        		<p className='left-vertical-line'>Encouraging collaboration and light competition</p>
 		        		</div>
 		        		<div className='col s12 l6 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
@@ -262,6 +295,21 @@ class TapTile extends Component {
 		        			</p>
 		        		</div>
 		        	</div>
+
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+			        		<p className='title'>
+			        			Affinity Mapping
+			        		</p>
+			        		<p>
+			        			The interview responses were coded and analyzed by affinity mapping.
+			        		</p>
+		        			<p className='width-100 container-center-inside' style={{marginTop: '3rem'}}>
+		        				<img className='width-100 shadow' src={require('./src/affinity.png')}/>
+		        			</p>
+			        	</div>
+		        	</div>
+
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
 			        		<p className='title'>
@@ -318,12 +366,12 @@ class TapTile extends Component {
 		        	</div>
 		        </Element>
 
-		         <Element name='research' data-aos="fade-up" >
+		         <Element name='ideation' data-aos="fade-up" >
 		        	<div className='my-container'>
 		        	<div className='row container-center-inside margin-top-1'>
 		        		<h2>- Ideation -</h2>
 		        	</div>
-		        	<div className='row'>
+		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
 		        			<p className='title'>
 		        				Diverge
@@ -340,7 +388,7 @@ class TapTile extends Component {
 		        		</div>
 		        	</div>
 
-		        	<div className='row'>
+		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
 		        			<p className='title'>
 		        				Converge
@@ -357,13 +405,12 @@ class TapTile extends Component {
 		        		</div>
 		        	</div>
 
-		        	<div className='row'>
+		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
 		        			<p className='title'>
 		        				Design Sprint
 		        			</p>
 		        			<p>For each of the three designs, we sketched out a storyboard for the participants to understand the features. The participants were asked to put stickers on the board to indicate how they like think of each design on certain aspects (willingness of use, for example).</p>
-							<p>With the feedback, we finalized the design by combining Jumping Tiles and Game Table into - TapTile. </p>		        			
 		        		</div>
 		        	</div>
 		        	<div className='row'>
@@ -379,11 +426,155 @@ class TapTile extends Component {
 		        		</div>
 		        	</div>
 
+
+
 		        	</div>
 	        	</Element>
 
+	        	<Element name='solution' data-aos="fade-up" >
+		        	<div className='my-container'>
+		        	<div className='row container-center-inside margin-top-1'>
+		        		<h2>- Solution -</h2>
+		        	</div>
+		        	<div className='row'>
+		        		<div className='col s12'>
+		        			<p className='width-100 container-center-inside'>
+		        				<img className='width-100 img-max-width-2' src={require('./src/highlevel.svg')}/>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p className='title'>
+		        				The Rule
+		        			</p>
+		        			<p> People on each side try to make their circle grow faster than the other side by stepping faster on the tiles.</p>
+		        		</div>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p className='title'>
+		        				Overall System Design
+		        			</p>
+		        			<p className='width-100 container-center-inside'>
+		        				<img className='width-100' src={require('./src/system.svg')}/>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12 l6'>
+		        			<p className='title'>
+		        				Visual
+		        			</p>
+			        		<p>I chose a background with vibrant color and bubble effect to attract attention.</p>
+		        		</div>
+		        		<div className='col s12 l6 container-center-inside'>
+		        			<p className='width-100 container-center-inside'>
+		        				<img className='width-100 img-max-width-2 shadow' style={{borderRadius: '3rem'}} src={require('./src/visual.gif')}/>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p className='title'>
+		        				Encouraging Collaboration
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div className='row'>
+		        		<div className='col s12 l6'>
+		        			<p className='width-100 container-center-inside'>
+		        				<img className='width-100 img-max-width-2 shadow' style={{borderRadius: '3rem'}} src={require('./src/one_person_tap.gif')}/>
+		        			</p>
+		        			<p>
+		        				One person tapping hardly fights against the circle shrinking.
+		        			</p>
+		        		</div>
+		        		<div className='col s12 l6'>
+			        		<p className='width-100 container-center-inside'>
+			        				<img className='width-100 img-max-width-2 shadow' style={{borderRadius: '3rem'}} src={require('./src/two_people_tap.gif')}/>
+		        			</p>
+		        			<p>
+		        				More people make the circle grow faster.
+		        			</p>
+		        		</div>
+		        	</div>
+		        	</div>
+	        	</Element>
 
-			</div>
+	        	<Element name='prototype' data-aos="fade-up" >
+		        	<div className='my-container'>
+		        	<div className='row container-center-inside margin-top-1'>
+		        		<h2>- Prototype -</h2>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p>We rapidly prototyped TapTile with Arduino and Processing.js. We used some of the most simple material to create a high-fidelity proof of concept.</p>
+		        		</div>
+		        	</div>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p className='width-100 container-center-inside'>
+			        				<img className='width-80' src={require('./src/prototype.png')}/>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div className='my-container'>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p>
+		        				<iframe className='width-100' style={{height: '40rem'}} src="https://www.youtube.com/embed/y4J8tKREnso" allowFullScreen></iframe>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	</div>
+	        	</Element>
+
+	        	<Element name='reflection' data-aos="fade-up" >
+		        	<div className='my-container'>
+		        	<div className='row container-center-inside margin-top-1'>
+		        		<h2>- Feedback & Reflection -</h2>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p>We showcased TapTile at Convergence Innovation Competition. Not only did we win the First Prize, we also gathered value feedback from numerous people trying it out.</p>
+		        			<p>Strangers came together and had fun for a couple of minutes. They left TapTile smiling and talking to each other about how they could have tapped a little faster. </p>
+		        			<p><span className='quote'>“I usually don’t do this but I couldn’t help but join that one guy on the left side while he was against two other people. I’m glad we won!”</span></p>
+		        			<p>TapTile was like a door through the invisible wall between strangers and it was fascinating to see people crossing it.</p>
+		        			<p><span className='quote'>“I had fun just watching them play.”</span> A girl said to me after a group of people left. At first I took the comment as a complement on TapTile but I wondered why she did not join. <span className='quote'>“I guess I’m just not that competitive.”</span> Maybe more game mode can be added to TapTile to balance the need for competitiveness and cooperation.</p>
+
+		        		</div>
+		        	</div>
+		        	</div>
+		        	
+	        	</Element>
+
+	        	<Element name='fin' data-aos="fade-up" >
+		        	<div className='my-container'>
+		        	<div className='row container-center-inside margin-top-1'>
+		        		<h2>- Fin. -</h2>
+		        	</div>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p>TapTile was such a special project for me, not just for the smiling faces of people trying it out, but also for the good memory with my team. I can’t describe how much fun we had during the process. From the first time the program successfully ran, to being obssessed with competing against each other, we worked as a team, and more importantly bonded as friends.</p>
+		        			
+		        		</div>
+		        	</div>
+		        	</div>
+		        	<div className='my-container-big'>
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+		        			<p className='width-100 container-center-inside'>
+			        				<img className='width-80' src={require('./src/group.jpg')}/>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	</div>
+		        	
+	        	</Element>
+
+
 			</div>
 		)
 	}

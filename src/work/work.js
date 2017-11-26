@@ -22,10 +22,11 @@ export class Work extends Component {
 	}
 
 	componentWillMount() {
-		$("html, body").scrollTop(0)
+        console.log('work will mount')
 	}
 
 	componentDidMount() {
+        console.log('work did mount')
     $('#work-btn').addClass('after-animation');
     $('#home-btn').removeClass('after-animation');
     $('#playground-btn').removeClass('after-animation');
@@ -44,6 +45,7 @@ export class Work extends Component {
   }
 
   render() {
+    console.log('work render')
     return (
     <div className='work-scope work-container-outer'>
     	<div id='work-content' className='work-container-inner container hidden'>

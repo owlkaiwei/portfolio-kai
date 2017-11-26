@@ -1,0 +1,31 @@
+#taptile-page {
+  background-color: #fff;
+  color: #351700; }
+  #taptile-page .title {
+    color: #ec8300; }
+  #taptile-page .title:before {
+    background-color: #FFEF76; }
+  #taptile-page .quote {
+    color: #ec8300; }
+  #taptile-page .emphasis:after {
+    background-color: #ec8300; }
+  #taptile-page .banner-text-tt {
+    background-color: rgba(255, 207, 20, 0.61); }
+  #taptile-page .banner-text-tt h1 {
+    color: #c48000; }
+  #taptile-page .banner-text-tt p {
+    color: #c48000; }
+  #taptile-page .left-vertical-line {
+    border-left: 0.4rem solid #ec8300; }
+  #taptile-page .progress-container a {
+    color: #351700; }
+  #taptile-page .progress-container:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  #taptile-page .project-navbar a {
+    color: black; }
+  #taptile-page .project-navbar a:before {
+    background-color: black; }
+  #taptile-page .project-navbar a:after {
+    background-color: black; }
+  #taptile-page .project-nav-background {
+    background-color: #fff; }

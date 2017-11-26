@@ -603,7 +603,7 @@
   top: 18px;
   z-index: 7;
   left: 0;
-  background-color: #fff;
+  background-color: #0F3351;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);

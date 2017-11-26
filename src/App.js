@@ -151,27 +151,35 @@ class Content extends Component {
         isFirstTime = false;
       };
       isScrolling = false
+      this.mouseScroll = this.mouseScroll.bind(this)
   }
 
   buttonScrollDown() {
+    isScrolling = true
     $('.letter-k').removeClass('letter-k-show');
     $('.letter-k').addClass('letter-k-hidden');
     $('#intro').addClass('intro-show'); 
-    $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo');
+    $("html, body").animate({scrollTop:$('#home-scroll-wrapper').height()*0.5}, 700, 'easeInOutExpo', ()=>{setTimeout(()=>{
+      isScrolling = false
+    }, 100)});
     this.setState({arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'})
   }
 
   buttonScrollUp() {
+    isScrolling = true
     $('.letter-k').removeClass('letter-k-hidden');
     $('.letter-k').addClass('letter-k-show');
     $('#intro').removeClass('intro-show'); 
-    $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo');
+    $("html, body").animate({scrollTop:0}, 700, 'easeInOutExpo', ()=>{setTimeout(()=>{
+      isScrolling = false
+    }, 100)});
     this.setState({arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'})
   }
 
   mouseScroll(event) {
     if (!isScrolling) {
       if(this.state.section===1 && $(window).scrollTop() > this.state.scrollTop) {
+        console.log('!!!')
         isScrolling = true
         this.setState({section:2, scrollTop:$('#home-scroll-wrapper').height()*0.5, isScrolling: true, arrowClass: 'arrow-up', buttonFunc: this.buttonScrollUp, greetingClass:'greeting-hidden'});
         $('.letter-k').removeClass('letter-k-show');
@@ -182,6 +190,7 @@ class Content extends Component {
       }
 
       else if (this.state.section===2 && $(window).scrollTop() < this.state.scrollTop) {
+        console.log('!!!!!')
         isScrolling = true
         this.setState({section:1, scrollTop:0, isScrolling: true, arrowClass: 'arrow-down', buttonFunc: this.buttonScrollDown, greetingClass:'greeting-show'});
         $('.letter-k').removeClass('letter-k-hidden');
@@ -212,7 +221,7 @@ class Content extends Component {
       $('.letter-k').removeClass('home-content-hidden')
       $('.letter-k').addClass('home-content-show')
     }, 500)
-    $(window).on('scroll', this.mouseScroll.bind(this));
+    $(window).on('scroll', this.mouseScroll);
 
     /*$('#home-content').on('scroll mousewheel touchmove', function(e) {
           e.preventDefault();
@@ -232,9 +241,8 @@ class Content extends Component {
   }
 
   componentWillUnmount() {
-    console.log('unmount')
-    $(window).off('scroll');
-    $("html, body").scrollTop(0)
+    isScrolling = true
+    $(window).off('scroll', this.mouseScroll);
   }
 
 

@@ -1,11 +1,13 @@
 /*@import '../_shared.scss'; */
 .taptile-project-page {
-  background-color: #fff;
-  /* progress */ }
+  /* progress */
+  /* Nav */ }
   .taptile-project-page .my-container {
     width: 90%;
     margin: 0 auto;
     max-width: 1000px; }
+  .taptile-project-page .my-container-big {
+    width: 100%; }
   @media (min-width: 601px) {
     .taptile-project-page .my-container {
       width: 80%; } }
@@ -30,8 +32,7 @@
     font-size: 1.4rem;
     font-weight: 400; }
   .taptile-project-page .title {
-    font-weight: 600;
-    color: #ec8300; }
+    font-weight: 600; }
   .taptile-project-page .title:before {
     /*content: '';*/
     /* currented hided*/
@@ -42,13 +43,11 @@
     /* padding-top: 100%; */
     position: absolute;
     z-index: -1;
-    background-color: #FFEF76;
     transform: translate(-50%, -50%); }
   .taptile-project-page .quote {
     font-family: "Halant";
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #ec8300; }
+    font-weight: 600; }
   .taptile-project-page .important {
     font-weight: 600; }
   .taptile-project-page .emphasis {
@@ -60,8 +59,7 @@
     width: 100%;
     height: 0.3rem;
     z-index: -1;
-    transform: translateY(-0.5rem);
-    background-color: #ec8300; }
+    transform: translateY(-0.5rem); }
   .taptile-project-page .key-word {
     font-weight: 600; }
   .taptile-project-page .margin-top-1 {
@@ -77,6 +75,8 @@
       margin-top: 4rem; }
     .taptile-project-page .margin-top-2 {
       margin-top: 2.5rem; } }
+  .taptile-project-page .width-80 {
+    width: 80%; }
   .taptile-project-page .width-90 {
     width: 90%; }
   .taptile-project-page .width-100 {
@@ -91,19 +91,18 @@
     /*background-color: #ffe381;*/
     overflow: hidden;
     position: relative; }
+  .taptile-project-page .banner-container-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
   .taptile-project-page .banner-img-tt {
     /*height: 90%;*/
     height: 80%;
     /*max-width: 90%;*/
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
     z-index: 1; }
   .taptile-project-page .banner-text-tt {
     display: inline-block;
-    background-color: rgba(255, 207, 20, 0.61);
     border-radius: 0.5rem;
     /*padding: 0 1.5rem 0 1.5rem;*/
     padding: 0 6rem 0 6rem;
@@ -111,11 +110,9 @@
   .taptile-project-page .banner-text-tt h1 {
     font-family: "Josefin Sans";
     display: inline-block;
-    color: #c48000;
     margin: 1.5rem 0 1.5rem 0; }
   .taptile-project-page .banner-text-tt p {
     font-family: "Josefin Sans";
-    color: #c48000;
     font-size: 2rem;
     margin: 0 0 1.5rem 0; }
   .taptile-project-page .logo-tt {
@@ -132,23 +129,109 @@
   .taptile-project-page .info-container-tt .row {
     margin: 0.5em 0 0.5em 0; }
   .taptile-project-page .left-vertical-line {
-    padding-left: 1.6rem;
-    border-left: 0.4rem solid #ec8300; }
+    padding-left: 1.6rem; }
   .taptile-project-page .shadow {
     box-shadow: 0 2px 21px #eaeaea; }
-
-.progress-container {
-  z-index: 100;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-family: 'Josefin Sans';
-  display: none; }
-
-.scroll-active {
-  color: yellow !important;
-  text-decoration: underline; }
+  .taptile-project-page .progress-container {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Josefin Sans';
+    display: block;
+    transition: all 0.3s cubic-bezier(0.7, 0.3, 0, 1);
+    border-radius: 2px; }
+    .taptile-project-page .progress-container a {
+      display: block;
+      text-align: left;
+      cursor: pointer;
+      margin: 0.5rem 1rem;
+      opacity: 0.3; }
+    .taptile-project-page .progress-container a:hover {
+      opacity: 1; }
+    .taptile-project-page .progress-container .circle {
+      display: none;
+      margin-left: 0.5rem; }
+    .taptile-project-page .progress-container .circle:before {
+      content: '\25CF'; }
+    .taptile-project-page .progress-container .scroll-active {
+      opacity: 1; }
+  .taptile-project-page .progress-responsive-position {
+    display: none;
+    right: 5%; }
+  @media (min-width: 601px) {
+    .taptile-project-page .my-containera {
+      width: 95%; }
+    .taptile-project-page .progress-responsive-position {
+      display: block;
+      right: 1%; } }
+  @media (min-width: 993px) {
+    .taptile-project-page .my-containera {
+      width: 65%; }
+    .taptile-project-page .progress-responsive-position {
+      display: block;
+      right: 5%; } }
+  @media (min-width: 1201px) {
+    .taptile-project-page .my-containera {
+      width: 55%; }
+    .taptile-project-page .progress-responsive-position {
+      display: block;
+      right: 10%; } }
+  .taptile-project-page .project-navbar {
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    z-index: 16;
+    color: black;
+    font-family: "Josefin Sans";
+    font-size: 11px;
+    font-weight: 700;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .taptile-project-page .project-navbar a {
+    margin: 0 30px;
+    cursor: pointer; }
+  .taptile-project-page .project-navbar a:before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 18px;
+    z-index: 7;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transform-origin: left;
+    will-change: transform; }
+  .taptile-project-page .project-navbar > a:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  .taptile-project-page .project-navbar a:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    z-index: 8;
+    left: 0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transform-origin: right; }
+  .taptile-project-page .project-nav-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1; }

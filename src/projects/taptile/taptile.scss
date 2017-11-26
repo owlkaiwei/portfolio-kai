@@ -1,0 +1,69 @@
+#taptile-page {
+	$color-1: #ec8300;
+	$font-primary: 'Josefin Sans';
+	$font-secondary: 'Halant';
+
+	background-color: #fff;
+	color: #351700;
+
+.title {
+	color: $color-1;
+}
+
+.title:before {
+	background-color: #FFEF76;
+}
+
+.quote {
+	color: $color-1;
+}
+
+.emphasis:after {
+	background-color: $color-1;
+}
+
+.banner-text-tt {
+	background-color: rgba(255, 207, 20, 0.61);
+}
+
+.banner-text-tt h1 {
+	color: rgb(196, 128, 0);
+}
+
+.banner-text-tt p {
+	color: rgb(196, 128, 0);
+}
+
+.left-vertical-line {
+	border-left: 0.4rem solid $color-1;
+}
+
+
+.progress-container {
+
+a {
+	color: #351700;
+}
+}
+
+.progress-container:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-navbar a {
+	color: black;
+}
+
+.project-navbar  a:before {
+	background-color: black;
+}
+
+.project-navbar  a:after {
+	background-color: black;
+}
+
+.project-nav-background {
+	background-color: #fff;
+}
+
+}

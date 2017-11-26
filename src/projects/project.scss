@@ -8,13 +8,16 @@ $font-primary: 'Josefin Sans';
 
 $font-secondary: 'Halant';
 
-background-color: #fff;
 
 
 .my-container {
 	width: 90%;
 	margin: 0 auto;
 	max-width: 1000px;
+}
+
+.my-container-big {
+	width: 100%;
 }
 
 @media (min-width: 601px) {
@@ -60,7 +63,6 @@ p {
 
 .title {
 	font-weight: 600;
-	color: $color-1;
 }
 
 .title:before {
@@ -72,7 +74,6 @@ p {
     /* padding-top: 100%; */
     position: absolute;
     z-index: -1;
-    background-color: #FFEF76;
     transform: translate(-50%, -50%);
 }
 
@@ -80,7 +81,6 @@ p {
 	font-family: $font-secondary;
 	font-size: 1.5rem;
 	font-weight: 600;
-	color: $color-1;
 }
 
 .important {
@@ -100,7 +100,6 @@ p {
 	height: 0.3rem;
 	z-index: -1;
 	transform: translateY(-0.5rem);
-	background-color: $color-1;
 }
 
 .key-word {
@@ -133,6 +132,10 @@ p {
 	}
 }
 
+.width-80 {
+	width: 80%;
+}
+
 .width-90 {
 	width: 90%;
 }
@@ -160,21 +163,22 @@ p {
 	position: relative;
 }
 
+.banner-container-inner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
 .banner-img-tt {
 	/*height: 90%;*/
 	height: 80%;
 	/*max-width: 90%;*/
-	position: absolute;
-	display: inline-block;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	display: block;
 	z-index: 1;
 }
 
 .banner-text-tt {
 	display: inline-block;
-	background-color: rgba(255, 207, 20, 0.61);
 	border-radius: 0.5rem;
     /*padding: 0 1.5rem 0 1.5rem;*/
     padding: 0 6rem 0 6rem;
@@ -184,14 +188,12 @@ p {
 .banner-text-tt h1 {
 	font-family: $font-primary;
 	display: inline-block;
-	color: rgb(196, 128, 0);
 	margin: 1.5rem 0 1.5rem 0;
 
 }
 
 .banner-text-tt p {
 	font-family: $font-primary;
-	color: rgb(196, 128, 0);
 	font-size: 2rem;
 	margin: 0 0 1.5rem 0;
 }
@@ -223,7 +225,6 @@ p {
 
 .left-vertical-line {
 	padding-left: 1.6rem;
-	border-left: 0.4rem solid $color-1;
 }
 
 .shadow {
@@ -234,28 +235,158 @@ p {
 
 
 /* progress */
-
-
-
-
-
-}
-
 .progress-container {
 	z-index: 100;
 	position: fixed;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 0;
+	right: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	font-family: 'Josefin Sans';
+	display: block;
+	transition: all 0.3s cubic-bezier(0.7, 0.3, 0, 1);
+	border-radius: 2px;
+
+
+	a {
+		display: block;
+		text-align: left;
+		cursor: pointer;
+		margin: 0.5rem 1rem;
+		opacity: 0.3;
+	}
+
+	a:hover {
+		opacity: 1;
+	}
+
+	.circle {
+		display: none;
+		margin-left: 0.5rem;
+	}
+
+	.circle:before {
+		content: '\25CF';
+	}
+
+	.scroll-active {
+		opacity: 1;
+	}
+}
+
+
+.progress-responsive-position {
 	display: none;
+	right: 5%;
+}
+
+
+@media (min-width: 601px) {
+	.my-containera {
+		width: 95%;
+	}
+	.progress-responsive-position {
+		display: block;
+		right: 1%;
+	}
+}
+
+@media (min-width: 993px) {
+	.my-containera {
+		width: 65%;
+	}
+	.progress-responsive-position {
+		display: block;
+		right: 5%;
+	}
+}
+
+@media (min-width: 1201px) {
+	.my-containera {
+		width: 55%;
+	}
+	.progress-responsive-position {
+		display: block;
+		right: 10%;
+	}
+}
+
+
+
+/* Nav */
+.project-navbar {
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  z-index: 16;
+  color: black;
+  font-family: $font-primary;
+  font-size: 11px;
+  font-weight: 700;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-navbar a {
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.project-navbar  a:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: 18px;
+  z-index: 7;
+  left: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transform-origin: left;
+  will-change: transform;
+}
+
+.project-navbar > a:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.project-navbar  a:after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  z-index: 8;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transform-origin: right;
+}
+
+.project-nav-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+
+
 
 }
 
-.scroll-active {
-	color: yellow !important;
-	text-decoration: underline;
-}
