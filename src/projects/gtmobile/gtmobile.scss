@@ -1,0 +1,75 @@
+#gtmobile-page {
+	$color-1: #1879DB;
+	$color-2: #00254c;
+	$font-primary: 'Josefin Sans';
+	$font-secondary: 'Halant';
+
+	background-color: #fff;
+	color: #00254c;
+
+.title {
+	color: $color-1;
+}
+
+.title:before {
+	background-color: #FFEF76;
+}
+
+.quote {
+	color: $color-1;
+}
+
+.emphasis:after {
+	background-color: $color-1;
+}
+
+.banner-text {
+	background-color: rgba(0, 37, 76, 0.8);
+}
+
+.banner-text h1 {
+	color: #fff;
+}
+
+.banner-text p {
+	color: #fff;
+}
+
+.banner-img {
+	height: 70% !important;
+}
+
+.left-vertical-line {
+	border-left: 0.4rem solid $color-1;
+}
+
+
+.progress-container {
+
+a {
+	color: $color-2;
+}
+}
+
+.progress-container:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-navbar a {
+	color: $color-2;
+}
+
+.project-navbar  a:before {
+	background-color: $color-2;
+}
+
+.project-navbar  a:after {
+	background-color: $color-2;
+}
+
+.project-nav-background {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12);
+}
+
+}

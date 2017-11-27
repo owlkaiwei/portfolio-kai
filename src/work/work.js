@@ -16,7 +16,7 @@ export class Work extends Component {
 	constructor() {
 		super()
 		AOS.init({
-	        once: false,
+	        once: true,
 	        duration: 500
      	}); 
 	}
@@ -44,6 +44,10 @@ export class Work extends Component {
 
   }
 
+  componentWillUnmount() {
+    $("html, body").scrollTop(0)
+  }
+
   render() {
     console.log('work render')
     return (
@@ -64,15 +68,29 @@ export class Work extends Component {
 
 
 
-            <div className='row margin-top-1'>
+            <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
-                    <img className='thumbnail' src={require('./src/taptile_thumbnail.png')}/>
+                    <img className='thumbnail thumbnail-light' src={require('./src/taptile_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>TapTile</div>
                     <div className='text'>
                         <p>Interaction Design</p>
                         <p>UX Research</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/gtmobile_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>GT Mobile</div>
+                    <div className='text'>
+                        <p>Responsive Web App Design</p>
+                        <p>Style Guide</p>
+                        <p>Information Architecture</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +112,7 @@ export class Work extends Component {
 
             <div className='row margin-top-1'>
                 <a className='col s10 push-s1 m8 xl6' href='http://www.imlc.io/apps' target='_blank'>
-                    <img className='thumbnail' src={require('./src/imlc_thumbnail.png')}/>
+                    <img className='thumbnail thumbnail-light' src={require('./src/imlc_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>WeCollabrify</div>

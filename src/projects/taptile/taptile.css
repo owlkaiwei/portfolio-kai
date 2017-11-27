@@ -9,11 +9,11 @@
     color: #ec8300; }
   #taptile-page .emphasis:after {
     background-color: #ec8300; }
-  #taptile-page .banner-text-tt {
+  #taptile-page .banner-text {
     background-color: rgba(255, 207, 20, 0.61); }
-  #taptile-page .banner-text-tt h1 {
+  #taptile-page .banner-text h1 {
     color: #c48000; }
-  #taptile-page .banner-text-tt p {
+  #taptile-page .banner-text p {
     color: #c48000; }
   #taptile-page .left-vertical-line {
     border-left: 0.4rem solid #ec8300; }
@@ -28,4 +28,5 @@
   #taptile-page .project-navbar a:after {
     background-color: black; }
   #taptile-page .project-nav-background {
-    background-color: #fff; }
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }

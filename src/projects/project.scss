@@ -1,6 +1,6 @@
 /*@import '../_shared.scss'; */
 
-.taptile-project-page {
+.project-page {
 
 $color-1: #ec8300;
 
@@ -132,6 +132,10 @@ p {
 	}
 }
 
+.width-70 {
+	width: 70%;
+}
+
 .width-80 {
 	width: 80%;
 }
@@ -152,10 +156,13 @@ p {
 	max-width: 500px;
 }
 
+.img-max-width-3 {
+	max-width: 300px;
+}
 
 
 
-.banner-container-tt {
+.banner-container {
 	width: 100%;
 	height: 100vh;
 	/*background-color: #ffe381;*/
@@ -169,7 +176,7 @@ p {
 	position: absolute;
 }
 
-.banner-img-tt {
+.banner-img {
 	/*height: 90%;*/
 	height: 80%;
 	/*max-width: 90%;*/
@@ -177,7 +184,7 @@ p {
 	z-index: 1;
 }
 
-.banner-text-tt {
+.banner-text {
 	display: inline-block;
 	border-radius: 0.5rem;
     /*padding: 0 1.5rem 0 1.5rem;*/
@@ -185,14 +192,14 @@ p {
     z-index: 2;
 }
 
-.banner-text-tt h1 {
+.banner-text h1 {
 	font-family: $font-primary;
 	display: inline-block;
 	margin: 1.5rem 0 1.5rem 0;
 
 }
 
-.banner-text-tt p {
+.banner-text p {
 	font-family: $font-primary;
 	font-size: 2rem;
 	margin: 0 0 1.5rem 0;
@@ -202,24 +209,24 @@ p {
 	margin-left: 3rem;
 }
 
-.info-container-tt {
+.info-container {
 	/*background-color: #ffe381;*/
 }
 
-.info-container-tt .label {
+.info-container .label {
 	text-align: right;
 }
 
-.info-container-tt .content {
+.info-container .content {
 	text-align: left;
 	font-weight: 500;
 }
 
-.info-container-tt p {
+.info-container p {
 	margin: 0rem 0 0rem 0;
 }
 
-.info-container-tt .row {
+.info-container .row {
 	margin: 0.5em 0 0.5em 0;
 }
 

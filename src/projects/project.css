@@ -1,39 +1,39 @@
 /*@import '../_shared.scss'; */
-.taptile-project-page {
+.project-page {
   /* progress */
   /* Nav */ }
-  .taptile-project-page .my-container {
+  .project-page .my-container {
     width: 90%;
     margin: 0 auto;
     max-width: 1000px; }
-  .taptile-project-page .my-container-big {
+  .project-page .my-container-big {
     width: 100%; }
   @media (min-width: 601px) {
-    .taptile-project-page .my-container {
+    .project-page .my-container {
       width: 80%; } }
   @media (min-width: 993px) {
-    .taptile-project-page .my-container {
+    .project-page .my-container {
       width: 65%; } }
   @media (min-width: 1201px) {
-    .taptile-project-page .my-container {
+    .project-page .my-container {
       width: 55%; } }
-  .taptile-project-page .container-center-inside {
+  .project-page .container-center-inside {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
     -webkit-justify-content: center;
     align-items: center; }
-  .taptile-project-page h2 {
+  .project-page h2 {
     font-family: "Josefin Sans";
     font-size: 1.8rem;
     font-weight: 600; }
-  .taptile-project-page p {
+  .project-page p {
     font-family: "Halant";
     font-size: 1.4rem;
     font-weight: 400; }
-  .taptile-project-page .title {
+  .project-page .title {
     font-weight: 600; }
-  .taptile-project-page .title:before {
+  .project-page .title:before {
     /*content: '';*/
     /* currented hided*/
     width: 8rem;
@@ -44,15 +44,15 @@
     position: absolute;
     z-index: -1;
     transform: translate(-50%, -50%); }
-  .taptile-project-page .quote {
+  .project-page .quote {
     font-family: "Halant";
     font-size: 1.5rem;
     font-weight: 600; }
-  .taptile-project-page .important {
+  .project-page .important {
     font-weight: 600; }
-  .taptile-project-page .emphasis {
+  .project-page .emphasis {
     display: inline-block; }
-  .taptile-project-page .emphasis:after {
+  .project-page .emphasis:after {
     content: "";
     position: relative;
     display: block;
@@ -60,79 +60,83 @@
     height: 0.3rem;
     z-index: -1;
     transform: translateY(-0.5rem); }
-  .taptile-project-page .key-word {
+  .project-page .key-word {
     font-weight: 600; }
-  .taptile-project-page .margin-top-1 {
+  .project-page .margin-top-1 {
     margin-top: 10rem; }
-  .taptile-project-page .margin-top-2 {
+  .project-page .margin-top-2 {
     margin-top: 8rem; }
-  .taptile-project-page .margin-top-3 {
+  .project-page .margin-top-3 {
     margin-top: 5rem; }
-  .taptile-project-page .no-margin-bottom {
+  .project-page .no-margin-bottom {
     margin-bottom: 0; }
   @media (max-width: 992px) {
-    .taptile-project-page .margin-top-1 {
+    .project-page .margin-top-1 {
       margin-top: 4rem; }
-    .taptile-project-page .margin-top-2 {
+    .project-page .margin-top-2 {
       margin-top: 2.5rem; } }
-  .taptile-project-page .width-80 {
+  .project-page .width-70 {
+    width: 70%; }
+  .project-page .width-80 {
     width: 80%; }
-  .taptile-project-page .width-90 {
+  .project-page .width-90 {
     width: 90%; }
-  .taptile-project-page .width-100 {
+  .project-page .width-100 {
     width: 100%; }
-  .taptile-project-page .img-max-width-1 {
+  .project-page .img-max-width-1 {
     max-width: 800px; }
-  .taptile-project-page .img-max-width-2 {
+  .project-page .img-max-width-2 {
     max-width: 500px; }
-  .taptile-project-page .banner-container-tt {
+  .project-page .img-max-width-3 {
+    max-width: 300px; }
+  .project-page .banner-container {
     width: 100%;
     height: 100vh;
     /*background-color: #ffe381;*/
     overflow: hidden;
     position: relative; }
-  .taptile-project-page .banner-container-inner {
+  .project-page .banner-container-inner {
     width: 100%;
     height: 100%;
     position: absolute; }
-  .taptile-project-page .banner-img-tt {
+  .project-page .banner-img {
     /*height: 90%;*/
     height: 80%;
     /*max-width: 90%;*/
     display: block;
     z-index: 1; }
-  .taptile-project-page .banner-text-tt {
+  .project-page .banner-text {
     display: inline-block;
     border-radius: 0.5rem;
     /*padding: 0 1.5rem 0 1.5rem;*/
     padding: 0 6rem 0 6rem;
     z-index: 2; }
-  .taptile-project-page .banner-text-tt h1 {
+  .project-page .banner-text h1 {
     font-family: "Josefin Sans";
     display: inline-block;
     margin: 1.5rem 0 1.5rem 0; }
-  .taptile-project-page .banner-text-tt p {
+  .project-page .banner-text p {
     font-family: "Josefin Sans";
     font-size: 2rem;
     margin: 0 0 1.5rem 0; }
-  .taptile-project-page .logo-tt {
+  .project-page .logo-tt {
     margin-left: 3rem; }
-  .taptile-project-page .info-container-tt {
+  .project-page .info-container {
     /*background-color: #ffe381;*/ }
-  .taptile-project-page .info-container-tt .label {
+  .project-page .info-container .label {
     text-align: right; }
-  .taptile-project-page .info-container-tt .content {
+  .project-page .info-container .content {
     text-align: left;
     font-weight: 500; }
-  .taptile-project-page .info-container-tt p {
+  .project-page .info-container p {
     margin: 0rem 0 0rem 0; }
-  .taptile-project-page .info-container-tt .row {
+  .project-page .info-container .row {
     margin: 0.5em 0 0.5em 0; }
-  .taptile-project-page .left-vertical-line {
+  .project-page .left-vertical-line {
     padding-left: 1.6rem; }
-  .taptile-project-page .shadow {
+  .project-page .shadow {
     box-shadow: 0 2px 21px #eaeaea; }
-  .taptile-project-page .progress-container {
+  .project-page .progress-container {
     z-index: 100;
     position: fixed;
     top: 50%;
@@ -145,43 +149,43 @@
     display: block;
     transition: all 0.3s cubic-bezier(0.7, 0.3, 0, 1);
     border-radius: 2px; }
-    .taptile-project-page .progress-container a {
+    .project-page .progress-container a {
       display: block;
       text-align: left;
       cursor: pointer;
       margin: 0.5rem 1rem;
       opacity: 0.3; }
-    .taptile-project-page .progress-container a:hover {
+    .project-page .progress-container a:hover {
       opacity: 1; }
-    .taptile-project-page .progress-container .circle {
+    .project-page .progress-container .circle {
       display: none;
       margin-left: 0.5rem; }
-    .taptile-project-page .progress-container .circle:before {
+    .project-page .progress-container .circle:before {
       content: '\25CF'; }
-    .taptile-project-page .progress-container .scroll-active {
+    .project-page .progress-container .scroll-active {
       opacity: 1; }
-  .taptile-project-page .progress-responsive-position {
+  .project-page .progress-responsive-position {
     display: none;
     right: 5%; }
   @media (min-width: 601px) {
-    .taptile-project-page .my-containera {
+    .project-page .my-containera {
       width: 95%; }
-    .taptile-project-page .progress-responsive-position {
+    .project-page .progress-responsive-position {
       display: block;
       right: 1%; } }
   @media (min-width: 993px) {
-    .taptile-project-page .my-containera {
+    .project-page .my-containera {
       width: 65%; }
-    .taptile-project-page .progress-responsive-position {
+    .project-page .progress-responsive-position {
       display: block;
       right: 5%; } }
   @media (min-width: 1201px) {
-    .taptile-project-page .my-containera {
+    .project-page .my-containera {
       width: 55%; }
-    .taptile-project-page .progress-responsive-position {
+    .project-page .progress-responsive-position {
       display: block;
       right: 10%; } }
-  .taptile-project-page .project-navbar {
+  .project-page .project-navbar {
     transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
     z-index: 16;
     color: black;
@@ -194,10 +198,10 @@
     justify-content: center;
     align-items: center;
     width: 100%; }
-  .taptile-project-page .project-navbar a {
+  .project-page .project-navbar a {
     margin: 0 30px;
     cursor: pointer; }
-  .taptile-project-page .project-navbar a:before {
+  .project-page .project-navbar a:before {
     content: "";
     position: relative;
     display: block;
@@ -212,10 +216,10 @@
     transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
     transform-origin: left;
     will-change: transform; }
-  .taptile-project-page .project-navbar > a:hover:before {
+  .project-page .project-navbar > a:hover:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
-  .taptile-project-page .project-navbar a:after {
+  .project-page .project-navbar a:after {
     content: "";
     position: relative;
     display: block;
@@ -229,7 +233,7 @@
     -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
     transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
     transform-origin: right; }
-  .taptile-project-page .project-nav-background {
+  .project-page .project-nav-background {
     width: 100%;
     height: 100%;
     position: absolute;

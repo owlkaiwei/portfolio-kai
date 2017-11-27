@@ -1,0 +1,34 @@
+#gtmobile-page {
+  background-color: #fff;
+  color: #00254c; }
+  #gtmobile-page .title {
+    color: #1879DB; }
+  #gtmobile-page .title:before {
+    background-color: #FFEF76; }
+  #gtmobile-page .quote {
+    color: #1879DB; }
+  #gtmobile-page .emphasis:after {
+    background-color: #1879DB; }
+  #gtmobile-page .banner-text {
+    background-color: rgba(0, 37, 76, 0.8); }
+  #gtmobile-page .banner-text h1 {
+    color: #fff; }
+  #gtmobile-page .banner-text p {
+    color: #fff; }
+  #gtmobile-page .banner-img {
+    height: 70% !important; }
+  #gtmobile-page .left-vertical-line {
+    border-left: 0.4rem solid #1879DB; }
+  #gtmobile-page .progress-container a {
+    color: #00254c; }
+  #gtmobile-page .progress-container:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  #gtmobile-page .project-navbar a {
+    color: #00254c; }
+  #gtmobile-page .project-navbar a:before {
+    background-color: #00254c; }
+  #gtmobile-page .project-navbar a:after {
+    background-color: #00254c; }
+  #gtmobile-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }

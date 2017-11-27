@@ -22,15 +22,15 @@
 	background-color: $color-1;
 }
 
-.banner-text-tt {
+.banner-text {
 	background-color: rgba(255, 207, 20, 0.61);
 }
 
-.banner-text-tt h1 {
+.banner-text h1 {
 	color: rgb(196, 128, 0);
 }
 
-.banner-text-tt p {
+.banner-text p {
 	color: rgb(196, 128, 0);
 }
 
@@ -64,6 +64,7 @@ a {
 
 .project-nav-background {
 	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12);
 }
 
 }

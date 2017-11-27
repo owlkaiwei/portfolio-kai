@@ -67,7 +67,7 @@ class TapTile extends Component {
 
 	render() {
 		return (
-			<div id='taptile-page' className='taptile-project-page page-container-tt'>
+			<div id='taptile-page' className='project-page'>
 				<Headroom disableInlineStyles={true}>
 		            <div className='project-navbar'>
 		              <div className='project-nav-background'/>
@@ -77,7 +77,7 @@ class TapTile extends Component {
 		              <a href='#/'>
 		                H O M E
 		              </a>
-		              <a>
+		              <a href='#/work/gtmobile'>
 		                N E X T : G T M O B I L E
 		              </a>
 		            </div>
@@ -102,13 +102,13 @@ class TapTile extends Component {
 
 		        </div>
 
-		        <Element name="banner" className="element banner-container-tt">
+		        <Element name="banner" className="element banner-container">
 		        	<div className='banner-container-inner container-center-inside'>
-		        		<img className='banner-img-tt' src={require('./src/taptile_banner.svg')} />
+		        		<img className='banner-img' src={require('./src/taptile_banner.svg')} />
 		        	</div>
 		        	<div className='banner-container-inner container-center-inside'>
-		        		<div className='banner-text-tt'>
-			          	<div className='title-and-logo-tt'>
+		        		<div className='banner-text'>
+			          	<div className='title-and-logo'>
 				          	<h1>TapTile</h1>
 				          	<img className='logo-tt' src={require('./src/taptile_logo.svg')} />
 			          	</div>
@@ -119,7 +119,7 @@ class TapTile extends Component {
 		         
 		        </Element>
 
-		        <Element name="info" className="element info-container-tt">
+		        <Element name="info" className="element info-container margin-top-2">
 		          <div className='row'>
 		          	<p className='col s4 label'>Role</p>
 		          	<p className='col s8 content'>

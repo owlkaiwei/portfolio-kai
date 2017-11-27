@@ -61,9 +61,14 @@
 	transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
 }
 
-.thumbnail:hover {
+.thumbnail-light:hover {
 	transform: scale(1.05);
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-dark:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .thumbnail-text-container {

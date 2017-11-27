@@ -22,8 +22,9 @@ import {Intro} from './intro/intro.js'
 import {Work} from './work/work.js'
 
 import TapTile from './projects/taptile/taptile'
+import GtMobile from './projects/gtmobile/gtmobile'
 
-import Test from './projects/taptile/test'
+
 
 var Scroll  = require('react-scroll');
 
@@ -667,7 +668,7 @@ class App extends Component {
           <Route  exact path="/work" component={()=><Work/>}/>
           <Route  path="/playground" component={()=><Playground/>}/>
           <Route  path="/work/taptile" component={TapTile}/>
-          <Route  path="/work/test" component={Test}/>
+          <Route  path="/work/gtmobile" component={GtMobile}/>
         </div>
       </Router>
     );
