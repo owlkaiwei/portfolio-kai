@@ -89,28 +89,27 @@ export class Work extends Component {
                     <div className='title'>GT Mobile</div>
                     <div className='text'>
                         <p>Responsive Web App Design</p>
-                        <p>Style Guide</p>
                         <p>Information Architecture</p>
+                        <p>Style Guide</p>
                     </div>
                 </div>
             </div>
 
-
-
-            <div className='row'>
-                <div className='col s10 push-s1 m12 title margin-top-page-start'>
-                    I was also an engineer. Well, I still am.
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/mood_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>M O O D (coming soon...)</div>
+                    <div className='text'>
+                        <p>Information Visualization</p>
+                        <p>Interaction Design</p>
+                        <p>Motion Design</p>
+                    </div>
                 </div>
             </div>
-            <div className='row margin-top-2'>
-                <div className='col s10 push-s1 m8 xl6 text'>
-                    I did some cool stuff when I was a Computer Science & Engineering student. From machine learning to web dev, these projects shaped my understanding of the technical world.
-                     I can’t count how many times my technical background made me a versatile team player.
-                </div>
-            </div>
 
-
-            <div className='row margin-top-1'>
+            <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='http://www.imlc.io/apps' target='_blank'>
                     <img className='thumbnail thumbnail-light' src={require('./src/imlc_thumbnail.png')}/>
                 </a>
@@ -123,12 +122,67 @@ export class Work extends Component {
                 </div>
             </div>
 
-            <div className='row'>
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5855524' target='_blank'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/pokecraft_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>PokeCraft</div>
+                    <div className='text'>
+                        <p>Game Design</p>
+                        <p>Unity</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div className='row' data-aos="fade-up">
+                <div className='col s10 push-s1 m12 title margin-top-page-start'>
+                    I was also an engineer. Well, I still am.
+                </div>
+            </div>
+            <div className='row margin-top-2' data-aos="fade-up">
+                <div className='col s10 push-s1 m8 xl6 text'>
+                    I did some cool stuff when I was a Computer Science & Engineering student. From machine learning to web dev, these projects shaped my understanding of the technical world.
+                     I can’t count how many times my technical background made me a versatile team player.
+                </div>
+            </div>
+
+
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5886319' target='_blank'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/piano_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Gamified Piano Trainer</div>
+                    <div className='text'>
+                        <p>Interaction Design</p>
+                        <p>Arduino</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5886152' target='_blank'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/latex_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>LaTeX Transformer</div>
+                    <div className='text'>
+                        <p>Machine Learning</p>
+                        <p>Image Processing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row' data-aos="fade-up">
                 <div className='col s10 push-s1 m12 title margin-top-page-start'>
                     About Kaiwei.Design
                 </div>
             </div>
-            <div style={{marginBottom: '10rem'}} className='row'>
+            <div style={{marginBottom: '10rem'}} className='row' data-aos="fade-up">
                 <div className='col s10 push-s1 m8 xl6 text'>
                     I have been designing and developing this website with ReactJS. It is definitely one of the most
                     rewarding passion projects of mine. It is still under construction and I am enjoying every bit of the process.

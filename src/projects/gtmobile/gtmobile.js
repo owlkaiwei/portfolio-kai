@@ -185,6 +185,38 @@ class GtMobile extends Component {
 		        		</div>
 		        	</div>
 
+		        	<div className='row margin-top-2'>
+		        		<div className='col s12'>
+			        		<p className='left-vertical-line'>Responsive design is practiced to make the apps adaptive to changing device dimensions.</p>
+		        		</div>
+		        	</div>
+		        	
+
+		        	</div>
+
+		        	<div className='my-container-big'>
+		        		<div className='row'>
+		        		<div className='col s12'>
+		        			<p className='width-100 container-center-inside'>
+		        				<img className='width-70' src={require('./src/responsive@x2.png')}/>
+		        			</p>
+		        		</div>
+		        		</div>
+		        	</div>
+
+		        	<div className='my-container'>
+		        		<div className='row margin-top-2'>
+			        		<div className='col s12'>
+				        		<p className='left-vertical-line'>A design guideline is generated to inform future apps from student developers.</p>
+			        		</div>
+			        	</div>
+			        	<div className='row'>
+			        		<div className='col s12'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70' src={require('./src/design_guideline@x2.png')}/>
+			        			</p>
+			        		</div>
+			        	</div>
 		        	</div>
 	        	</Element>
 
