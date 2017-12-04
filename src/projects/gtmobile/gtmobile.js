@@ -154,7 +154,7 @@ class GtMobile extends Component {
 
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12 l6 push-l6'>
-			        		<p className='left-vertical-line'>GT Mobile is now redesigned to be unified in style.</p>
+			        		<p className='left-vertical-line'>My effort was focused on making GT Mobile a platform that was usable, pleasant, and unified.</p>
 		        		</div>
 		        		<div className='col s12 l6 pull-l6 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
@@ -165,7 +165,7 @@ class GtMobile extends Component {
 
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12 l6'>
-			        		<p className='left-vertical-line'>Previously disconnected apps are now integrated to create a more integrated experience. This is the transition from GT Places to GT Buses.</p>
+			        		<p className='left-vertical-line'>Previously disconnected apps are now re-designed to create a more integrated experience. This is the transition from GT Places to GT Buses.</p>
 		        		</div>
 		        		<div className='col s12 l6 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
@@ -207,17 +207,287 @@ class GtMobile extends Component {
 		        	<div className='my-container'>
 		        		<div className='row margin-top-2'>
 			        		<div className='col s12'>
-				        		<p className='left-vertical-line'>A design guideline is generated to inform future apps from student developers.</p>
+				        		<p className='left-vertical-line'>A design guideline is generated to inform future apps built by student developers.
+				        		I made sure the guideline not only follows the legacy style of Georgia Tech's digital designs but also embodies GT Mobile's unique identity.
+				        		</p>
 			        		</div>
 			        	</div>
 			        	<div className='row'>
 			        		<div className='col s12'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-70' src={require('./src/design_guideline@x2.png')}/>
+			        				<img className='width-70' src={require('./src/design_guideline@x3_profile.png')}/>
 			        			</p>
 			        		</div>
 			        	</div>
 		        	</div>
+	        	</Element>
+
+	        	<Element name='understanding'>
+	        		<div className='my-container'>
+		        		<div className='row container-center-inside margin-top-1'>
+			        		<h2>- Understanding -</h2>
+			        	</div>
+	        			<div className='row margin-top-2'>
+	        				<div className='col s12'>
+	        					<p>When I first met with the team, I was given the task of <span className='quote'>"just redesigning the platform to make it look better"</span>.
+	        					With this "task" in mind, I took a look at the current product.
+	        					</p>
+	        				</div>
+	        			</div>
+
+	        			<div className='row'>
+			        		<div className='col s12'>
+			        			<p className='title'>
+			        				The First Look at The Current System
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+				        				<img className='width-100' src={require('./src/current_product.png')}/>
+			        			</p>
+			        			<p>
+			        				With a quick glance, I was able to identify several noticeable issues with the visual aspect and usability of the current product
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Functional Inconsistency: &nbsp;</span> 
+			        				Across the multiple applications, many shared UI components such as the navigation bar
+			        				have different interactions and functionalities, which affects the system's overall learnability and usability.
+		        				</p>
+		        				<p className='left-vertical-line'>
+			        				<span className='key-word'>Style Inconsistency:&nbsp;</span>
+			        				Similar to functional inconsistency, GT Mobile's apps are lacking consistency in terms of typography, interaction, look and feel.
+		        				</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Style Outdatedness:&nbsp;</span>
+			        				As can be seen from above screenshots, current GT Mobile interface lacks mordernization in style.
+		        				</p>
+
+		        				<p>
+		        					<span className='quote'>"But is that all?"</span> &nbsp; I asked myself. My experience from previous design projects
+		        					was telling me that above observations were informative but not necessarily complete. <span className='key-word'>Look does not equal usability</span>.
+		        				</p>
+
+			        		</div>
+		        		</div>
+
+		        		<div className='row'>
+			        		<div className='col s12 margin-top-2'>
+			        			<p className='title'>
+			        				Usability Testing - What are the pain points?
+			        			</p>
+			        			<p>
+			        				GT Mobile consists of 6 legacy applications and many other links, which is too big of a group for me to start with. I decided to start gaining empathy with users
+			        				by conducting a usability testing on Homepage and the most used app - GT Places. I recruited 5 students and asked each to 
+			        				participate in a one-on-one user testing session with a think-aloud protocol. In the session, the participant was asked to conduct several 
+			        				tasks such as navigating the homepage and finding a campus building with a specific attribute.
+			        			</p>
+			        			<p>
+			        				Apart from complaints about visual inconsistencies, what I heard most from the participants were &nbsp;
+			        				<span className='quote'>"I wish it took me from GT Places straight to GT Buses because school bus is the most convenient."</span> &nbsp;
+			        				That was when I realized that <span className='key-word'>the current information architecture was poor not just in the homapage, but also between apps</span>.
+			        			</p>
+
+			        		</div>
+		        		</div>
+
+		        		<div className='row'>
+			        		<div className='col s12 margin-top-2'>
+			        			<p className='title'>
+			        				Card Sorting - What does a desirable IA look like?
+			        			</p>
+			        			<p>
+			        				To further understand the desired information architecture, I conducted a closed card sorting excersise
+			        				with each of the five participants. For initialization, I wrote the most high-level categories and essential functionalities
+			        				of apps on the cards. Then I asked the participant to group the cards based on their understand of the current
+			        				platform. The participant started with the scheme on the left and typical end result was shown on the right.
+			        			</p>
+			        		
+			        		</div>
+		        		</div>
+
+		        	</div>
+
+	        		<div className='my-container-big'>
+		        		<div className='col s12'>
+		        			<p className='width-100 container-center-inside'>
+				        				<img className='width-70' src={require('./src/card_sorting.png')}/>
+			        			</p>
+		        		</div>
+		        	</div>
+
+		        	<div className='my-container'>
+		        		<div className='row'>
+			        		<div className='col s12'>
+	
+			        			<p>
+			        				The card sorting exercise resulted in the following insights
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				What makes GT Mobile useful is the <span className='key-word'>updated and relevant information</span> about campus events and functional
+			        				facilities like bus stops and printers.
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				Apps are expected to work together (turns out that's what the participant meant by "Shared DB"). An example was: as a campus event is annouced in GT Feeds,
+			        				the user should be redirected to GT Places for it's location, and then to GT Buses for a route to get there.
+			        			</p>
+			        		
+			        		</div>
+		        		</div>
+		        		<div className='row'>
+		        			<div className='col s12 margin-top-2'>
+			        			<p className='title'>
+			        				My Proposal
+			        			</p>
+			        			<p>
+			        				With the empathy I built during the research phase, I proposed the following deliverable
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-100' src={require('./src/proposal_small.png')}/>
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Information Architecture:&nbsp;</span>
+			        				A new information architecture that addresses the issues in the organization of Homepage, apps, and links.
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Redesign:&nbsp;</span>
+			        				Redesign the experience of Homepage, GT Places, and GT Buses.
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Design Guideline:&nbsp;</span>
+			        				In the future, GT Mobile will be featureing more apps created by student developers. In order
+			        				to keep the consistency of the platform, a design guideline should be provided to them.
+			        			</p>
+			        		</div>
+		        		</div>
+		        	</div>
+
+	        	</Element>
+
+	        	<Element name='design'>	
+	        		<div className='my-container'>
+		        		<div className='row container-center-inside margin-top-1'>
+			        		<h2>- Design -</h2>
+			        	</div>
+	        			<div className='row margin-top-2'>
+	        				<div className='col s12'>
+		        				<p className='title'>
+			        				Information Architecture
+			        			</p>
+	        						<p className='width-100 container-center-inside'>
+				        				<img className='width-100' src={require('./src/IA.png')}/>
+			        				</p>
+	        					<p>
+	        						Instead of having all the apps and social medialinks randomly listed on the Homapage, I decided
+	        						to better organize the Homapage by separating them. Furthermore, apps are divided into two categories 
+	        						based on the kind of information they provide
+	        					</p>
+	        					<p className='left-vertical-line'>
+			        				<span className='key-word'>Event-Based:&nbsp;</span>
+			        				Event-based apps feature information that are frequently updated as campus events take place. They are connected
+			        				to provide the user with different aspects of the same piece of information.
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				<span className='key-word'>Static: &nbsp;</span>
+			        				Static apps contains content that does not change frequently. They serve as a reference to campus offices, services, and facilities.
+			        			</p>
+			        			<p>
+			        				GT Places is designed to be the connecting point of all current apps because most information consumed are surrounding
+			        				a geolocaion(building) on campus.
+			        			</p>
+	        				</div>
+	        			</div>
+
+	        			<div className='row margin-top-2'>
+	        				<div className='col s12'>
+		        				<p className='title'>
+			        				Low-Fidelity Prototype
+			        			</p>
+	        				</div>
+	        			</div>
+
+
+
+	        			<div className='row margin-top-2'>
+	        				<div className='col s12'>
+		        				<p className='title'>
+			        				Wireframe
+			        			</p>
+	        				</div>
+	        			</div>
+
+
+        			</div>
+
+        			<div className='my-container-big margin-top-2'>
+        				<div className='row'>
+        					<p className='width-100 container-center-inside'>
+		        				<img className='width-100' src={require('./src/wireframe.png')}/>
+	        				</p>
+        				</div>
+        			</div>
+
+        			
+
+
+	        	</Element>
+
+	        	<Element name='high-fidelity'>
+	        		<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
+		        				<p className='title container-center-inside'>
+			        				Hight-Fidelity Prototype
+			        			</p>
+			        			<p className='container-center-inside margin-top-2'>
+			        				<iframe src="https://marvelapp.com/3da435g?emb=1" width="452" height="901" allowTransparency="true" frameBorder="0"></iframe>
+			        			</p>
+	        				</div>
+        				</div>
+        			</div>
+
+        			<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
+		        				<p className='title'>
+			        				GT Places' Tag Feature
+			        			</p>
+			        			<p>
+			        				In the research phase, one user need that really stood out was the ability to 
+			        				find campus buildings with certain functionalities or facilities, which inspired
+			     					a redesigned tag feature.
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6'>
+			        			<p className='left-vertical-line'>
+			        				The user can add a tag to a building with an explanation of tha tag.
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/add_tag.gif')}/>
+			        			</p>
+			        		</div>
+			        		<div className='col s12 l6'>
+				        		<p className='left-vertical-line'>
+			        				The user can also report a tag if he thinks it is incorrect or irrelavant.
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/report_tag.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+
+        				<div className='row margin-top-2'>
+			        		<div className='col s12 l6'>
+				        		<p className='left-vertical-line'>The user can search certain buildings by their name or tags.</p>
+			        		</div>
+			        		<div className='col s12 l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/search@x2.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+        			</div>
+
 	        	</Element>
 
 

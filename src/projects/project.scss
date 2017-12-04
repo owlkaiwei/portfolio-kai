@@ -246,6 +246,7 @@ p {
 	z-index: 100;
 	position: fixed;
 	top: 50%;
+	width: 115px;
 	transform: translateY(-50%);
 	right: 1rem;
 	display: flex;
@@ -267,6 +268,7 @@ p {
 
 	a:hover {
 		opacity: 1;
+		font-weight: 600
 	}
 
 	.circle {
@@ -281,6 +283,10 @@ p {
 	.scroll-active {
 		opacity: 1;
 	}
+}
+
+.progress-container:hover a {
+	opacity: 0.8;
 }
 
 

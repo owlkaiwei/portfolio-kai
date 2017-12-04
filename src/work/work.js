@@ -96,11 +96,11 @@ export class Work extends Component {
             </div>
 
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6'>
+                <a className='col s10 push-s1 m8 xl6' href='https://gtgunsnroses.github.io/music-infovis/' target='_blank'>
                     <img className='thumbnail thumbnail-dark' src={require('./src/mood_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>M O O D (coming soon...)</div>
+                    <div className='title'>M O o D</div>
                     <div className='text'>
                         <p>Information Visualization</p>
                         <p>Interaction Design</p>
