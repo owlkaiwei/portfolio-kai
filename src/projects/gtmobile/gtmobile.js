@@ -86,17 +86,20 @@ class GtMobile extends Component {
 					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="research" smooth={true} offset={-100} >
+			        <ScrollLink activeClass="active" to="understand" smooth={true} offset={-100} >
 			          <span className='label'>Research</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="ideation" smooth={true} offset={-100}>
-			          <span className='label'>Ideation</span><span className='circle'></span>
+			        <ScrollLink activeClass="active" to="design" smooth={true} offset={-100}>
+			          <span className='label'>Design</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="solution" smooth={true} offset={-100}>
-			          <span className='label'>Solution</span><span className='circle'></span>
-			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="prototype" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="active" to="high-fidelity" smooth={true} offset={-100}>
 			          <span className='label'>Prototype</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="active" to="guideline" smooth={true} offset={-100}>
+			          <span className='label'>Visual</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="active" to="reflection" smooth={true} offset={-100}>
+			          <span className='label'>Reflection</span><span className='circle'></span>
 			        </ScrollLink>
 			        <a onClick={this.scrollToTop}>Back to Top</a>
 
@@ -407,7 +410,7 @@ class GtMobile extends Component {
 
 	        			<div className='row margin-top-2'>
 	        				<div className='col s12'>
-		        				<p className='title'>
+		        				<p className='title container-center-inside'>
 			        				Wireframe
 			        			</p>
 	        				</div>
@@ -446,6 +449,53 @@ class GtMobile extends Component {
         			<div className='my-container margin-top-2'>
         				<div className='row'>
         					<div className='col s12'>
+		        				<p className='title container-center-inside'>
+			        				Homepage
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6 push-l6'>
+				        		<p className='left-vertical-line'>The homepage is rearranged so that legacy apps and social media links are separated
+				        		I also made sure that Homepage is scalable by adding pages to contain apps made by students developers.
+				        		</p>
+			        		</div>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/homepage_shortened.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+        			</div>
+
+        			<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
+		        				<p className='title container-center-inside'>
+			        				Places
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6 push-l6'>
+				        		<p className='left-vertical-line'>
+				        		For places, I made sure relevant information (eg. events, newly introduced facilities) is curated for
+				        		the user.
+				        		</p>
+			        		</div>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/places_pages_final.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+        			</div>
+
+        			<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
 		        				<p className='title'>
 			        				GT Places' Tag Feature
 			        			</p>
@@ -463,30 +513,154 @@ class GtMobile extends Component {
 			        				The user can add a tag to a building with an explanation of tha tag.
 			        			</p>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/add_tag.gif')}/>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/add_tag_shortened.gif')}/>
 			        			</p>
 			        		</div>
 			        		<div className='col s12 l6'>
 				        		<p className='left-vertical-line'>
-			        				The user can also report a tag if he thinks it is incorrect or irrelavant.
+			        				The user can also report a tag if they think it is incorrect or irrelavant.
 			        			</p>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/report_tag.gif')}/>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/report_tag_shortened.gif')}/>
 			        			</p>
 			        		</div>
 		        		</div>
 
         				<div className='row margin-top-2'>
-			        		<div className='col s12 l6'>
+			        		<div className='col s12 l6 push-l6'>
 				        		<p className='left-vertical-line'>The user can search certain buildings by their name or tags.</p>
 			        		</div>
-			        		<div className='col s12 l6 container-center-inside'>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/search@x2.gif')}/>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/search_final.gif')}/>
 			        			</p>
 			        		</div>
 		        		</div>
         			</div>
+
+        			<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
+		        				<p className='title container-center-inside'>
+			        				Connecting Places and Buses
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6 push-l6'>
+				        		<p className='left-vertical-line'>
+				        			In the new design, I introduced the transition from Places to Buses for the user to get an optimized route
+				        			to the destination by school bus.
+				        		</p>
+			        		</div>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/places_to_buses@x1_128.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+        			</div>
+
+        			<div className='my-container margin-top-2'>
+        				<div className='row'>
+        					<div className='col s12'>
+		        				<p className='title container-center-inside'>
+			        				Buses
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6 push-l6'>
+				        		<p className='left-vertical-line'>
+				        			Buses feature a card-based UI design that provides the user with information of bus stops around them.
+				        		</p>
+			        		</div>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-70 img-max-width-3 shadow' src={require('./src/buses-main_x0.5_shortened.gif')}/>
+			        			</p>
+			        		</div>
+		        		</div>
+        			</div>
+
+
+	        	</Element>
+
+
+
+
+
+	        	<Element name='guideline'>
+	        		<div className='my-container'>
+	        			<div className='row container-center-inside margin-top-1'>
+			        		<h2>- Visual Identity -</h2>
+			        	</div>
+
+			        	<div className='row margin-top-2'>
+        					<div className='col s12'>
+		        				<p className='title'>
+			        				Mood Board
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-100' src={require('./src/mood_board.png')}/>
+		        				</p>
+		        				<p>
+		        					My choices of product mood and color were based on a combination of
+		        					Geoagia Tech's physical apperance and its virtual branding identity.
+		        				</p>
+	        				</div>
+        				</div>
+
+
+			        	<div className='row margin-top-2'>
+        					<div className='col s12'>
+		        				<p className='title'>
+			        				Design Guideline
+			        			</p>
+			        			<p className='width-100 container-center-inside'>
+			        				<img className='width-100' src={require('./src/design_guideline_light.png')}/>
+		        				</p>
+		        				<p>
+		        					I extracted a set of design guideline from
+		        					the design I did for Homepage, Places, and Buses. Due to confidentiality reasons I couldn't share all details of guideline here.
+		        				</p>
+	        				</div>
+        				</div>
+
+	        		</div>
+
+	        	</Element>
+
+	        	<Element name='reflection' style={{marginBottom: '100px'}}>
+	        		<div className='my-container'>
+	        			<div className='row container-center-inside margin-top-1'>
+			        		<h2>- Reflection -</h2>
+			        	</div>
+			        	<p className='margin-top-2'>
+			        		GT Mobile's redesign has just started and I am so proud to have been leading the process. GT Places
+			        		has been shipped and is going through development iterations. I want to write a note to myself reminding me the most valuable
+			        		lessons I was taught
+			        	</p>
+			        	<p className='left-vertical-line'>
+	        				<span className='key-word'>Critical Thinking: &nbsp;</span> 
+	        				I did not simply take the initial task of "making it look better". Being a little skeptical and patient, I
+	        				looked into how users were interacting with the exiting platform. Without the research process, I would not
+	        				have reached the design that really addressed the pain points.
+	    				</p>
+	    				<p className='left-vertical-line'>
+	        				<span className='key-word'>Documentation Is Key:&nbsp;</span>
+	        				From research to insights, from low-fidelity design to high-fidelity prototype, there were so many documents
+	        				involved. I really took time to think about how to organize the documents tell a story of my process, not just for stakeholders but also for myself.
+	    				</p>
+	    				<p className='left-vertical-line'>
+	        				<span className='key-word'>Design with Constraints:&nbsp;</span>
+	        				One of the constraints given to me was "not adding any new features" due to lack to development labor. That was actually quite a new experience for me because
+	        				I had been used to throwing in new features when user asked for them. This constraint really inspired me to look closely
+	        				at existing product and optimizing it with new information architecture. I really got a taste of <span className='key-word'>converting constraints into inspiration</span>.
+	    				</p>
+	        		</div>
 
 	        	</Element>
 
