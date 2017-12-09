@@ -23,6 +23,10 @@
     justify-content: center;
     -webkit-justify-content: center;
     align-items: center; }
+  .project-page .container-center-horizontal {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center; }
   .project-page h2 {
     font-family: "Josefin Sans";
     font-size: 1.8rem;
@@ -243,3 +247,16 @@
     position: absolute;
     left: 0;
     z-index: -1; }
+  .project-page .expandable {
+    cursor: zoom-in;
+    transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1); }
+  .project-page .expandable:hover {
+    transform: scale(1.008); }
+  .project-page .caption {
+    opacity: 0.8;
+    display: flex;
+    justify-content: center; }
+  .project-page .italic {
+    font-style: italic; }
+  .project-page .emphasis-new {
+    text-decoration: underline; }

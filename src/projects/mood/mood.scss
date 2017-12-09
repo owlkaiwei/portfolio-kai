@@ -1,0 +1,111 @@
+#mood-page {
+	$color-1: #FAA5A5;
+	$color-2: #FAA5A5;
+	$color-3: #9BE5E3;
+	$main-text-color: rgba(255, 255, 255, 0.9); 
+	$background-color: #2E2A48;
+	$font-primary: 'Josefin Sans';
+	$font-secondary: 'Halant';
+
+	background-color: $background-color;
+	color: $main-text-color;
+
+
+.title {
+	color: $color-1;
+}
+
+.title:before {
+	background-color: #FFEF76;
+}
+
+.quote {
+	color: $color-3;
+}
+
+.emphasis:after {
+	background-color: $color-1;
+}
+
+.emphasis-new {
+	text-decoration-color: $color-1
+}
+
+.banner-text {
+	background-color: rgba(46, 42, 72, 0.75);
+}
+
+.banner-text h1 {
+	color: #FAA5A5;
+}
+
+.banner-text p {
+	color: #FAA5A5;
+}
+
+.banner-img {
+	height: 70% !important;
+}
+
+.left-vertical-line {
+	border-left: 0.4rem solid $color-1;
+}
+
+
+.progress-container {
+
+a {
+	color: $color-2;
+}
+}
+
+.progress-container:hover {
+	//background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-navbar a {
+	color: $color-2;
+}
+
+.project-navbar  a:before {
+	background-color: $color-2;
+}
+
+.project-navbar  a:after {
+	background-color: $color-2;
+}
+
+.project-nav-background {
+	background-color: $background-color;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.link-to-project {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	display: block;
+	color: $color-2;
+	padding: 7px;
+	border-radius: 5px;
+	font-family: $font-primary;
+	cursor: pointer;
+	border: 1px solid $color-2;
+	transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1);
+}
+
+.link-to-project:hover {
+	background-color: rgba(250, 165, 165, 0.1);
+}
+
+.shadow {
+	box-shadow: 0 2px 21px rgba(0, 0, 0, 0.2)
+}
+
+a {
+	color : $color-2
+}
+
+}

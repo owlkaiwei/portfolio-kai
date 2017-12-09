@@ -34,15 +34,6 @@ class GtMobile extends Component {
 	} 
 
 	componentDidMount() {
- 
-	    Events.scrollEvent.register('begin', function(to, element) {
-	      console.log("begin", arguments);
-	    })
-	 
-	    Events.scrollEvent.register('end', function(to, element) {
-	      console.log("end", arguments);
-	    })
-	 
 	    scrollSpy.update();
 	 
 	  }
@@ -52,8 +43,7 @@ class GtMobile extends Component {
 	  }
 
 	componentWillUnmount() {
-		Events.scrollEvent.remove('begin')
-		Events.scrollEvent.remove('end')
+		$("html, body").scrollTop(0)
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -77,8 +67,8 @@ class GtMobile extends Component {
 		              <a href='#/'>
 		                H O M E
 		              </a>
-		              <a href='#/work/taptile'>
-		                N E X T : T A P T I L E
+		              <a href='#/work/mood'>
+		                U P  N E X T :  M O o D
 		              </a>
 		            </div>
 		        </Headroom>
@@ -86,7 +76,7 @@ class GtMobile extends Component {
 					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="understand" smooth={true} offset={-100} >
+			        <ScrollLink activeClass="active" to="understanding" smooth={true} offset={-100} >
 			          <span className='label'>Research</span><span className='circle'></span>
 			        </ScrollLink>
 			        <ScrollLink activeClass="active" to="design" smooth={true} offset={-100}>

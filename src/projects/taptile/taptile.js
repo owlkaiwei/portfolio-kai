@@ -35,14 +35,6 @@ class TapTile extends Component {
 
 	componentDidMount() {
  
-	    Events.scrollEvent.register('begin', function(to, element) {
-	      console.log("begin", arguments);
-	    })
-	 
-	    Events.scrollEvent.register('end', function(to, element) {
-	      console.log("end", arguments);
-	    })
-	 
 	    scrollSpy.update();
 	 
 	  }
@@ -52,8 +44,7 @@ class TapTile extends Component {
 	  }
 
 	componentWillUnmount() {
-		Events.scrollEvent.remove('begin')
-		Events.scrollEvent.remove('end')
+		$("html, body").scrollTop(0)
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -78,7 +69,7 @@ class TapTile extends Component {
 		                H O M E
 		              </a>
 		              <a href='#/work/gtmobile'>
-		                N E X T : G T M O B I L E
+		                U P  N E X T : G T M O B I L E
 		              </a>
 		            </div>
 		        </Headroom>
@@ -133,7 +124,7 @@ class TapTile extends Component {
 		          </div>
 		          <div className='row'>
 		          	<p className='col s4 label'>Award</p>
-		          	<p className='col s8 content'><a href='http://cic.gatech.edu/fall-2016/winners'>First Prize @ Georgia Tech Convergence Innovation Competition</a></p>
+		          	<p className='col s8 content'><a href='http://cic.gatech.edu/fall-2016/winners'>First Place @ Georgia Tech Convergence Innovation Competition</a></p>
 		          </div>
 		          <div className='row'>
 		          	<p className='col s4 label'>Duration</p>
@@ -209,7 +200,7 @@ class TapTile extends Component {
 		        			<p className='quote'>Why be on the phone, when you can interact with people around you?</p>
 		        		</div>
 		        	</div>
-		        	<div className='row'>
+		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
 		        			<p className='title'>
 		        				Initiative

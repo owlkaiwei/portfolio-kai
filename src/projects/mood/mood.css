@@ -1,0 +1,54 @@
+#mood-page {
+  background-color: #2E2A48;
+  color: rgba(255, 255, 255, 0.9); }
+  #mood-page .title {
+    color: #FAA5A5; }
+  #mood-page .title:before {
+    background-color: #FFEF76; }
+  #mood-page .quote {
+    color: #9BE5E3; }
+  #mood-page .emphasis:after {
+    background-color: #FAA5A5; }
+  #mood-page .emphasis-new {
+    text-decoration-color: #FAA5A5; }
+  #mood-page .banner-text {
+    background-color: rgba(46, 42, 72, 0.75); }
+  #mood-page .banner-text h1 {
+    color: #FAA5A5; }
+  #mood-page .banner-text p {
+    color: #FAA5A5; }
+  #mood-page .banner-img {
+    height: 70% !important; }
+  #mood-page .left-vertical-line {
+    border-left: 0.4rem solid #FAA5A5; }
+  #mood-page .progress-container a {
+    color: #FAA5A5; }
+  #mood-page .project-navbar a {
+    color: #FAA5A5; }
+  #mood-page .project-navbar a:before {
+    background-color: #FAA5A5; }
+  #mood-page .project-navbar a:after {
+    background-color: #FAA5A5; }
+  #mood-page .project-nav-background {
+    background-color: #2E2A48;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  #mood-page .link-to-project {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #FAA5A5;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    cursor: pointer;
+    border: 1px solid #FAA5A5;
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #mood-page .link-to-project:hover {
+    background-color: rgba(250, 165, 165, 0.1); }
+  #mood-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.2); }
+  #mood-page a {
+    color: #FAA5A5; }

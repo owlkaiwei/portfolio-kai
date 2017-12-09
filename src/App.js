@@ -23,6 +23,7 @@ import {Work} from './work/work.js'
 
 import TapTile from './projects/taptile/taptile'
 import GtMobile from './projects/gtmobile/gtmobile'
+import Mood from './projects/mood/mood'
 
 
 
@@ -669,6 +670,7 @@ class App extends Component {
           <Route  path="/playground" component={()=><Playground/>}/>
           <Route  path="/work/taptile" component={TapTile}/>
           <Route  path="/work/gtmobile" component={GtMobile}/>
+          <Route  path="/work/mood" component={Mood}/>
         </div>
       </Router>
     );

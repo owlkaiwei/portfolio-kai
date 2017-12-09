@@ -68,18 +68,6 @@ export class Work extends Component {
 
 
 
-            <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
-                    <img className='thumbnail thumbnail-light' src={require('./src/taptile_thumbnail.png')}/>
-                </a>
-                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>TapTile</div>
-                    <div className='text'>
-                        <p>Interaction Design</p>
-                        <p>UX Research</p>
-                    </div>
-                </div>
-            </div>
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
@@ -96,7 +84,7 @@ export class Work extends Component {
             </div>
 
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='https://gtgunsnroses.github.io/music-infovis/' target='_blank'>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/mood'>
                     <img className='thumbnail thumbnail-dark' src={require('./src/mood_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
@@ -104,7 +92,20 @@ export class Work extends Component {
                     <div className='text'>
                         <p>Information Visualization</p>
                         <p>Interaction Design</p>
-                        <p>Motion Design</p>
+                        <p>Visual Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/taptile_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>TapTile</div>
+                    <div className='text'>
+                        <p>Interaction Design</p>
+                        <p>UX Research</p>
                     </div>
                 </div>
             </div>

@@ -49,6 +49,12 @@ $font-secondary: 'Halant';
 	align-items: center;
 }
 
+.container-center-horizontal {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+}
+
 h2 {
 	font-family: $font-primary;
 	font-size: 1.8rem;
@@ -396,8 +402,28 @@ p {
   z-index: -1;
 }
 
+.expandable {
+	cursor: zoom-in;
+	transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
+}
 
+.expandable:hover {
+	transform: scale(1.008)
+}
 
+.caption {
+	opacity: 0.8;
+	display: flex;
+	justify-content: center
+}
+
+.italic {
+	font-style: italic;
+}
+
+.emphasis-new {
+	text-decoration: underline;
+}
 
 
 
