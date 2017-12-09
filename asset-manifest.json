@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.22308842.css",
   "main.css.map": "static/css/main.22308842.css.map",
-  "main.js": "static/js/main.de03c9ed.js",
-  "main.js.map": "static/js/main.de03c9ed.js.map",
+  "main.js": "static/js/main.53860875.js",
+  "main.js.map": "static/js/main.53860875.js.map",
   "static/media/IA.png": "static/media/IA.6c725854.png",
   "static/media/Kaiwei_Wang_Resume.pdf": "static/media/Kaiwei_Wang_Resume.8342538c.pdf",
   "static/media/add_tag_shortened.gif": "static/media/add_tag_shortened.679428d3.gif",
@@ -46,6 +46,7 @@
   "static/media/interview@x5.png": "static/media/interview@x5.6ba01ea4.png",
   "static/media/latex_thumbnail.png": "static/media/latex_thumbnail.a3c88aae.png",
   "static/media/load.svg": "static/media/load.b660dd2b.svg",
+  "static/media/loader.gif": "static/media/loader.e729a569.gif",
   "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
   "static/media/mantra@x1.png": "static/media/mantra@x1.b5cb36c0.png",
   "static/media/mantra_bg@x1.png": "static/media/mantra_bg@x1.004442c6.png",
