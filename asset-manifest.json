@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.0f854f15.css",
   "main.css.map": "static/css/main.0f854f15.css.map",
-  "main.js": "static/js/main.9d1edc74.js",
-  "main.js.map": "static/js/main.9d1edc74.js.map",
+  "main.js": "static/js/main.e9800042.js",
+  "main.js.map": "static/js/main.e9800042.js.map",
   "static/media/IA.png": "static/media/IA.6c725854.png",
   "static/media/Kaiwei_Wang_Resume.pdf": "static/media/Kaiwei_Wang_Resume.8342538c.pdf",
   "static/media/add_tag_shortened.gif": "static/media/add_tag_shortened.679428d3.gif",
@@ -54,6 +54,8 @@
   "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
   "static/media/mantra@x1.png": "static/media/mantra@x1.b5cb36c0.png",
   "static/media/mantra_bg@x1.png": "static/media/mantra_bg@x1.004442c6.png",
+  "static/media/medband.png": "static/media/medband.c73a88d2.png",
+  "static/media/medband_full.png": "static/media/medband_full.9d3e940a.png",
   "static/media/metaphor.png": "static/media/metaphor.2058d696.png",
   "static/media/mood_board.png": "static/media/mood_board.f56d96df.png",
   "static/media/mood_thumbnail.png": "static/media/mood_thumbnail.36f5dda8.png",
@@ -90,6 +92,6 @@
   "static/media/two_people_tap.gif": "static/media/two_people_tap.026c5bcc.gif",
   "static/media/typeface@x2.png": "static/media/typeface@x2.0f3a15fd.png",
   "static/media/visual.gif": "static/media/visual.3f913d87.gif",
-  "static/media/wasted.png": "static/media/wasted.47bbef0d.png",
+  "static/media/wasted.png": "static/media/wasted.6fca925c.png",
   "static/media/wireframe.png": "static/media/wireframe.6b150cfa.png"
 }
