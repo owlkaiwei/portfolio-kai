@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.0f854f15.css",
   "main.css.map": "static/css/main.0f854f15.css.map",
-  "main.js": "static/js/main.e9800042.js",
-  "main.js.map": "static/js/main.e9800042.js.map",
+  "main.js": "static/js/main.148bc9e3.js",
+  "main.js.map": "static/js/main.148bc9e3.js.map",
   "static/media/IA.png": "static/media/IA.6c725854.png",
   "static/media/Kaiwei_Wang_Resume.pdf": "static/media/Kaiwei_Wang_Resume.8342538c.pdf",
   "static/media/add_tag_shortened.gif": "static/media/add_tag_shortened.679428d3.gif",
@@ -36,6 +36,7 @@
   "static/media/design_sprint_4.png": "static/media/design_sprint_4.ee2ea084.png",
   "static/media/detail_filter.gif": "static/media/detail_filter.c6767cac.gif",
   "static/media/diagram@x1.svg": "static/media/diagram@x1.978efe5a.svg",
+  "static/media/echoit_thumbnail.png": "static/media/echoit_thumbnail.e32b6eb3.png",
   "static/media/energy_tempo@x2.png": "static/media/energy_tempo@x2.738f5e99.png",
   "static/media/goals@x2.png": "static/media/goals@x2.845c52ee.png",
   "static/media/group.jpg": "static/media/group.c5acf07d.jpg",
