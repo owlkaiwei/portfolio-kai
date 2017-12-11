@@ -1,0 +1,190 @@
+@import '../../_shared.scss';
+
+#misc {
+
+$color-1: #FAA5A5;
+$color-2: $color-primary;
+$color-3: #9BE5E3;
+$main-text-color: rgba(255, 255, 255, 0.9); 
+$background-color: #2E2A48;
+
+
+#work-content {
+	z-index: 5;
+	transition: all 1s ease-in-out
+}
+
+.hidden {
+	opacity: 0;
+	transform: translateY(1rem)
+}
+
+.show {
+	opacity: 1;
+	transform: translateY(0)
+}
+
+.title {
+	font-family: 'Halant';
+	font-size: 3.5rem;
+	color: $color-primary
+}
+
+
+.text {
+	font-family: 'Halant';
+	font-size: 1.3rem;
+	color: $color-primary
+}
+
+.margin-top-page-start {
+	margin-top: 20vh
+}
+
+.margin-top-1 {
+	margin-top: 5rem
+}
+
+.margin-top-2 {
+	margin-top: 3rem
+}
+
+
+.thumbnail {
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+	transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
+}
+
+.thumbnail-light:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-dark:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail-text-container {
+	display: flex;
+	flex-direction: column;
+
+	div {
+		margin-left: 3rem
+	}
+
+	.title {
+		font-family: 'Josefin Sans';
+		font-size: 2rem;
+		color: $color-primary;
+	}
+
+	.text {
+		font-family: 'Halant';
+		font-size: 1.3rem;
+		color: $color-primary;
+	}
+}
+
+@media (max-width : 600px) {
+	.title {
+		font-family: 'Halant';
+		font-size: 3rem;
+		color: $color-primary
+	}
+
+	.hide-when-small {
+		display: none
+	}
+}
+
+/* Nav */
+.project-navbar {
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  z-index: 16;
+  color: black;
+  font-family: $font-primary;
+  font-size: 11px;
+  font-weight: 700;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-navbar a {
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.project-navbar  a:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: 18px;
+  z-index: 7;
+  left: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transform-origin: left;
+  will-change: transform;
+}
+
+.project-navbar > a:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.project-navbar  a:after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  z-index: 8;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+  transform-origin: right;
+}
+
+.project-nav-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12);
+
+}
+
+.project-navbar a {
+	color: $color-2;
+}
+
+.project-navbar  a:before {
+	background-color: $color-2;
+}
+
+.project-navbar  a:after {
+	background-color: $color-2;
+}
+
+.shadow {
+	box-shadow: 0 2px 21px #eaeaea
+}
+
+}

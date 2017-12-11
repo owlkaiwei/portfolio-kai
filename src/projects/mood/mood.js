@@ -14,6 +14,8 @@ import '../../../node_modules/aos/dist/aos.css';
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
 
+import Img from 'react-image'
+
 var Scroll  = require('react-scroll');
 
 var ScrollLink = Scroll.Link;
@@ -29,6 +31,7 @@ const emptyStack = {
 	images : []
 }
 
+const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
 
 
 class Mood extends Component {
@@ -124,7 +127,7 @@ class Mood extends Component {
 
 		        <Element name="banner" className="element banner-container">
 		        	<div className='banner-container-inner container-center-inside'>
-		        		<img className='banner-img' src={require('./src/banner.svg')} />
+		        		<Img className='banner-img' src={require('./src/banner.svg')} loader={loader} />
 		        	</div>
 		        	<div className='banner-container-inner container-center-inside'>
 		        		<div className='banner-text'>
@@ -189,7 +192,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow expandable' 
+			        				<Img className='width-80 img-max-width-2 shadow expandable' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/trend.gif'))
 		        							this.setState({
@@ -206,6 +209,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/trend.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -220,7 +224,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow expandable' 
+			        				<Img className='width-80 img-max-width-2 shadow expandable' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/slider.gif'))
 		        							this.setState({
@@ -237,6 +241,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/slider.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -250,7 +255,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow expandable' 
+			        				<Img className='width-80 img-max-width-2 shadow expandable' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/song_detail.gif'))
 		        							this.setState({
@@ -267,6 +272,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/song_detail.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -281,7 +287,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-100 img-max-width-3 shadow' src={require('./src/design_principles@x2.png')}/>
+			        				<Img className='width-100 img-max-width-3 shadow' src={require('./src/design_principles@x2.png')}/>
 			        			</p>
 			        		</div>
 			        	</div>
@@ -305,7 +311,7 @@ class Mood extends Component {
 			        				<span className='key-word'>Billboard Yearly Top 100 (1965 - 2015)</span>
 		        				</p>
 		        				<p className='width-100 container-center-inside'>
-		        					<img className='width-100 expandable shadow' 
+		        					<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/data_billboard.png'))
 		        							this.setState({
@@ -322,6 +328,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/data_billboard.png')}
+		        						loader={loader}
 	        						/>
 		        				</p>
 		        				<p>
@@ -336,7 +343,7 @@ class Mood extends Component {
 		        					Thanks to <a href='https://developer.spotify.com/web-api/object-model/#audio-features-object' target='_blank'>Spotify Web API</a>, we were able to obtain detailed information about a track, including its audio features.
 		        				</p>
 		        				<p className='width-100 container-center-inside'>
-		        					<img className='width-100 expandable shadow' 
+		        					<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/api_object_full.png'))
 		        							this.setState({
@@ -353,6 +360,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/api_object_short.png')}
+		        						loader={loader}
 	        						/>
 		        				</p>
 		        				<p className='caption'>
@@ -363,7 +371,7 @@ class Mood extends Component {
 		        					I presented to my team my initial understanding of the data
 		        				</p>
 		        				<p className='width-100 container-center-inside'>
-		        					<img className='width-100' src={require('./src/data_scheme@x2.png')}/>
+		        					<Img className='width-100' src={require('./src/data_scheme@x2.png')}/>
 		        				</p>
 		        				<p>
 		        					A two-dimensional scheme can be extracted - time from year 1965 to year 2015, and songs in each year ranking from 1 to 100.
@@ -405,7 +413,7 @@ class Mood extends Component {
 		        		<div className='row margin-top-2' data-aos='fade-up'>
 				        		<div className='col s12'>
 				        		<p className='width-100 container-center-inside'>
-			        					<img className='width-100' src={require('./src/goals@x2.png')}/>
+			        					<Img className='width-100' src={require('./src/goals@x2.png')}/>
 			        				</p>
 				        			<p className='title margin-top-2'>
 				        				User Goals
@@ -473,7 +481,7 @@ class Mood extends Component {
         				<div className='row'>
 			        		<div className='col s12 l6'>
 			        			<p className='width-100'>
-			        				<img className='width-100 expandable shadow' 
+			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/alternative_1_big@x2.png'))
 		        							this.setState({
@@ -490,12 +498,13 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/alternative_1@x2.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 	        				</div>
 	        				<div className='col s12 l6'>
 			        			<p className='width-100'>
-			        				<img className='width-100 expandable shadow' 
+			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/alternative_2_big@x2.png'))
 		        							this.setState({
@@ -512,13 +521,14 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/alternative_2@x2.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 	        				</div>
 
 			        		<div className='col s12 l6'>
 			        			<p className='width-100'>
-			        				<img className='width-100 expandable shadow' 
+			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/alternative_3_big@x2.png'))
 		        							this.setState({
@@ -535,12 +545,13 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/alternative_3@x2.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 	        				</div>
 	        				<div className='col s12 l6'>
 			        			<p className='width-100'>
-			        				<img className='width-100 expandable shadow' 
+			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/alternative_4_big@x2.png'))
 		        							this.setState({
@@ -557,6 +568,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/alternative_4@x2.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 	        				</div>
@@ -568,7 +580,7 @@ class Mood extends Component {
 			        				High-Fidelity Interface Design
 			        			</p>
 			        			<p className='margin-top-2'>
-			        				<img className='width-100 expandable shadow' 
+			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/interface@x1.png'))
 		        							this.setState({
@@ -585,6 +597,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/interface@x1.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        			<p className='left-vertical-line key-word margin-top-2'>
@@ -600,7 +613,7 @@ class Mood extends Component {
 			        				that presents both the hollistic and the detailed data to the user.
 			        			</p>
 			        			<p className=''>
-			        				<img className='width-100 expandable' 
+			        				<Img className='width-100 expandable' 
 		        						onLoad={()=>{
 		        							images.push(require('./src/mantra_bg@x1.png'))
 		        							this.setState({
@@ -617,6 +630,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/mantra@x1.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 	        				</div>
@@ -636,7 +650,7 @@ class Mood extends Component {
 			        				 each interaction should serves a user task, and then that user task should be in a group of tasks that achieve a user goal.</span>
 			        			</p>
 			        			<p className='width-100 container-center-inside'>
-		        					<img className='width-100' src={require('./src/interaction_highlevel@x2.png')}/>
+		        					<Img className='width-100' src={require('./src/interaction_highlevel@x2.png')}/>
 		        				</p>
 		        				<p>
 		        					Keeping the user's process in mind, I found it easier to come up with meaningful interactions that ultimately help the 
@@ -669,7 +683,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow expandable' 
+			        				<Img className='width-80 img-max-width-2 shadow expandable' 
 		        						onClick={()=>{
 		        							console.log(images)
 		        							this.setState({
@@ -678,6 +692,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/trend.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -695,7 +710,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow expandable' 
+			        				<Img className='width-80 img-max-width-2 shadow expandable' 
 			        					onLoad={()=>{
 		        							images.push(require('./src/hover_year@x2.png'))
 		        							this.setState({
@@ -712,6 +727,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/hover_year@x2.png')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -738,7 +754,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-100 img-max-width-2 expandable' 
+			        				<Img className='width-100 img-max-width-2 expandable' 
 			        					onLoad={()=>{
 		        							images.push(require('./src/detail_filter.gif'))
 		        							this.setState({
@@ -755,6 +771,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/detail_filter.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -766,7 +783,7 @@ class Mood extends Component {
 				        			Interaction #2 - Sliding through Years
 				        		</p>
 				        		<p className='width-100'>
-				        			<img className='width-100 expandable shadow' 
+				        			<Img className='width-100 expandable shadow' 
 		        						onClick={()=>{
 		        							console.log(images)
 		        							this.setState({
@@ -775,6 +792,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/slider.gif')}
+		        						loader={loader}
 	        						/>
 				        		</p>
 				        		<p>
@@ -806,7 +824,7 @@ class Mood extends Component {
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
 			        			<p className='width-100 container-center-inside'>
-			        				<img className='width-80 img-max-width-2 shadow' 
+			        				<Img className='width-80 img-max-width-2 shadow' 
 		        						onClick={()=>{
 		        							console.log(images)
 		        							this.setState({
@@ -815,6 +833,7 @@ class Mood extends Component {
 		        							})
 		        						}}
 		        						src={require('./src/song_detail.gif')}
+		        						loader={loader}
 	        						/>
 			        			</p>
 			        		</div>
@@ -826,7 +845,7 @@ class Mood extends Component {
 				        			Visual Mapping - Color
 				        		</p>
 				        		<p>
-				        			<img className='width-100 container-center-inside' src={require('./src/color@x2.png')}/>
+				        			<Img className='width-100 container-center-inside' src={require('./src/color@x2.png')} loader={loader}/>
 				        		</p>
 				        		<p>
 				        			The valence (0 - 1) of the song is visually mapped to a color between #F961A0 and #56E4E4. 
@@ -840,7 +859,7 @@ class Mood extends Component {
 				        			Visual Mapping - Animation
 				        		</p>
 				        		<p>
-				        			<img className='width-100 container-center-inside' src={require('./src/energy_tempo@x2.png')}/>
+				        			<Img className='width-100 container-center-inside' src={require('./src/energy_tempo@x2.png')} loader={loader}/>
 				        		</p>
 				        		<p>
 				        			A song's tempo is conveyed through the frequency of growing/contracting animation, while its 
@@ -881,7 +900,7 @@ class Mood extends Component {
 				        			theme of "seeking" and "music".
 				        		</p>
 				        		<p>
-				        			<img className='width-100 container-center-inside' src={require('./src/metaphor.png')}/>
+				        			<Img className='width-100 container-center-inside' src={require('./src/metaphor.png')} loader={loader}/>
 				        		</p>
 				        		<p className='key-word'>
 				        			3. Enclosure
@@ -898,11 +917,22 @@ class Mood extends Component {
 				        			Typeface
 				        		</p>
 				        		<p>
-				        			<img className='width-100 container-center-inside' src={require('./src/typeface@x2.png')}/>
+				        			<Img className='width-100 container-center-inside' src={require('./src/typeface@x2.png')} loader={loader}/>
 				        		</p>
 				        		<p>
 				        			The visualization is themed with multiple round-shaped components. To create graphical tension between round 
 				        			shapes and the text, I chose a condensed font that is tall, narrow, and elegant.
+				        		</p>
+			        		</div>
+		        		</div>
+
+		        		<div className='row margin-top-2' data-aos='fade-up'>
+		        			<div className='col s12'>
+				        		<p className='left-vertical-line key-word'>
+				        			Graphical Integrity
+				        		</p>
+				        		<p>
+				        			On the left-hand view, graphical integrity is preserved by presenting the entire scale for the range of the data.
 				        		</p>
 			        		</div>
 		        		</div>
@@ -912,7 +942,78 @@ class Mood extends Component {
 	        	<Element name='evaluation'>
 	        		<div className='my-container'>
 		        		<div className='row container-center-inside margin-top-1'>
-			        		<h2>- Evaluation -</h2>
+			        		<h2>- Evaluation & Feedback -</h2>
+			        	</div>
+
+			        	<div className='row margin-top-2'>
+			        		<div className='col s12'>
+			        			<p>
+			        				After finishing developing the visualization, the team obtained feedback from the Information Visualization 
+			        				class by letting classmates try out the design.
+			        			</p>
+			        		</div>
+			        	</div>
+
+			        	<div className='row margin-top-2'>
+			        		<div className='col s12'>
+				        		<p className='title'>
+				        			Usability Metrics
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Learnability
+				        		</p>
+				        		<p>
+				        			Due to the minimal design practiced in the visualization, some users found it hard to understand all the features. 
+				        			I then improved learnability by providing an Intro page as well as an always-accessible ‘Help’ menu that would bring up a graphic on various controls and descriptions of areas on the screen.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Effectiveness
+				        		</p>
+				        		<p>
+				        			The design allows users to easily answer the questions identified earlier in the report with ease, and relatively few steps.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Insightfulness
+				        		</p>
+				        		<p>
+				        			Other than the pre-identified set of questions, the visualization also allows for discovery of insights through interactions. The class interacted with the visualization and came   up   with   the   following   insights:
+				        		</p>
+				        		<p>	
+				        			1. Songs   that   were   high   on   billboard   rankings   do   not   necessarily   remain   popular.
+				        		</p>
+				        		<p>
+				        			2. Songs   that   were   lower   down   on   billboard   rankings   can   regain   popularity   today.
+				        		</p>
+				        		<p>
+				        			3. Songs   that   were   high   on   billboards   in   recent   years   are   more   popular   today.
+				        		</p>
+				        		<p>
+				        			4. The generic shape/trend over the years for loudness and energy seemed to be correlated.
+				        		</p>
+				        		<p>
+				        			5. 1983   was   definitely   a   more   positive   year   than   2015. (Try to find out about this in the visualization :D)
+				        		</p>
+			        		</div>
+			        	</div>
+
+			        	<div className='row margin-top-2'>
+			        		<div className='col s12'>
+				        		<p className='title'>
+				        			User Experience Metrics
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Enjoyment
+				        		</p>
+				        		<p>
+				        			Including the ability to play the song selection aims to increase enjoyment. Coupled with the pulsing circles in accordance with the tempo, enjoyment levels are expected to be   high.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Engagement
+				        		</p>
+				        		<p>
+				        			Given that the dataset paints a different picture each year, users’ engagement is expected to remain high as exploration continues due to the various surprises that may lie in store. Especially for music lovers, transporting them back to the past, to their childhood   oldies   will   also   keep   engagement   levels   high.
+				        		</p>
+			        		</div>
 			        	</div>
 		        	</div>
 	        	</Element>
@@ -923,14 +1024,64 @@ class Mood extends Component {
 			        		<h2>- Reflection -</h2>
 			        	</div>
 
-			        	<div className='row margin-top-2' data-aos='fade-up'>
+			        	<div className='row margin-top-2'>
+			        		<div className='col s12'>
+				        		<p>
+				        			I am proud of not only how MOoD turned out to be, but also the process that brought me to the final solution. Unlike 
+				        			any other kind of apps or websites, MOoD broadened my horizon to the field of information visualization where I got to 
+				        			learn and apply some domain-specific principles.
+				        		</p>
+			        		</div>
+		        		</div>
 
+			        	<div className='row'>
+			        		<div className='col s12'>
+				        		<p className='left-vertical-line key-word'>
+				        			Task-Driven Design Process
+				        		</p>
+				        		<p>
+				        			When designing the multiple interactions, I started out coming up concepts that turned out 
+				        			to be meaningless. Then I started to ask myself <span className='quote'>what interaction 
+				        			can really help the user achieve the goals?</span>  The reversed process of goao-task-interaction 
+				        			really kept me close to the user and design meaningful interactions.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Perception and Culture
+				        		</p>
+				        		<p>
+				        			One of the feedbacks that I got was the color mapping for valence was arguably inaccurate. In some cultures, 
+				        			red is perceived more negative than green. In the future, I will be more careful when it comes to subjective 
+				        			perception metrics like color mapping and try to find a more appropriate solution.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			Trade-off between Visual Effect and Graphical Integrity
+				        		</p>
+				        		<p>
+				        			For the left-side view, a difficult decision was made to keep the X-axis full range instead of just the range where 
+				        			the data lies in. This decision compromised some visual effect of the trends but preserved the graphical integrity, 
+				        			which was more important. <span className='quote'>I would rather tell a bland story than a dishonest one</span>.
+				        		</p>
+				        		<p className='left-vertical-line key-word'>
+				        			The Power of Music
+				        		</p>
+				        		<p>
+				        			I felted so rewarded by the look of people when they found their favorite songs on the chart with a circles bouncing 
+				        			to the beats, because that was how I felt when I was designing MOoD. What I hear, what I see, and my passion for music 
+				        			just all clicked together and created a beautiful story that an Excel sheet does not do.
+				        		</p>
+				        		<p className='margin-top-2 container-center-inside'>
+				        			<Img className='width-30' src={require('./src/banner.svg')} loader={loader} />
+				        		</p>
+
+
+
+			        		</div>
 			        	</div>
 		        	</div>
 	        	</Element>
 
 
-        		<div style={{height: '1000px'}}>
+        		<div style={{height: '500px'}}>
         		</div>
 
 		        

@@ -1,0 +1,120 @@
+#misc {
+  /* Nav */ }
+  #misc #work-content {
+    z-index: 5;
+    transition: all 1s ease-in-out; }
+  #misc .hidden {
+    opacity: 0;
+    transform: translateY(1rem); }
+  #misc .show {
+    opacity: 1;
+    transform: translateY(0); }
+  #misc .title {
+    font-family: 'Halant';
+    font-size: 3.5rem;
+    color: #0F3351; }
+  #misc .text {
+    font-family: 'Halant';
+    font-size: 1.3rem;
+    color: #0F3351; }
+  #misc .margin-top-page-start {
+    margin-top: 20vh; }
+  #misc .margin-top-1 {
+    margin-top: 5rem; }
+  #misc .margin-top-2 {
+    margin-top: 3rem; }
+  #misc .thumbnail {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1); }
+  #misc .thumbnail-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }
+  #misc .thumbnail-dark:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
+  #misc .thumbnail-text-container {
+    display: flex;
+    flex-direction: column; }
+    #misc .thumbnail-text-container div {
+      margin-left: 3rem; }
+    #misc .thumbnail-text-container .title {
+      font-family: 'Josefin Sans';
+      font-size: 2rem;
+      color: #0F3351; }
+    #misc .thumbnail-text-container .text {
+      font-family: 'Halant';
+      font-size: 1.3rem;
+      color: #0F3351; }
+  @media (max-width: 600px) {
+    #misc .title {
+      font-family: 'Halant';
+      font-size: 3rem;
+      color: #0F3351; }
+    #misc .hide-when-small {
+      display: none; } }
+  #misc .project-navbar {
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    z-index: 16;
+    color: black;
+    font-family: "Josefin Sans";
+    font-size: 11px;
+    font-weight: 700;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  #misc .project-navbar a {
+    margin: 0 30px;
+    cursor: pointer; }
+  #misc .project-navbar a:before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 18px;
+    z-index: 7;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transform-origin: left;
+    will-change: transform; }
+  #misc .project-navbar > a:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  #misc .project-navbar a:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    z-index: 8;
+    left: 0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
+    transform-origin: right; }
+  #misc .project-nav-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #misc .project-navbar a {
+    color: #0F3351; }
+  #misc .project-navbar a:before {
+    background-color: #0F3351; }
+  #misc .project-navbar a:after {
+    background-color: #0F3351; }
+  #misc .shadow {
+    box-shadow: 0 2px 21px #eaeaea; }

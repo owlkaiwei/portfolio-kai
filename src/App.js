@@ -24,7 +24,7 @@ import {Work} from './work/work.js'
 import TapTile from './projects/taptile/taptile'
 import GtMobile from './projects/gtmobile/gtmobile'
 import Mood from './projects/mood/mood'
-
+import Misc from './projects/misc/misc'
 
 
 var Scroll  = require('react-scroll');
@@ -671,6 +671,7 @@ class App extends Component {
           <Route  path="/work/taptile" component={TapTile}/>
           <Route  path="/work/gtmobile" component={GtMobile}/>
           <Route  path="/work/mood" component={Mood}/>
+          <Route  path="/work/misc" component={Misc}/>
         </div>
       </Router>
     );

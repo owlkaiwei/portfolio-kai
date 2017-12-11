@@ -91,8 +91,8 @@ export class Work extends Component {
                     <div className='title'>M O o D</div>
                     <div className='text'>
                         <p>Information Visualization</p>
-                        <p>Interaction Design</p>
-                        <p>Visual Design</p>
+                        <p>Interaction</p>
+                        <p>Visual</p>
                     </div>
                 </div>
             </div>
@@ -104,37 +104,29 @@ export class Work extends Component {
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>TapTile</div>
                     <div className='text'>
-                        <p>Interaction Design</p>
+                        <p>Interaction</p>
                         <p>UX Research</p>
                     </div>
                 </div>
             </div>
 
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='http://www.imlc.io/apps' target='_blank'>
-                    <img className='thumbnail thumbnail-light' src={require('./src/imlc_thumbnail.png')}/>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/misc'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/other_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>WeCollabrify</div>
+                    <div className='title'>Miscellaneous</div>
                     <div className='text'>
-                        <p>Web Development</p>
-                        <p>UI Design</p>
+                        <p>Graphic</p>
+                        <p>Poster</p>
+                        <p>Logo</p>
                     </div>
                 </div>
             </div>
 
-            <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5855524' target='_blank'>
-                    <img className='thumbnail thumbnail-light' src={require('./src/pokecraft_thumbnail.png')}/>
-                </a>
-                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>PokeCraft</div>
-                    <div className='text'>
-                        <p>Game Design</p>
-                        <p>Unity</p>
-                    </div>
-                </div>
-            </div>
+
+
+        
 
 
 
@@ -174,6 +166,32 @@ export class Work extends Component {
                     <div className='text'>
                         <p>Machine Learning</p>
                         <p>Image Processing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='http://www.imlc.io/apps' target='_blank'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/imlc_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>WeCollabrify</div>
+                    <div className='text'>
+                        <p>Web Development</p>
+                        <p>UI Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5855524' target='_blank'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/pokecraft_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>PokeCraft</div>
+                    <div className='text'>
+                        <p>Game Design</p>
+                        <p>Unity</p>
                     </div>
                 </div>
             </div>

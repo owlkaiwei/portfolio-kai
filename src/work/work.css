@@ -1,8 +1,3 @@
-.work-container-outer {
-  position: abosolute;
-  width: 100%;
-  height: 200vh; }
-
 #work-content {
   z-index: 5;
   transition: all 1s ease-in-out; }
@@ -14,10 +9,6 @@
 .show {
   opacity: 1;
   transform: translateY(0); }
-
-.work-scope .test {
-  background-color: red;
-  height: 300vh; }
 
 .work-scope .title {
   font-family: 'Halant';
