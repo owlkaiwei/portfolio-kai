@@ -17,16 +17,6 @@
   @media (min-width: 1201px) {
     .project-page .my-container {
       width: 55%; } }
-  .project-page .container-center-inside {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center; }
-  .project-page .container-center-horizontal {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center; }
   .project-page h2 {
     font-family: "Josefin Sans";
     font-size: 1.8rem;
@@ -192,10 +182,11 @@
     justify-content: center;
     align-items: center;
     width: 100%; }
-  .project-page .project-navbar a {
+  .project-page .project-navbar .text-link {
     margin: 0 30px;
-    cursor: pointer; }
-  .project-page .project-navbar a:before {
+    cursor: pointer;
+    z-index: 2; }
+  .project-page .project-navbar .text-link:before {
     content: "";
     position: relative;
     display: block;
@@ -210,10 +201,10 @@
     transition: all 0.65s cubic-bezier(0.7, 0.3, 0, 1);
     transform-origin: left;
     will-change: transform; }
-  .project-page .project-navbar > a:hover:before {
+  .project-page .project-navbar .text-link:hover:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
-  .project-page .project-navbar a:after {
+  .project-page .project-navbar .text-link:after {
     content: "";
     position: relative;
     display: block;
@@ -233,6 +224,39 @@
     position: absolute;
     left: 0;
     z-index: -1; }
+  .project-page .back-container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; }
+  .project-page .back-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+    cursor: pointer; }
+  .project-page .back-wrapper:after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: block;
+    /* padding-top: 100%; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: black;
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1); }
+  .project-page .back-wrapper:hover:after {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(1); }
+  .project-page .back-arrow {
+    width: 24px;
+    vertical-align: middle; }
+  .project-page .back-container a {
+    margin: 0 50px !important; }
   .project-page .caption {
     opacity: 0.8;
     display: flex;

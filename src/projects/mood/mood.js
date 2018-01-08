@@ -66,9 +66,6 @@ class Mood extends Component {
 		AOS.refresh();
 	}
 
-	componentWillUnmount() {
-		$("html, body").scrollTop(0)
-	}
 
 
 	render() {
@@ -93,15 +90,25 @@ class Mood extends Component {
 		        )}
 				<Headroom disableInlineStyles={true}>
 		            <div className='project-navbar'>
+		            <div className='nav-container-outer'>
+		            	<div className='back-container'>
+			                <a className='back-wrapper' href='#/work'>
+			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
+			                </a>
+			                <a className='text-link' href='#/work/reco'>
+				                U P  &nbsp; N E X T : &nbsp; R E C O
+				            </a>
+			              </div>
+			              </div>
 		              <div className='project-nav-background'/>
-		              <a href='#/work'>
+		              <a className='text-link' href='#/work'>
 		                W O R K
 		              </a>
-		              <a href='#/'>
+		              <a className='text-link' href='#/'>
 		                H O M E
 		              </a>
-		              <a href='#/work/taptile'>
-		                U P  N E X T : T A P T I L E
+		              <a className='text-link' href='#/playground'>
+		                P L A Y G R O U N D
 		              </a>
 		            </div>
 		        </Headroom>
@@ -467,6 +474,59 @@ class Mood extends Component {
 			        			<p className='title'>
 			        				Brainstorming & Sketching
 			        			</p>
+			        			<p>
+			        				The team first diverged to brainstrom and roughly sketch out concepts. In this phase, I focused 
+			        				on efficient usage of the multiple attraibutes in a high-level information layout.
+			        			</p>
+	        				</div>
+        				</div>
+
+        				<div className='row'>
+			        		<div className='col s12 l6'>
+			        			<p className='width-100'>
+			        				<Img className='width-100 expandable shadow' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/sketch_1.jpg'))
+		        							this.setState({
+		        								images : images,
+		        								sketch_1_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							console.log(images)
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.sketch_1_index
+		        							})
+		        						}}
+		        						src={require('./src/sketch_1_small.png')}
+		        						loader={loader}
+	        						/>
+			        			</p>
+	        				</div>
+	        				<div className='col s12 l6'>
+			        			<p className='width-100'>
+			        				<Img className='width-100 expandable shadow' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/sketch_2.jpg'))
+		        							this.setState({
+		        								images : images,
+		        								sketch_2_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							console.log(images)
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.sketch_2_index
+		        							})
+		        						}}
+		        						src={require('./src/sketch_2_small.png')}
+		        						loader={loader}
+	        						/>
+			        			</p>
 	        				</div>
         				</div>
 
@@ -474,6 +534,13 @@ class Mood extends Component {
 			        		<div className='col s12'>
 			        			<p className='title'>
 			        				Medium-Fidelity Design Alternatives
+			        			</p>
+			        			<p >
+			        				Having obtained the team's feedback on the above two rough concepts, I turned them into 
+			        				medium-fidelity designs (Idea 01 and Idead 04) for an in-class design sprint. 
+			        			</p>
+			        			<p>
+			        				(Please click on the graphs to see the complete description of them.)
 			        			</p>
 	        				</div>
         				</div>
@@ -572,7 +639,45 @@ class Mood extends Component {
 	        						/>
 			        			</p>
 	        				</div>
+
         				</div>
+
+        				<div className='row' data-aos='fade-up'>
+			        		<div className='col s12'>
+			        			<p >
+			        				We presented the above design alternatives to the class and obtained valuable feedback. 
+			        			</p>
+			        			<p className='left-vertical-line'>
+				        			The designs were limited within just one view, each featuring a set of attributes. With so many interesting 
+				        			attributes in our dataset, an "overview-zoom-filter-detail" structure(Schneiderman's Mantra) might be more 
+				        			efficient.
+				        		</p>
+	        				</div>
+        				</div>
+
+        				<div className='row margin-top-2' data-aos='fade-up'>
+			        		<div className='col s12'>
+			        			<p className='title'>
+			        				Converge
+			        			</p>
+	        				</div>
+	        				<div className='col s12 l6 push-l6'>
+				        		<p className='left-vertical-line'>
+				        			With the feedback and a better understanding of the data, the team gathered once more to combine and revise 
+				        			the designs. An "overview-zoom-filter-detail" structure started to take shape.
+				        		</p>
+			        		</div>
+			        		<div className='col s12 l6 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<Img className='width-100' 
+		        						src={require('./src/converge.jpg')}
+		        						loader={loader}
+	        						/>
+			        			</p>
+			        		</div>
+        				</div>
+
+        			
 
         				<div className='row margin-top-2' data-aos='fade-up'>
 			        		<div className='col s12'>
@@ -609,7 +714,7 @@ class Mood extends Component {
 
 			        			<p>
 			        				Schneiderman's Mantra is one of the key design principles applied when I was
-			        				designing the visualization. It helped me construct an logical information architecture
+			        				designing the visualization. It helped me construct a logical information architecture
 			        				that presents both the hollistic and the detailed data to the user.
 			        			</p>
 			        			<p className=''>
@@ -647,7 +752,7 @@ class Mood extends Component {
 			        				<span className='key-word'>Representation</span> and <span className='key-word'>interaction</span> 
 			        				  &nbsp;are two equally important components of an information visualization. When I was designing the interaction, something that I
 			        				 kept reminding myself was: <span className='emphasis-new'>When the user is presented the visualization, 
-			        				 each interaction should serves a user task, and then that user task should be in a group of tasks that achieve a user goal.</span>
+			        				 each interaction should serve a user task, and then that user task should be in a group of tasks that achieve a user goal.</span>
 			        			</p>
 			        			<p className='width-100 container-center-inside'>
 		        					<Img className='width-100' src={require('./src/interaction_highlevel@x2.png')}/>
@@ -705,7 +810,7 @@ class Mood extends Component {
 				        		</p>
 				        		<p>
 				        			If interested in more quantitative detail of a year, the user can hover on 
-			        				the circle and a modal will appear near the cursor.
+			        				the circle to read a list of attributes of that year.
 				        		</p>
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
@@ -744,7 +849,7 @@ class Mood extends Component {
 		        		<div className='row'>
 			        		<div className='col s12 l6 push-l6'>
 				        		<p className='left-vertical-line key-word'>
-				        			Interaction #1 - Filtering Songs Based on Current Popularity
+				        			Interaction #3 - Filtering Songs Based on Current Popularity
 				        		</p>
 				        		<p>
 				        			In the detail view of each year, songs ranking from #1 to #100 are ordered 
@@ -780,7 +885,7 @@ class Mood extends Component {
 			        	<div className='row'>
 			        		<div className='col s12'>
 				        		<p className='left-vertical-line key-word'>
-				        			Interaction #2 - Sliding through Years
+				        			Interaction #4 - Sliding through Years
 				        		</p>
 				        		<p className='width-100'>
 				        			<Img className='width-100 expandable shadow' 
@@ -816,7 +921,7 @@ class Mood extends Component {
 		        		<div className='row margin-top-2' data-aos='fade-up'>
 		        			<div className='col s12 l6 push-l6'>
 				        		<p className='left-vertical-line key-word'>
-				        			Interaction - Hovering for Song Detail
+				        			Interaction #5  - Hovering for Song Detail
 				        		</p>
 				        		<p>
 				        			When hovering over the a song, the bar is thickened and song detail is displayed.
@@ -1037,12 +1142,12 @@ class Mood extends Component {
 			        	<div className='row'>
 			        		<div className='col s12'>
 				        		<p className='left-vertical-line key-word'>
-				        			Task-Driven Design Process
+				        			Goal-Driven Design Process
 				        		</p>
 				        		<p>
-				        			When designing the multiple interactions, I started out coming up concepts that turned out 
-				        			to be meaningless. Then I started to ask myself <span className='quote'>what interaction 
-				        			can really help the user achieve the goals?</span>  The reversed process of goao-task-interaction 
+				        			When designing the multiple interactions, I started out coming up with concepts that turned out 
+				        			to be somewhat meaningless. They might look fancy, but still meaningless. Then I started to ask myself <span className='quote'>what interaction 
+				        			can really help the user achieve the goals?</span>  The reversed process of goal-task-interaction 
 				        			really kept me close to the user and design meaningful interactions.
 				        		</p>
 				        		<p className='left-vertical-line key-word'>

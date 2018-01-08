@@ -116,12 +116,13 @@ $background-color: #2E2A48;
   width: 100%;
 }
 
-.project-navbar a {
+.project-navbar .text-link {
   margin: 0 30px;
   cursor: pointer;
+  z-index: 2
 }
 
-.project-navbar  a:before {
+.project-navbar  .text-link:before {
   content: "";
   position: relative;
   display: block;
@@ -138,13 +139,13 @@ $background-color: #2E2A48;
   will-change: transform;
 }
 
-.project-navbar > a:hover:before {
+.project-navbar  .text-link:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
 
-.project-navbar  a:after {
+.project-navbar  .text-link:after {
   content: "";
   position: relative;
   display: block;
@@ -185,6 +186,51 @@ $background-color: #2E2A48;
 
 .shadow {
 	box-shadow: 0 2px 21px #eaeaea
+}
+
+.back-container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between
+}
+
+.back-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.back-wrapper:after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: block;
+    /* padding-top: 100%; */
+    position: absolute;
+    left: 50%;
+    top:50%;
+    background-color: black;
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
+  }
+
+.back-wrapper:hover:after {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.back-arrow {
+  width: 24px;
+  vertical-align: middle
+}
+
+.back-container a {
+  margin: 0 50px !important
 }
 
 }

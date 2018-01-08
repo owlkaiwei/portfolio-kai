@@ -25,9 +25,9 @@
     color: #FAA5A5; }
   #mood-page .project-navbar a {
     color: #FAA5A5; }
-  #mood-page .project-navbar a:before {
+  #mood-page .project-navbar .text-link:before {
     background-color: #FAA5A5; }
-  #mood-page .project-navbar a:after {
+  #mood-page .project-navbar .text-link:after {
     background-color: #FAA5A5; }
   #mood-page .project-nav-background {
     background-color: #2E2A48;

@@ -45,6 +45,7 @@
 
 .thumbnail {
 	width: 100%;
+	border-radius: 10px;
 	height: auto;
 	transform: scale(1);
 	transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1);
@@ -91,6 +92,23 @@
 	.hide-when-small {
 		display: none
 	}
+}
+
+.emoji {
+	height: 1.3rem
+}
+
+.emoji-big {
+	vertical-align: middle;
+	height: 3.5rem
+}
+
+.emoji-container {
+	display: inline-block;
+}
+
+.work-email-link {
+	position: relative;
 }
 
 }

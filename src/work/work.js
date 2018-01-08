@@ -10,23 +10,22 @@ import 'jquery.easing';
 import './work.css';
 import AOS from 'aos'; 
 import '../../node_modules/aos/dist/aos.css'; 
+import Waypoint from 'react-waypoint';
 
 export class Work extends Component {
 
 	constructor() {
 		super()
 		AOS.init({
-	        once: true,
+	        once: false,
 	        duration: 500
      	}); 
 	}
 
 	componentWillMount() {
-        console.log('work will mount')
 	}
 
 	componentDidMount() {
-        console.log('work did mount')
     $('#work-btn').addClass('after-animation');
     $('#home-btn').removeClass('after-animation');
     $('#playground-btn').removeClass('after-animation');
@@ -40,7 +39,7 @@ export class Work extends Component {
     $('#vertical-line-left').addClass('vertical-line-left-work');
 
     $('#work-content').removeClass('hidden')
-    $('#work-content').removeClass('show')
+    $('#work-content').addClass('show')
 
   }
 
@@ -78,6 +77,7 @@ export class Work extends Component {
                     <div className='text'>
                         <p>Responsive Web App Design</p>
                         <p>Information Architecture</p>
+                        <p>Interaction Design</p>
                         <p>Style Guide</p>
                     </div>
                 </div>
@@ -90,9 +90,23 @@ export class Work extends Component {
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>M O o D</div>
                     <div className='text'>
-                        <p>Information Visualization</p>
-                        <p>Interaction</p>
-                        <p>Visual</p>
+                        <p>Music Information Visualization</p>
+                        <p>Interaction Design</p>
+                        <p>Visual Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/reco'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/echoit_thumbnail@2x.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Reco</div>
+                    <div className='text'>
+                        <p>iOS 11 App Design</p>
+                        <p>Motion Design</p>
+                        <p>Branding</p>
                     </div>
                 </div>
             </div>
@@ -104,11 +118,14 @@ export class Work extends Component {
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>TapTile</div>
                     <div className='text'>
-                        <p>Interaction</p>
+                        <p>Physical Sensor-Based Prototyping</p>
+                        <p>Interaction Design</p>
                         <p>UX Research</p>
                     </div>
                 </div>
             </div>
+
+            
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/misc'>
@@ -138,12 +155,43 @@ export class Work extends Component {
             <div className='row margin-top-2' data-aos="fade-up">
                 <div className='col s10 push-s1 m8 xl6 text'>
                     I did some cool stuff when I was a Computer Science & Engineering student. From machine learning to web dev, these projects shaped my understanding of the technical world.
-                     I can’t count how many times my technical background made me a versatile team player.
+                     I can’t count how many times my technical background made me <span style={{'position':'relative'}} className='team-player'>a versatile team player</span>.
+                </div>
+                <Waypoint
+                      onEnter={()=>{$('.team-player').addClass('text-reveal')}}
+                      onLeave={()=>{$('.team-player').removeClass('text-reveal')}}
+                />
+            </div>
+
+            <div className='row margin-top-1'>
+                 <div className='col s10 push-s1 m5' data-aos='fade-up'>
+                    <a className='width-100' href='https://kaiwei.carbonmade.com/projects/5855524' target='_blank'>
+                        <img className='thumbnail thumbnail-light' src={require('./src/pokecraft_thumbnail.png')}/>
+                    </a>
+                </div>
+                <div className='col s10 push-s1 m5' data-aos='fade-up' data-aos-delay={300}>
+                    <a className='width-100' href='http://www.imlc.io/apps' target='_blank'>
+                        <img className='thumbnail thumbnail-light' src={require('./src/imlc_thumbnail.png')}/>
+                    </a>
+                </div>
+            </div>
+
+            <div className='row'>
+                <div className='col s10 push-s1 m5' data-aos='fade-up'>
+                    <a className='width-100' href='https://kaiwei.carbonmade.com/projects/5886152' target='_blank'>
+                        <img className='thumbnail thumbnail-light' src={require('./src/latex_thumbnail.png')}/>
+                    </a>
+                </div>
+               
+                <div className='col s10 push-s1 m5' data-aos='fade-up' data-aos-delay={300}>
+                    <a className='width-100' href='https://kaiwei.carbonmade.com/projects/5886319' target='_blank'>
+                        <img className='thumbnail thumbnail-light' src={require('./src/piano_thumbnail.png')}/>
+                    </a>
                 </div>
             </div>
 
 
-
+        <div style={{display: 'none'}}>
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='https://kaiwei.carbonmade.com/projects/5886319' target='_blank'>
                     <img className='thumbnail thumbnail-light' src={require('./src/piano_thumbnail.png')}/>
@@ -195,16 +243,40 @@ export class Work extends Component {
                     </div>
                 </div>
             </div>
+        </div>
 
             <div className='row' data-aos="fade-up">
                 <div className='col s10 push-s1 m12 title margin-top-page-start'>
-                    About Kaiwei.Design
+                    Kaiwei.Design and Me &nbsp;
+                    <img className='emoji-big' src={require('./src/emoji_30.svg')}/>
                 </div>
             </div>
-            <div style={{marginBottom: '10rem'}} className='row' data-aos="fade-up">
+
+            <div className='row' data-aos="fade-up">
                 <div className='col s10 push-s1 m8 xl6 text'>
-                    I have been designing and developing this website with ReactJS. It is definitely one of the most
-                    rewarding passion projects of mine. It is still under construction and I am enjoying every bit of the process.
+                    <p>
+                        I have been crafting kaiwei.design with ReactJS. This site itself has been a challenging
+                        and rewarding web design project. 
+                    </p>
+                    <p>
+                        Here I have the chance to sit down, collect the pieces, and document my journey as a designer. 
+                        Kaiwei.design will always be under construction and I am enjoying every bit of the process.
+                    </p>
+                    <p>
+                        I am open for job opportunities. If you are looking for a designer with skill, passion, and versatility, <span className='work-email-link'><a href='mailto:wangkw@gatech.edu' style={{color: '#fac466', fontWeight: '600'}}>let's talk!</a></span>
+                    </p>
+                    <Waypoint
+                      onEnter={()=>{$('.work-email-link').addClass('text-reveal')}}
+                      onLeave={()=>{$('.work-email-link').removeClass('text-reveal')}}
+                    />
+                </div>
+            </div>
+
+             <div className='row margin-top-2'>
+                 <div className='col s10 push-s1 m8 xl6 text'>
+                    <p style={{fontSize: '1rem'}}>
+                        <span style={{opacity: '0.8', display: 'none'}}>Copyright</span> <span style={{color: '#fac466', fontWeight: 'bold'}}>©</span> <span style={{opacity: '0.8'}}>Kaiwei Wang - 2018</span>
+                    </p>
                 </div>
             </div>
 

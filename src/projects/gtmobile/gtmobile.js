@@ -12,6 +12,8 @@ import './gtmobile.css';
 import AOS from 'aos'; 
 import '../../../node_modules/aos/dist/aos.css'; 
 import Headroom from 'react-headroom'
+import Lightbox from "react-image-lightbox"
+import Img from 'react-image'
 
 var Scroll  = require('react-scroll');
 
@@ -21,12 +23,27 @@ var Events     = Scroll.Events;
 var scroll     = Scroll.animateScroll;
 var scrollSpy  = Scroll.scrollSpy;
 
+const emptyStack = {
+	isOpen : false,
+	imgIndex : 0,
+	imgCounter : 0,
+	images : []
+}
+
+const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
+
 
 
 class GtMobile extends Component {
 	constructor(props, context) { 
 		console.log('construct')
 		super(props, context); 
+		this.state = {
+			isOpen : false,
+			imgIndex : 0,
+			imgCounter : 0,
+			images : []
+		}
 		AOS.init({
 	        once: false,
 	        duration: 300
@@ -42,33 +59,53 @@ class GtMobile extends Component {
 	    scroll.scrollToTop();
 	  }
 
-	componentWillUnmount() {
-		$("html, body").scrollTop(0)
-	}
 
 	componentWillReceiveProps(nextProps) {
-		console.log('will receive props')
 		AOS.refresh();
 	}
 
-	foo() {
-		console.log('hey')
-	}
 
 	render() {
+		const { isOpen, imgIndex, imgCounter, images} = this.state;
 		return (
 			<div id='gtmobile-page' className='project-page'>
+				{isOpen && (
+		          <Lightbox
+		            mainSrc={images[imgIndex]}
+		            nextSrc={images[(imgIndex + 1) % images.length]}
+		            prevSrc={images[(imgIndex + images.length - 1) % images.length]}
+		            onCloseRequest={() => this.setState({ isOpen: false })}
+		            onMovePrevRequest={() =>
+		              this.setState({
+		                imgIndex: (imgIndex + images.length - 1) % images.length
+		              })}
+		            onMoveNextRequest={() =>
+		              this.setState({
+		                imgIndex: (imgIndex + 1) % images.length
+		              })}
+		          />
+		        )}
 				<Headroom disableInlineStyles={true}>
 		            <div className='project-navbar'>
+		            	<div className='nav-container-outer'>
+		            	<div className='back-container'>
+			                <a className='back-wrapper' href='#/work'>
+			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
+			                </a>
+			                <a className='text-link' href='#/work/mood'>
+				                U P  &nbsp; N E X T : &nbsp; M O o D
+				            </a>
+			              </div>
+			              </div>
 		              <div className='project-nav-background'/>
-		              <a href='#/work'>
+		              <a className='text-link' href='#/work'>
 		                W O R K
 		              </a>
-		              <a href='#/'>
+		              <a className='text-link' href='#/'>
 		                H O M E
 		              </a>
-		              <a href='#/work/mood'>
-		                U P  N E X T :  M O o D
+		              <a className='text-link' href='#/playground'>
+		                P L A Y G R O U N D
 		              </a>
 		            </div>
 		        </Headroom>
@@ -104,7 +141,7 @@ class GtMobile extends Component {
 			          	<div className='title-and-logo'>
 				          	<h1>GT Mobile</h1>
 			          	</div>
-			          	<p>everyone's partner on GT campus</p>
+			          	<p>everyone's partner on GT campus, redesigned.</p>
 			          </div>
 		        	</div>
 		          
@@ -113,30 +150,30 @@ class GtMobile extends Component {
 
 		        <Element name="info" className="element info-container margin-top-2">
 		          <div className='row'>
-		          	<p className='col s4 label'>Role</p>
-		          	<p className='col s8 content'>
+		          	<p className='col s5 label'>Role</p>
+		          	<p className='col s7 content'>
 		          		Lead UX Designer<br/>
 		          		UX Researcher
 		          	</p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Employer</p>
-		          	<p className='col s8 content'>Research Network Operation Center @ Georgia Tech</p>
+		          	<p className='col s5 label'>Employer</p>
+		          	<p className='col s7 content'>Research Network Operation Center @ Georgia Tech</p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Tool</p>
-		          	<p className='col s8 content'>Framer Studio<br/> Principle<br/> ReactJS</p>
+		          	<p className='col s5 label'>Tool</p>
+		          	<p className='col s7 content'>Framer Studio<br/> Principle<br/> ReactJS</p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Duration</p>
-		          	<p className='col s8 content'>Spring 2017</p>
+		          	<p className='col s5 label'>Duration</p>
+		          	<p className='col s7 content'>Spring 2017</p>
 		          </div>
 		        </Element>
 
 		        <Element name='overview' data-aos="fade-up" >
 		        	<div className='my-container'>
 		        	<div className='row container-center-inside margin-top-1'>
-		        		<h2>- A Redesign. More Than A New Look. -</h2>
+		        		<h2>- It's More Than A New Look. -</h2>
 		        	</div>
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
@@ -147,7 +184,7 @@ class GtMobile extends Component {
 
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12 l6 push-l6'>
-			        		<p className='left-vertical-line'>My effort was focused on making GT Mobile a platform that was usable, pleasant, and unified.</p>
+			        		<p className='left-vertical-line'>My goal was to transform GT Mobile into a platform that was usable, enjoyable, and unified.</p>
 		        		</div>
 		        		<div className='col s12 l6 pull-l6 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
@@ -158,7 +195,7 @@ class GtMobile extends Component {
 
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12 l6'>
-			        		<p className='left-vertical-line'>Previously disconnected apps are now re-designed to create a more integrated experience. This is the transition from GT Places to GT Buses.</p>
+			        		<p className='left-vertical-line'>Previously disconnected apps were re-designed to create a more integrated experience. This is the transition from GT Places to GT Buses.</p>
 		        		</div>
 		        		<div className='col s12 l6 container-center-inside'>
 		        			<p className='width-100 container-center-inside'>
@@ -180,7 +217,7 @@ class GtMobile extends Component {
 
 		        	<div className='row margin-top-2'>
 		        		<div className='col s12'>
-			        		<p className='left-vertical-line'>Responsive design is practiced to make the apps adaptive to changing device dimensions.</p>
+			        		<p className='left-vertical-line'>I practiced responsive design to make the apps adaptive to changing device dimensions.</p>
 		        		</div>
 		        	</div>
 		        	
@@ -200,7 +237,7 @@ class GtMobile extends Component {
 		        	<div className='my-container'>
 		        		<div className='row margin-top-2'>
 			        		<div className='col s12'>
-				        		<p className='left-vertical-line'>A design guideline is generated to inform future apps built by student developers.
+				        		<p className='left-vertical-line'>A design guideline was generated to inform future apps built by student developers.
 				        		I made sure the guideline not only follows the legacy style of Georgia Tech's digital designs but also embodies GT Mobile's unique identity.
 				        		</p>
 			        		</div>
@@ -284,7 +321,7 @@ class GtMobile extends Component {
 		        		<div className='row'>
 			        		<div className='col s12 margin-top-2'>
 			        			<p className='title'>
-			        				Card Sorting - What does a desirable IA look like?
+			        				Card Sorting - What does a desirable <span className='key-word'>Information Architecture</span> look like?
 			        			</p>
 			        			<p>
 			        				To further understand the desired information architecture, I conducted a closed card sorting excersise
@@ -319,7 +356,7 @@ class GtMobile extends Component {
 			        			</p>
 			        			<p className='left-vertical-line'>
 			        				Apps are expected to work together (turns out that's what the participant meant by "Shared DB"). An example was: as a campus event is annouced in GT Feeds,
-			        				the user should be redirected to GT Places for it's location, and then to GT Buses for a route to get there.
+			        				the user should be redirected to GT Places for its location, and then to GT Buses for a route to get there.
 			        			</p>
 			        		
 			        		</div>
@@ -391,8 +428,91 @@ class GtMobile extends Component {
 	        			<div className='row margin-top-2'>
 	        				<div className='col s12'>
 		        				<p className='title'>
-			        				Low-Fidelity Prototype
+			        				Gettingn Early Feedback with Low-Fidelity Prototype
 			        			</p>
+			        			<p>
+			        				After sketching out rough ideas for the homepage-places-buses user flow, I made a paper prototype and tested it 
+			        				with three students to get feedback on the information hierachy and layout.
+			        			</p>
+	        				</div>
+	        			</div>
+
+	        			<div className='row'>
+        					<p className='width-100 container-center-inside'>
+		        				<Img className='width-100 shadow expandable' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/low-fi-1.png'))
+		        							this.setState({
+		        								images : images,
+		        								low_fi_1_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.low_fi_1_index
+		        							})
+		        						}}
+		        						src={require('./src/low-fi-1.png')}
+		        						loader={loader}
+	        						/>
+	        				</p>
+        				</div>
+
+        				<p>
+        					<span className='key-word left-vertical-line'>A Design Challenge: Layout for Different Bus Stops &nbsp;</span> 
+        				</p>
+        				<p>
+        					According to the participant, most of the time they care about the two or three bus stops nearby, and it is very important for 
+        					them to see the bus stops locations on a map interface. For my initial sketch (below left), I was suggested that the vertical scroll 
+        					should be limited to the bottom area of the interface. But for a phone user, that scroll area is too small and can crop out some information 
+        					for one bus stops. 
+        				</p>
+        				<p>
+        					I then rearranged the three bus stops to be in a horizontal view, where one card was displayed at a time. This approach solved the above complaints and I was 
+        					encouraged to develope a motion prototype, which will be showed in a later section.
+        				</p>
+        				<div className='row'>
+	        				<div className='col s12 m4'>
+	        					<Img className='width-100 shadow expandable' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/low-fi-2.png'))
+		        							this.setState({
+		        								images : images,
+		        								low_fi_2_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.low_fi_2_index
+		        							})
+		        						}}
+		        						src={require('./src/low-fi-2.png')}
+		        						loader={loader}
+	        						/>
+	        				</div>
+	        				<div className='col s12 m8'>
+	        					<Img className='width-100 shadow expandable' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/low-fi-3.png'))
+		        							this.setState({
+		        								images : images,
+		        								low_fi_3_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.low_fi_3_index
+		        							})
+		        						}}
+		        						src={require('./src/low-fi-3.png')}
+		        						loader={loader}
+	        						/>
 	        				</div>
 	        			</div>
 
@@ -401,7 +521,7 @@ class GtMobile extends Component {
 	        			<div className='row margin-top-2'>
 	        				<div className='col s12'>
 		        				<p className='title container-center-inside'>
-			        				Wireframe
+			        				High-Fidelity Prototype & Wireframe
 			        			</p>
 	        				</div>
 	        			</div>
@@ -426,9 +546,6 @@ class GtMobile extends Component {
 	        		<div className='my-container margin-top-2'>
         				<div className='row'>
         					<div className='col s12'>
-		        				<p className='title container-center-inside'>
-			        				Hight-Fidelity Prototype
-			        			</p>
 			        			<p className='container-center-inside margin-top-2'>
 			        				<iframe src="https://marvelapp.com/3da435g?emb=1" width="452" height="901" allowTransparency="true" frameBorder="0"></iframe>
 			        			</p>

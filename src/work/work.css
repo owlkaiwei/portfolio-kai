@@ -31,6 +31,7 @@
 
 .work-scope .thumbnail {
   width: 100%;
+  border-radius: 10px;
   height: auto;
   transform: scale(1);
   transition: all 0.5s cubic-bezier(0.1, 0.29, 0, 1); }
@@ -64,3 +65,16 @@
     color: #0F3351; }
   .work-scope .hide-when-small {
     display: none; } }
+
+.work-scope .emoji {
+  height: 1.3rem; }
+
+.work-scope .emoji-big {
+  vertical-align: middle;
+  height: 3.5rem; }
+
+.work-scope .emoji-container {
+  display: inline-block; }
+
+.work-scope .work-email-link {
+  position: relative; }

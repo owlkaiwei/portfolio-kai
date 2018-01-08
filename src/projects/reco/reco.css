@@ -1,0 +1,55 @@
+#reco-page {
+  background-color: #fff;
+  color: rgba(255, 255, 255, 0.9); }
+  #reco-page .title {
+    color: #ED7171; }
+  #reco-page .title:before {
+    background-color: #FFEF76; }
+  #reco-page .quote {
+    color: #464646; }
+  #reco-page .emphasis:after {
+    background-color: #ED7171; }
+  #reco-page .emphasis-new {
+    text-decoration-color: #ED7171; }
+  #reco-page .banner-img-container {
+    z-index: 2; }
+  #reco-page .banner-text-container {
+    z-index: 1; }
+  #reco-page .banner-text {
+    width: 100% !important;
+    background-color: #f5f5f5; }
+  #reco-page .banner-text h1 {
+    color: #464646; }
+  #reco-page .banner-text p {
+    color: #464646; }
+  #reco-page .banner-img {
+    height: 70% !important; }
+  #reco-page .left-vertical-line {
+    border-left: 0.4rem solid #ED7171; }
+  #reco-page .progress-container a {
+    color: #464646; }
+  #reco-page .project-navbar a {
+    color: #464646; }
+  #reco-page .project-navbar .text-link:before {
+    background-color: #464646; }
+  #reco-page .project-navbar .text-link:after {
+    background-color: #464646; }
+  #reco-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #reco-page .link-to-project {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #464646;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #reco-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.2); }
+  #reco-page a {
+    color: #464646; }

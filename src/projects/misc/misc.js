@@ -62,13 +62,9 @@ class Misc extends Component {
 
 
     componentWillReceiveProps(nextProps) {
-        console.log('will receive props')
         AOS.refresh();
     }
 
-    componentWillUnmount() {
-        $("html, body").scrollTop(0)
-    }
 
   render() {
     const { isOpen, imgIndex, imgCounter, images} = this.state
@@ -92,15 +88,25 @@ class Misc extends Component {
                 )}
         <Headroom disableInlineStyles={true}>
             <div className='project-navbar'>
+            <div className='nav-container-outer'>
+                <div className='back-container'>
+                    <a className='back-wrapper' href='#/work'>
+                            <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
+                    </a>
+                    <a className='text-link' href='#/work/gtmobile'>
+                        U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+                    </a>
+                  </div>
+              </div>
               <div className='project-nav-background'/>
-              <a href='#/work'>
+              <a className='text-link' href='#/work'>
                 W O R K
               </a>
-              <a href='#/'>
+              <a className='text-link' href='#/'>
                 H O M E
               </a>
-              <a href='#/work/taptile'>
-                U P  N E X T : T A P T I L E
+              <a className='text-link' href='#/playground'>
+                P L A Y G R O U N D
               </a>
             </div>
         </Headroom>

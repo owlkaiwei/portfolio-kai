@@ -23,11 +23,11 @@
     color: #00254c; }
   #gtmobile-page .progress-container:hover {
     background-color: rgba(255, 255, 255, 0.5); }
-  #gtmobile-page .project-navbar a {
+  #gtmobile-page .project-navbar .text-link {
     color: #00254c; }
-  #gtmobile-page .project-navbar a:before {
+  #gtmobile-page .project-navbar .text-link:before {
     background-color: #00254c; }
-  #gtmobile-page .project-navbar a:after {
+  #gtmobile-page .project-navbar .text-link:after {
     background-color: #00254c; }
   #gtmobile-page .project-nav-background {
     background-color: #fff;

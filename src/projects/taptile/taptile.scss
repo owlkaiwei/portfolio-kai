@@ -1,5 +1,6 @@
 #taptile-page {
 	$color-1: #ec8300;
+	$main-text-color: #351700;
 	$font-primary: 'Josefin Sans';
 	$font-secondary: 'Halant';
 
@@ -51,14 +52,14 @@ a {
 }
 
 .project-navbar a {
-	color: black;
+	color: $main-text-color;
 }
 
-.project-navbar  a:before {
+.project-navbar  .text-link:before {
 	background-color: black;
 }
 
-.project-navbar  a:after {
+.project-navbar  .text-link:after {
 	background-color: black;
 }
 

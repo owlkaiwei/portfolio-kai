@@ -25,7 +25,7 @@ export class Intro extends Component {
 							Kaiwei Wang
 						</div>
 						<div className='intro-text intro-text-size-2 intro-margin-top-2'>
-							I am a product designer with passion for creating useful and delightful user experience.
+							I am a product designer and web developer with passion for creating an interactive, useful, and delightful user experience.
 						</div>
 						<div className='intro-text intro-text-size-2'>
 							Currently I am working for Georgia Tech while pursuing my Masters degree in Human-Computer Interaction.

@@ -43,33 +43,36 @@ class TapTile extends Component {
 	    scroll.scrollToTop();
 	  }
 
-	componentWillUnmount() {
-		$("html, body").scrollTop(0)
-	}
 
 	componentWillReceiveProps(nextProps) {
-		console.log('will receive props')
 		AOS.refresh();
 	}
 
-	foo() {
-		console.log('hey')
-	}
 
 	render() {
 		return (
 			<div id='taptile-page' className='project-page'>
 				<Headroom disableInlineStyles={true}>
 		            <div className='project-navbar'>
+		            <div className='nav-container-outer'>
+		            	<div className='back-container'>
+			                <a className='back-wrapper' href='#/work'>
+			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
+			                </a>
+			                <a className='text-link' href='#/work/gtmobile'>
+				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+				            </a>
+			              </div>
+			              </div>
 		              <div className='project-nav-background'/>
-		              <a href='#/work'>
+		              <a className='text-link' href='#/work'>
 		                W O R K
 		              </a>
-		              <a href='#/'>
+		              <a className='text-link' href='#/'>
 		                H O M E
 		              </a>
-		              <a href='#/work/gtmobile'>
-		                U P  N E X T : G T M O B I L E
+		              <a className='text-link' href='#/playground'>
+		                P L A Y G R O U N D
 		              </a>
 		            </div>
 		        </Headroom>
@@ -112,23 +115,23 @@ class TapTile extends Component {
 
 		        <Element name="info" className="element info-container margin-top-2">
 		          <div className='row'>
-		          	<p className='col s4 label'>Role</p>
-		          	<p className='col s8 content'>
+		          	<p className='col s5 label'>Role</p>
+		          	<p className='col s7 content'>
 		          		Lead Interaction Designer<br/>
 		          		UX Researcher
 		          	</p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Tool</p>
-		          	<p className='col s8 content'>Arduino<br/> Processing.js</p>
+		          	<p className='col s5 label'>Tool</p>
+		          	<p className='col s7 content'>Arduino<br/> Processing.js</p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Award</p>
-		          	<p className='col s8 content'><a href='http://cic.gatech.edu/fall-2016/winners'>First Place @ Georgia Tech Convergence Innovation Competition</a></p>
+		          	<p className='col s5 label'>Award</p>
+		          	<p className='col s7 content'><a href='http://cic.gatech.edu/fall-2016/winners'>First Place @ Georgia Tech Convergence Innovation Competition</a></p>
 		          </div>
 		          <div className='row'>
-		          	<p className='col s4 label'>Duration</p>
-		          	<p className='col s8 content'>Fall 2016</p>
+		          	<p className='col s5 label'>Duration</p>
+		          	<p className='col s7 content'>Fall 2016</p>
 		          </div>
 		        </Element>
 

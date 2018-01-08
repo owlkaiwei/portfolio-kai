@@ -5,7 +5,9 @@ import {
   withRouter,
   Redirect,
   Switch,
-  Link
+  Link,
+  browserHistory, 
+  applyRouterMiddleware
 } from 'react-router-dom';
 import $ from 'jquery';
 import 'jquery.easing';
@@ -21,10 +23,14 @@ import {Intro} from './intro/intro.js'
 
 import {Work} from './work/work.js'
 
+import Playground from './playground/playground'
+
 import TapTile from './projects/taptile/taptile'
 import GtMobile from './projects/gtmobile/gtmobile'
 import Mood from './projects/mood/mood'
 import Misc from './projects/misc/misc'
+import Reco from './projects/reco/reco'
+
 
 
 var Scroll  = require('react-scroll');
@@ -50,7 +56,7 @@ const toWork = (history) => {
         case '/work': {
           break;
         }   
-        case '/playground': {
+        default: {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/work') ;},500);
@@ -70,7 +76,7 @@ const toHome = (history) => {
         case '/': {
           break;
         }   
-        case '/playground': {
+        default: {
           $('.after-animation').toggleClass('after-animation');
           $('#playground-content').animate({opacity: '0'}, 500); 
           setTimeout(()=>{history.push('/') ;},500);
@@ -88,9 +94,6 @@ const toPlayground = (history) => {
           setTimeout(()=>{history.push('/playground') ;},500);
           break;
         }   
-        case '/happy-birthday-yiran': {
-          break;
-        }   
         case '/': {
           $('.after-animation').toggleClass('after-animation');
           $('#home-content').removeClass('home-content-show')
@@ -98,6 +101,9 @@ const toPlayground = (history) => {
           setTimeout(()=>{history.push('/playground') ;},500);
           break;
         }    
+        default: {
+          break;
+        }
 
       }
 }
@@ -147,7 +153,8 @@ class Content extends Component {
         isScrolling: false,
         arrowClass: 'arrow-down',
         greetingClass: 'greeting-show',
-        buttonFunc: this.buttonScrollDown
+        buttonFunc: this.buttonScrollDown,
+        toIntro: null
       };
       if (isFirstTime === true) {
         isFirstTime = false;
@@ -240,6 +247,12 @@ class Content extends Component {
       $('#left-part').css({'transform' : 'translate(' + leftX +'px, ' + leftY + 'px)'});
       //$('#right-part').css({'display' : 'none'});
     });
+
+    if (this.props.location.state) {
+      if (this.props.location.state.toIntro) {
+        this.buttonScrollDown()
+      }
+    }
   }
 
   componentWillUnmount() {
@@ -299,32 +312,6 @@ class Content extends Component {
 }
 
 
-class NavBarKai extends Component {
-  render() {
-    var history = this.props.history
-      return (
-      <div id='navbar'>
-        <a
-          id='work-btn'
-          onClick={()=>{toWork(history)}}>
-          W O R K
-        </a>
-        <a
-          id='home-btn'
-          onClick={()=>{toHome(history)}}
-        >
-          H O M E
-        </a>
-        <a
-          id='playground-btn'
-          onClick={()=>{toPlayground(history)}}
-        >
-          P L A Y G R O U N D.
-        </a>
-      </div>
-      )
-  }
-}
 
 class NavBar extends Component {
   constructor() {
@@ -346,7 +333,7 @@ class NavBar extends Component {
     }
 
     else {
-      return({class: 'nav-work', disable: false}) 
+      return({class: 'nav-home', disable: true}) 
     }
   }
 
@@ -359,22 +346,41 @@ class NavBar extends Component {
         <Headroom disableInlineStyles={true} disable={attr.disable}>
             <div id='navbar'>
               <div id='nav-background' className={attr.class}/>
-              <a
+              { this.props.location.pathname !== '/' &&
+              <div className='nav-container-outer'>
+                  <div className='container name-container'>
+                    <Link id='nav-name' className='name' to={{
+                        pathname: '/',
+                        state: { toIntro: true }
+                      }}
+                      onMouseEnter={(e)=>{
+                        $(e.target).addClass("text-reveal"); 
+                      }}
+                      onMouseOut={(e)=>{
+                        $(e.target).removeClass("text-reveal"); 
+                      }}
+                    >
+                      K A I W E I &nbsp; W A N G
+                    </Link>
+                  </div>
+                </div>
+              }
+              <a className='text-link'
                 id='work-btn'
                 onClick={()=>{toWork(history)}}>
                 W O R K
               </a>
-              <a
+              <a className='text-link'
                 id='home-btn'
                 onClick={()=>{toHome(history)}}
               >
                 H O M E
               </a>
-              <a
+              <a className='text-link'
                 id='playground-btn'
                 onClick={()=>{toPlayground(history)}}
               >
-                P L A Y G R O U N D.
+                P L A Y G R O U N D
               </a>
             </div>
         </Headroom>
@@ -419,105 +425,7 @@ const Back = withRouter(({history})=>{
 })
 
 
-class Face extends Component {
-   constructor() {
-      super();
-      this.state = {
-        num: 1
-      };
 
-  }
-
-  componentDidMount() {
-    $('#avatar-'+this.props.name).mouseenter(()=>{
-      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-1')
-      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-2')
-      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-1')
-      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-2')
-    })
-    $('#avatar-'+this.props.name).click(()=>{
-      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-1')
-      $('#head-container-inner-'+this.props.name).toggleClass('head-animation-2')
-      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-1')
-      $('#face-container-inner-'+this.props.name).toggleClass('face-animation-2')
-
-
-
-      if (this.state.num === 1) {
-        $('#text-container-inner-'+this.props.name+'-bd').toggleClass('text-animation-1')
-        $('#text-container-inner-'+this.props.name+'-bd').toggleClass('text-animation-2')
-        //randomization goes here
-        this.setState({num: 2})
-      }
-      else if (this.state.num === 2) {
-        $('#text-container-inner-'+this.props.name+'-xyx').toggleClass('text-animation-1')
-        $('#text-container-inner-'+this.props.name+'-xyx').toggleClass('text-animation-2')
-        this.setState({num: 1})
-      }
-    })
-  }
-
-
-
-  render() {
-    return (
-         <svg className='face-svg' xmlns="http://www.w3.org/2000/svg"viewBox="0 0 328 314">
-          <g id={'avatar-'+this.props.name} >
-            <g className='head-container-outer' transform='translate(68, 50)'>
-              <g id={'head-container-inner-'+this.props.name} className='head-animation-1'>
-                <image id={'head-'+this.props.name} width='200px' height='200px' className='head' xlinkHref={require('./img/faces/' + this.props.name + '/head.png')} />
-              </g>
-            </g>
-            <g className='face-container-outer' transform='translate(130, 135)'>
-              <g id={'face-container-inner-'+this.props.name} className='face-animation-1'>
-                <image id={'face-'+this.props.name} width='75px' height='75px' className='face' xlinkHref={require('./img/faces/' + this.props.name + '/face.png')} />
-              </g>
-            </g>
-            { (this.props.name === 'ym') &&
-            <g>
-              <g className='text-container-outer' transform='translate(70, -20)'>
-                <g id={'text-container-inner-'+this.props.name+'-bd'} className='text-animation-1'>
-                  <image id={'text-'+this.props.name} width='200px' height='75px' className='text' xlinkHref={require('./img/faces/' + this.props.name + '/text-bd.svg')} />
-                </g>
-              </g>
-              <g className='text-container-outer' transform='translate(115, 0)'>
-                <g id={'text-container-inner-'+this.props.name+'-xyx'} className='text-animation-1'>
-                  <image id={'text-'+this.props.name} width='100px' height='50px' className='text' xlinkHref={require('./img/faces/' + this.props.name + '/text-xyx.svg')} />
-                </g>
-              </g>
-            </g>
-            }
-          </g>
-      </svg>
-      )
-  }
-}
-
-class Playground extends Component {
-
-  componentDidMount() {
-    $('#work-btn').removeClass('after-animation');
-    $('#home-btn').removeClass('after-animation');
-    $('#playground-btn').toggleClass('after-animation');
-
-    $('#vertical-line-right').removeClass('vertical-line-right-work');
-    $('#vertical-line-right').removeClass('vertical-line-right-home');
-    $('#vertical-line-right').addClass('vertical-line-right-playground');
-
-    $('#vertical-line-left').removeClass('vertical-line-left-work');
-    $('#vertical-line-left').removeClass('vertical-line-left-home');
-    $('#vertical-line-left').addClass('vertical-line-left-playground');
-  }
-
-
-  render() {
-    return (
-    <div id='playground-content'>
-      <Face name='ym' />
-    </div>
-    )
-  }
-}
 
 class Background extends Component {
   constructor() {
@@ -618,19 +526,34 @@ class Background extends Component {
 class Main extends Component {
   render() {
     var pathname = this.props.location.pathname
+    var history = this.props.history
     return (
-      (pathname === '/' || pathname === '/work' || pathname === '/playground') &&
+      (pathname === '/' || pathname === '/work' || pathname.startsWith('/playground')) &&
       <div>
         <Background pathname={pathname}/>
         <NavBar {...this.props}/>
-        <div id='vertical-line-left' className='vertical-line'/>
-        <div id='vertical-line-right' className='vertical-line'/>
+        <div id='vertical-line-left' onClick={()=>{toWork(history)}} className='vertical-line'/>
+        <div id='vertical-line-right'  onClick={()=>{toPlayground(history)}} className='vertical-line'/>
       </div>
     
 
     )
   }
 }
+
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
+
+  render() {
+    return this.props.children
+  }
+}
+
+var MyScroll = withRouter(ScrollToTop)
 
 
 
@@ -663,16 +586,19 @@ class App extends Component {
     console.log('app is re-rendered!')
     return (
       <Router>
-        <div className={this.state.display}>
-          <Route path='/' component={Main}/>
-          <Route exact path="/" component={Content}/>
-          <Route  exact path="/work" component={()=><Work/>}/>
-          <Route  path="/playground" component={()=><Playground/>}/>
-          <Route  path="/work/taptile" component={TapTile}/>
-          <Route  path="/work/gtmobile" component={GtMobile}/>
-          <Route  path="/work/mood" component={Mood}/>
-          <Route  path="/work/misc" component={Misc}/>
-        </div>
+        <MyScroll>
+          <div className={this.state.display}>
+            <Route path='/' component={Main}/>
+            <Route exact path="/" component={Content}/>
+            <Route exact path="/work" component={()=><Work/>}/>
+            <Route path="/playground" component={()=><Playground/>}/>
+            <Route path="/work/taptile" component={TapTile}/>
+            <Route path="/work/gtmobile" component={GtMobile}/>
+            <Route path="/work/mood" component={Mood}/>
+            <Route path="/work/reco" component={Reco}/>
+            <Route path="/work/misc" component={(router)=>(<Misc router={router}/>)}/>
+          </div>
+        </MyScroll>
       </Router>
     );
   }
