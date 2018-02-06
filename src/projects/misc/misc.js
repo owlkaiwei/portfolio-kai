@@ -93,11 +93,28 @@ class Misc extends Component {
                     <a className='back-wrapper' href='#/work'>
                             <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
                     </a>
-                    <a className='text-link' href='#/work/gtmobile'>
-                        U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+                    <a className='text-link' href='#/work/wardrober'>
+                        U P  &nbsp; N E X T : &nbsp;  W A R D R O B E R
                     </a>
                   </div>
               </div>
+              <div className='nav-container-outer'>
+                          <div className='container name-container'>
+                            <Link id='nav-name' className='name' to={{
+                                pathname: '/',
+                                state: { toIntro: true }
+                              }}
+                              onMouseEnter={(e)=>{
+                                $(e.target).addClass("text-reveal"); 
+                              }}
+                              onMouseOut={(e)=>{
+                                $(e.target).removeClass("text-reveal"); 
+                              }}
+                            >
+                              K A I W E I &nbsp; W A N G
+                            </Link>
+                          </div>
+                    </div>
               <div className='project-nav-background'/>
               <a className='text-link' href='#/work'>
                 W O R K

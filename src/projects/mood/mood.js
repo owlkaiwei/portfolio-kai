@@ -95,11 +95,28 @@ class Mood extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/reco'>
-				                U P  &nbsp; N E X T : &nbsp; R E C O
+			                <a className='text-link' href='#/work/gtmobile'>
+				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
 				            </a>
 			              </div>
 			              </div>
+			              <div className='nav-container-outer'>
+		                  <div className='container name-container'>
+		                    <Link id='nav-name' className='name' to={{
+		                        pathname: '/',
+		                        state: { toIntro: true }
+		                      }}
+		                      onMouseEnter={(e)=>{
+		                        $(e.target).addClass("text-reveal"); 
+		                      }}
+		                      onMouseOut={(e)=>{
+		                        $(e.target).removeClass("text-reveal"); 
+		                      }}
+		                    >
+		                      K A I W E I &nbsp; W A N G
+		                    </Link>
+		                  </div>
+	                </div>
 		              <div className='project-nav-background'/>
 		              <a className='text-link' href='#/work'>
 		                W O R K
@@ -112,20 +129,24 @@ class Mood extends Component {
 		              </a>
 		            </div>
 		        </Headroom>
+
 				<div className='progress-container progress-responsive-position'>
-					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
+					<a className='link-in-progress'  href='https://gtgunsnroses.github.io/music-infovis/' target='_blank'>
+				        		View Project
+				        	</a>
+					<ScrollLink activeClass="scroll-active" to="overview" smooth={false} spy={true} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="understanding" smooth={true} offset={-100} >
+			        <ScrollLink activeClass="scroll-active" to="understanding" smooth={false} spy={true} offset={-100} >
 			          <span className='label'>Understanding</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="design-process" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="design-process" smooth={false} spy={true} offset={-100}>
 			          <span className='label'>Design</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="evaluation" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="evaluation" smooth={false} spy={true} offset={-100}>
 			          <span className='label'>Evaluation</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="reflection" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="reflection" smooth={false} spy={true} offset={-100}>
 			          <span className='label'>Reflection</span><span className='circle'></span>
 			        </ScrollLink>
 			        <a onClick={this.scrollToTop}>Back to Top</a>
@@ -158,7 +179,8 @@ class Mood extends Component {
 		          	<p className='col s5 label'>Role</p>
 		          	<p className='col s7 content'>
 		          		Interaction Designer<br/>
-		          		Visual Designer
+		          		Visual Designer<br/>
+		          		Web Developer
 		          	</p>
 		          </div>
 		          <div className='row'>
@@ -404,7 +426,7 @@ class Mood extends Component {
 				        				<span className='key-word'>Non-musically-trained people who are interested in music</span>
 			        				</p>
 			        				<p className='left-vertical-line'>
-				        				<span className='key-word'>Music priducers/artists</span>
+				        				<span className='key-word'>Music producers/artists</span>
 			        				</p>
 			        				<p className='left-vertical-line'>
 				        				<span className='key-word'>Researchers from music streaming platforms/services</span>
@@ -412,7 +434,7 @@ class Mood extends Component {
 
 			        				<p>
 			        					The key feature of the target audience is the mixture of novices and experts, which requires the design
-			        					to balance easily-understandable visualization and in-depth musical domain knowledge.
+			        					to balance easily understandable visualization and in-depth musical domain knowledge.
 			        				</p>
 			        			</div>
 		        		</div>
@@ -658,13 +680,45 @@ class Mood extends Component {
         				<div className='row margin-top-2' data-aos='fade-up'>
 			        		<div className='col s12'>
 			        			<p className='title'>
-			        				Converge
+			        				Challenge - Converge
 			        			</p>
+			        			<p>
+			        				From fellow designers and peers, I received feedback on the design alternatives. The first concept named MOoD 
+				        			stood out for its novelty and visual excellence, but the other concepts embodied data attributes that MOod could not.
+			        			</p>
+			        			<p className='width-100'>
+			        				<Img className='width-100' 
+		        						src={require('./src/challenge_view.png')}
+		        						loader={loader}
+	        						/>
+			        			</p>
+			        			<p>
+			        				Looking back at our target audience, it was clear to me that simply representing "Polularity" and "Rank" 
+			        				could not fulfill needs, nor could it do justice to such a rich dataset. <span className='emphasis-new'>Combining concepts was a must, but how?</span>
+			        			</p>
+			        			<p className='left-vertical-line key-word margin-top-2'>
+			        				Schneiderman's Mantra
+			        			</p>
+			        			<p className='italic'>
+			        				Overview first, zoom and filter, then details-on-demand
+			        			</p>
+
+			        			<p>
+			        				Schneiderman's Mantra was one of the key design principles I learned in the class of 
+			        				Information Visualization and I decided to see if it could help me combine the concepts and 
+			        				develop a logic among them.
+			        			</p>
+			        			
 	        				</div>
-	        				<div className='col s12 l6 push-l6'>
-				        		<p className='left-vertical-line'>
-				        			With the feedback and a better understanding of the data, the team gathered once more to combine and revise 
-				        			the designs. An "overview-zoom-filter-detail" structure started to take shape.
+	        				
+        				</div>
+
+        				<div className='row'>
+        					<div className='col s12 l6 push-l6'>
+				        		<p>
+				        			I initiated and led a design session with the team and pitched the potential benefit of applying Schneiderman's Mantra. 
+				        			We were fascinated by how <span className='emphasis-new'>"Trend"</span> and <span className='emphasis-new'>other attributes including "Popularity"</span> 
+				        			fit in the overview-zoom-filter-detail structure.
 				        		</p>
 			        		</div>
 			        		<div className='col s12 l6 pull-l6 container-center-inside'>
@@ -676,6 +730,39 @@ class Mood extends Component {
 			        			</p>
 			        		</div>
         				</div>
+
+        				<div className='row'>
+        					<div className='col s12'>
+        						<p>
+        							I collected the fruitful results from the design session and constructed the following layout. Compared to the original 
+        							MOod design, the following design felt more complete in data attributes and more logical in the user flow.
+        						</p>
+        						<p className=''>
+			        				<Img className='width-100 expandable' 
+		        						onLoad={()=>{
+		        							images.push(require('./src/mantra_bg@x1.png'))
+		        							this.setState({
+		        								images : images,
+		        								mantra_index : imgCounter,
+		        								imgCounter : imgCounter + 1
+		        							})
+		        						}} 
+		        						onClick={()=>{
+		        							console.log(images)
+		        							this.setState({
+		        								isOpen : true,
+		        								imgIndex : this.state.mantra_index
+		        							})
+		        						}}
+		        						src={require('./src/mantra@x1.png')}
+		        						loader={loader}
+	        						/>
+			        			</p>
+        					</div>
+
+        				</div>
+
+        				
 
         			
 
@@ -705,39 +792,7 @@ class Mood extends Component {
 		        						loader={loader}
 	        						/>
 			        			</p>
-			        			<p className='left-vertical-line key-word margin-top-2'>
-			        				Schneiderman's Mantra
-			        			</p>
-			        			<p className='italic'>
-			        				Overview first, zoom and filter, then details-on-demand
-			        			</p>
-
-			        			<p>
-			        				Schneiderman's Mantra is one of the key design principles applied when I was
-			        				designing the visualization. It helped me construct a logical information architecture
-			        				that presents both the hollistic and the detailed data to the user.
-			        			</p>
-			        			<p className=''>
-			        				<Img className='width-100 expandable' 
-		        						onLoad={()=>{
-		        							images.push(require('./src/mantra_bg@x1.png'))
-		        							this.setState({
-		        								images : images,
-		        								mantra_index : imgCounter,
-		        								imgCounter : imgCounter + 1
-		        							})
-		        						}} 
-		        						onClick={()=>{
-		        							console.log(images)
-		        							this.setState({
-		        								isOpen : true,
-		        								imgIndex : this.state.mantra_index
-		        							})
-		        						}}
-		        						src={require('./src/mantra@x1.png')}
-		        						loader={loader}
-	        						/>
-			        			</p>
+			        			
 	        				</div>
         				</div>
 
@@ -1053,31 +1108,32 @@ class Mood extends Component {
 			        	<div className='row margin-top-2'>
 			        		<div className='col s12'>
 			        			<p>
-			        				After finishing developing the visualization, the team obtained feedback from the Information Visualization 
-			        				class by letting classmates try out the design.
+			        				Finishing initial development cycle, MOoD was tried out by the undergraduate music history class in Georgia Tech. The 
+			        				feedback was amazingly positive. MOoD was praised on its visual appearance and interaction by students in 
+			        				music school.
 			        			</p>
 			        		</div>
 			        	</div>
 
-			        	<div className='row margin-top-2'>
+			        	<div className='row'>
 			        		<div className='col s12'>
 				        		<p className='title'>
 				        			Usability Metrics
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Learnability
 				        		</p>
 				        		<p>
 				        			Due to the minimal design practiced in the visualization, some users found it hard to understand all the features. 
 				        			I then improved learnability by providing an Intro page as well as an always-accessible ‘Help’ menu that would bring up a graphic on various controls and descriptions of areas on the screen.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Effectiveness
 				        		</p>
 				        		<p>
 				        			The design allows users to easily answer the questions identified earlier in the report with ease, and relatively few steps.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Insightfulness
 				        		</p>
 				        		<p>
@@ -1106,13 +1162,13 @@ class Mood extends Component {
 				        		<p className='title'>
 				        			User Experience Metrics
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Enjoyment
 				        		</p>
 				        		<p>
 				        			Including the ability to play the song selection aims to increase enjoyment. Coupled with the pulsing circles in accordance with the tempo, enjoyment levels are expected to be   high.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Engagement
 				        		</p>
 				        		<p>
@@ -1141,7 +1197,7 @@ class Mood extends Component {
 
 			        	<div className='row'>
 			        		<div className='col s12'>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word '>
 				        			Goal-Driven Design Process
 				        		</p>
 				        		<p>
@@ -1150,7 +1206,7 @@ class Mood extends Component {
 				        			can really help the user achieve the goals?</span>  The reversed process of goal-task-interaction 
 				        			really kept me close to the user and design meaningful interactions.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Perception and Culture
 				        		</p>
 				        		<p>
@@ -1158,7 +1214,7 @@ class Mood extends Component {
 				        			red is perceived more negative than green. In the future, I will be more careful when it comes to subjective 
 				        			perception metrics like color mapping and try to find a more appropriate solution.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			Trade-off between Visual Effect and Graphical Integrity
 				        		</p>
 				        		<p>
@@ -1166,7 +1222,7 @@ class Mood extends Component {
 				        			the data lies in. This decision compromised some visual effect of the trends but preserved the graphical integrity, 
 				        			which was more important. <span className='quote'>I would rather tell a bland story than a dishonest one</span>.
 				        		</p>
-				        		<p className='left-vertical-line key-word'>
+				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			The Power of Music
 				        		</p>
 				        		<p>
@@ -1174,7 +1230,7 @@ class Mood extends Component {
 				        			to the beats, because that was how I felt when I was designing MOoD. What I hear, what I see, and my passion for music 
 				        			just all clicked together and created a beautiful story that an Excel sheet does not do.
 				        		</p>
-				        		<p className='margin-top-2 container-center-inside'>
+				        		<p className='margin-top-1 container-center-inside'>
 				        			<Img className='width-30' src={require('./src/banner.svg')} loader={loader} />
 				        		</p>
 
@@ -1186,7 +1242,7 @@ class Mood extends Component {
 	        	</Element>
 
 
-        		<div style={{height: '500px'}}>
+        		<div style={{height: '200px'}}>
         		</div>
 
 		        

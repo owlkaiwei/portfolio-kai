@@ -59,11 +59,28 @@ class TapTile extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/gtmobile'>
-				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+			                <a className='text-link' href='#/work/elavon'>
+				                U P  &nbsp; N E X T : &nbsp; I N T E R N S H I P
 				            </a>
 			              </div>
 			              </div>
+			             <div className='nav-container-outer'>
+		                  <div className='container name-container'>
+		                    <Link id='nav-name' className='name' to={{
+		                        pathname: '/',
+		                        state: { toIntro: true }
+		                      }}
+		                      onMouseEnter={(e)=>{
+		                        $(e.target).addClass("text-reveal"); 
+		                      }}
+		                      onMouseOut={(e)=>{
+		                        $(e.target).removeClass("text-reveal"); 
+		                      }}
+		                    >
+		                      K A I W E I &nbsp; W A N G
+		                    </Link>
+		                  </div>
+	                </div>
 		              <div className='project-nav-background'/>
 		              <a className='text-link' href='#/work'>
 		                W O R K
@@ -77,19 +94,19 @@ class TapTile extends Component {
 		            </div>
 		        </Headroom>
 				<div className='progress-container progress-responsive-position'>
-					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
+					<ScrollLink activeClass="scroll-active" to="overview" spy={true} smooth={false} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="research" smooth={true} offset={-100} >
+			        <ScrollLink activeClass="scroll-active" to="research" spy={true} smooth={false} offset={-100} >
 			          <span className='label'>Research</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="ideation" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="ideation" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Ideation</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="solution" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="solution" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Solution</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="prototype" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="prototype" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Prototype</span><span className='circle'></span>
 			        </ScrollLink>
 			        <a onClick={this.scrollToTop}>Back to Top</a>

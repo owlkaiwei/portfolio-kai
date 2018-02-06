@@ -95,11 +95,28 @@ class Reco extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/taptile'>
-				                U P  &nbsp; N E X T : &nbsp; T A P T I L E
+			                <a className='text-link' href='#/work/misc'>
+				                U P  &nbsp; N E X T : &nbsp; M I S C
 				            </a>
 			              </div>
 			              </div>
+			              <div className='nav-container-outer'>
+		                  <div className='container name-container'>
+		                    <Link id='nav-name' className='name' to={{
+		                        pathname: '/',
+		                        state: { toIntro: true }
+		                      }}
+		                      onMouseEnter={(e)=>{
+		                        $(e.target).addClass("text-reveal"); 
+		                      }}
+		                      onMouseOut={(e)=>{
+		                        $(e.target).removeClass("text-reveal"); 
+		                      }}
+		                    >
+		                      K A I W E I &nbsp; W A N G
+		                    </Link>
+		                  </div>
+	                </div>
 		              <div className='project-nav-background'/>
 		              <a className='text-link' href='#/work'>
 		                W O R K

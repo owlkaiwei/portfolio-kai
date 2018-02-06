@@ -30,6 +30,9 @@ import GtMobile from './projects/gtmobile/gtmobile'
 import Mood from './projects/mood/mood'
 import Misc from './projects/misc/misc'
 import Reco from './projects/reco/reco'
+import Wardrober from './projects/wardrober/wardrober'
+import Elavon from './projects/elavon/elavon'
+import LifeDash from './projects/lifedash/lifedash'
 
 
 
@@ -596,6 +599,9 @@ class App extends Component {
             <Route path="/work/gtmobile" component={GtMobile}/>
             <Route path="/work/mood" component={Mood}/>
             <Route path="/work/reco" component={Reco}/>
+            <Route path="/work/wardrober" component={Wardrober}/>
+            <Route path="/work/elavon" component={Elavon}/>
+            <Route path="/work/lifedash" component={LifeDash}/>
             <Route path="/work/misc" component={(router)=>(<Misc router={router}/>)}/>
           </div>
         </MyScroll>

@@ -92,11 +92,28 @@ class GtMobile extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/mood'>
-				                U P  &nbsp; N E X T : &nbsp; M O o D
+			                <a className='text-link' href='#/work/lifedash'>
+				                U P  &nbsp; N E X T : &nbsp; L I F E D A S H
 				            </a>
 			              </div>
 			              </div>
+			              <div className='nav-container-outer'>
+		                  <div className='container name-container'>
+		                    <Link id='nav-name' className='name' to={{
+		                        pathname: '/',
+		                        state: { toIntro: true }
+		                      }}
+		                      onMouseEnter={(e)=>{
+		                        $(e.target).addClass("text-reveal"); 
+		                      }}
+		                      onMouseOut={(e)=>{
+		                        $(e.target).removeClass("text-reveal"); 
+		                      }}
+		                    >
+		                      K A I W E I &nbsp; W A N G
+		                    </Link>
+		                  </div>
+	                </div>
 		              <div className='project-nav-background'/>
 		              <a className='text-link' href='#/work'>
 		                W O R K
@@ -110,22 +127,22 @@ class GtMobile extends Component {
 		            </div>
 		        </Headroom>
 				<div className='progress-container progress-responsive-position'>
-					<ScrollLink activeClass="scroll-active" to="overview" smooth={true} offset={-100} >
+					<ScrollLink activeClass="scroll-active" to="overview" spy={true} smooth={false} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="understanding" smooth={true} offset={-100} >
+			        <ScrollLink activeClass="scroll-active" to="understanding" spy={true} smooth={false} offset={-100} >
 			          <span className='label'>Research</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="design" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="design" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Design</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="high-fidelity" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="high-fidelity" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Prototype</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="guideline" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="guideline" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Visual</span><span className='circle'></span>
 			        </ScrollLink>
-			        <ScrollLink activeClass="active" to="reflection" smooth={true} offset={-100}>
+			        <ScrollLink activeClass="scroll-active" to="reflection" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Reflection</span><span className='circle'></span>
 			        </ScrollLink>
 			        <a onClick={this.scrollToTop}>Back to Top</a>
@@ -255,7 +272,7 @@ class GtMobile extends Component {
 	        	<Element name='understanding'>
 	        		<div className='my-container'>
 		        		<div className='row container-center-inside margin-top-1'>
-			        		<h2>- Understanding -</h2>
+			        		<h2>- Understanding The Problem -</h2>
 			        	</div>
 	        			<div className='row margin-top-2'>
 	        				<div className='col s12'>
@@ -394,7 +411,7 @@ class GtMobile extends Component {
 	        	<Element name='design'>	
 	        		<div className='my-container'>
 		        		<div className='row container-center-inside margin-top-1'>
-			        		<h2>- Design -</h2>
+			        		<h2>- Design Process -</h2>
 			        	</div>
 	        			<div className='row margin-top-2'>
 	        				<div className='col s12'>

@@ -1,0 +1,64 @@
+#elavon-page {
+  background-color: #fff;
+  color: #303030; }
+  #elavon-page .title {
+    color: #66A421; }
+  #elavon-page .title:before {
+    background-color: #FFEF76; }
+  #elavon-page .quote {
+    color: #464646; }
+  #elavon-page .emphasis:after {
+    background-color: #66A421; }
+  #elavon-page .emphasis-new {
+    text-decoration-color: #66A421; }
+  #elavon-page .banner-img-container {
+    z-index: 2; }
+  #elavon-page .banner-text-container {
+    z-index: 1; }
+  #elavon-page .banner-text {
+    width: 100% !important;
+    background-color: #f5f5f5; }
+  #elavon-page .banner-text h1 {
+    color: #464646; }
+  #elavon-page .banner-text p {
+    color: #464646; }
+  #elavon-page .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #elavon-page .left-vertical-line {
+    border-left: 0.4rem solid #66A421; }
+  #elavon-page .progress-container a {
+    color: #464646; }
+  #elavon-page .progress-container:hover {
+    background-color: rgba(255, 255, 255, 0.8); }
+  #elavon-page .project-navbar a {
+    color: #464646; }
+  #elavon-page .project-navbar .text-link:before {
+    background-color: #464646; }
+  #elavon-page .project-navbar .text-link:after {
+    background-color: #464646; }
+  #elavon-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #elavon-page .link-to-project {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #464646;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #elavon-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.1); }
+  #elavon-page a {
+    color: #66A421;
+    cursor: pointer; }
+  #elavon-page .round {
+    border-radius: 10px; }
+  #elavon-page .project-navbar .name {
+    color: #464646; }

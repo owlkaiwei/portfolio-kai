@@ -67,18 +67,18 @@ export class Work extends Component {
 
 
 
-
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/gtmobile_thumbnail.png')}/>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/wardrober'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/wardrober_thumbnail@yellow.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>GT Mobile</div>
+                    <div className='title'>Wardrober</div>
                     <div className='text'>
-                        <p>Responsive Web App Design</p>
-                        <p>Information Architecture</p>
-                        <p>Interaction Design</p>
-                        <p>Style Guide</p>
+                        <p>7-Day Design Challenge</p>
+                        <p>UX Research</p>
+                        <p>IOS 11 Design</p>
+                        <p>Rapid Prototyping</p>
+                        <p>Motion Design</p>
                     </div>
                 </div>
             </div>
@@ -97,19 +97,37 @@ export class Work extends Component {
                 </div>
             </div>
 
+
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/reco'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/echoit_thumbnail@2x.png')}/>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/gtmobile_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>Reco</div>
+                    <div className='title'>GT Mobile</div>
                     <div className='text'>
-                        <p>iOS 11 App Design</p>
-                        <p>Motion Design</p>
-                        <p>Branding</p>
+                        <p>Responsive Web App Design</p>
+                        <p>Information Architecture</p>
+                        <p>Interaction Design</p>
+                        <p>Style Guide</p>
                     </div>
                 </div>
             </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/lifedash'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/lifedash_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>LifeDash.com</div>
+                    <div className='text'>
+                        <p>UX Design</p>
+                        <p>Web Design</p>
+                        <p>UX Research Planning</p>
+                    </div>
+                </div>
+            </div>
+
+
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
@@ -121,6 +139,34 @@ export class Work extends Component {
                         <p>Physical Sensor-Based Prototyping</p>
                         <p>Interaction Design</p>
                         <p>UX Research</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/elavon'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/elavon_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>UX Internship @ Elavon</div>
+                    <div className='text'>
+                        <p>Help Center Design</p>
+                        <p>Ecommerce App Design</p>
+                        <p>Agile Development/Lean UX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' style={{display: 'none'}} data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/reco'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/echoit_thumbnail@2x.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Reco</div>
+                    <div className='text'>
+                        <p>iOS 11 App Design</p>
+                        <p>Motion Design</p>
+                        <p>Branding</p>
                     </div>
                 </div>
             </div>
@@ -275,7 +321,7 @@ export class Work extends Component {
              <div className='row margin-top-2'>
                  <div className='col s10 push-s1 m8 xl6 text'>
                     <p style={{fontSize: '1rem'}}>
-                        <span style={{opacity: '0.8', display: 'none'}}>Copyright</span> <span style={{color: '#fac466', fontWeight: 'bold'}}>©</span> <span style={{opacity: '0.8'}}>Kaiwei Wang - 2018</span>
+                        <span style={{opacity: '0.8', display: 'none'}}>Copyright</span>  <span style={{opacity: '0.8'}}>Design & Code by Kaiwei Wang</span> <span style={{color: '#fac466', fontWeight: 'bold'}}>©</span> <span style={{opacity: '0.8'}}>2018</span>
                     </p>
                 </div>
             </div>

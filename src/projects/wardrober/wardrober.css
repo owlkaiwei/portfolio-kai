@@ -1,0 +1,64 @@
+#wardrober-page {
+  background-color: #fff;
+  color: #303030; }
+  #wardrober-page .title {
+    color: #ED7171; }
+  #wardrober-page .title:before {
+    background-color: #FFEF76; }
+  #wardrober-page .quote {
+    color: #464646; }
+  #wardrober-page .emphasis:after {
+    background-color: #ED7171; }
+  #wardrober-page .emphasis-new {
+    text-decoration-color: #ED7171; }
+  #wardrober-page .banner-img-container {
+    z-index: 2; }
+  #wardrober-page .banner-text-container {
+    z-index: 1; }
+  #wardrober-page .banner-text {
+    width: 100% !important;
+    background-color: #f5f5f5; }
+  #wardrober-page .banner-text h1 {
+    color: #464646; }
+  #wardrober-page .banner-text p {
+    color: #464646; }
+  #wardrober-page .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #wardrober-page .left-vertical-line {
+    border-left: 0.4rem solid #ED7171; }
+  #wardrober-page .progress-container a {
+    color: #464646; }
+  #wardrober-page .progress-container:hover {
+    background-color: white; }
+  #wardrober-page .project-navbar a {
+    color: #464646; }
+  #wardrober-page .project-navbar .text-link:before {
+    background-color: #464646; }
+  #wardrober-page .project-navbar .text-link:after {
+    background-color: #464646; }
+  #wardrober-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #wardrober-page .link-to-project {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #464646;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #wardrober-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.1); }
+  #wardrober-page a {
+    color: #ED7171;
+    cursor: pointer; }
+  #wardrober-page .round {
+    border-radius: 10px; }
+  #wardrober-page .project-navbar .name {
+    color: #464646; }

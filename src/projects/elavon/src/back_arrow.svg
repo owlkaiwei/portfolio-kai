@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="23px" viewBox="0 0 32 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>reco</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Tablet-Portrait" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-417.000000, -512.000000)">
+        <g id="reco" transform="translate(416.000000, 512.000000)" fill="#464646" fill-rule="nonzero">
+            <path d="M11.273,1.009 C11.717,0.565 12.416,0.565 12.86,1.009 C13.289,1.438 13.289,2.152 12.86,2.58 L4.813,10.627 L31.367,10.627 C31.986,10.627 32.494,11.119 32.494,11.738 C32.494,12.357 31.986,12.865 31.367,12.865 L4.813,12.865 L12.86,20.897 C13.289,21.341 13.289,22.056 12.86,22.484 C12.416,22.928 11.717,22.928 11.273,22.484 L1.321,12.532 C0.892,12.103 0.892,11.389 1.321,10.961 L11.273,1.009 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

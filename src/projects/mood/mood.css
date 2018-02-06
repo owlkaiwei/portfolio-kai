@@ -48,6 +48,17 @@
     transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
   #mood-page .link-to-project:hover {
     background-color: rgba(250, 165, 165, 0.1); }
+  #mood-page .link-in-progress {
+    opacity: 1;
+    color: #FAA5A5;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    cursor: pointer;
+    border: 1px solid #FAA5A5;
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #mood-page .link-in-progress:hover {
+    background-color: rgba(250, 165, 165, 0.1); }
   #mood-page .shadow {
     box-shadow: 0 2px 21px rgba(0, 0, 0, 0.2); }
   #mood-page a {

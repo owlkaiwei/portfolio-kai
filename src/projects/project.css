@@ -120,7 +120,6 @@
     z-index: 100;
     position: fixed;
     top: 50%;
-    width: 115px;
     transform: translateY(-50%);
     right: 1rem;
     display: flex;
@@ -137,8 +136,7 @@
       margin: 0.5rem 1rem;
       opacity: 0.3; }
     .project-page .progress-container a:hover {
-      opacity: 1;
-      font-weight: 600; }
+      opacity: 1; }
     .project-page .progress-container .circle {
       display: none;
       margin-left: 0.5rem; }
@@ -146,8 +144,6 @@
       content: '\25CF'; }
     .project-page .progress-container .scroll-active {
       opacity: 1; }
-  .project-page .progress-container:hover a {
-    opacity: 0.8; }
   .project-page .progress-responsive-position {
     display: none;
     right: 5%; }
@@ -257,6 +253,15 @@
     vertical-align: middle; }
   .project-page .back-container a {
     margin: 0 50px !important; }
+  .project-page .name {
+    z-index: 2;
+    position: relative; }
+  @media (max-width: 1023px) {
+    .project-page .name-container {
+      display: none; } }
+  @media (max-width: 830px) {
+    .project-page .back-container {
+      display: none; } }
   .project-page .caption {
     opacity: 0.8;
     display: flex;

@@ -212,7 +212,7 @@ p {
 	z-index: 100;
 	position: fixed;
 	top: 50%;
-	width: 115px;
+	//width: 120px;
 	transform: translateY(-50%);
 	right: 1rem;
 	display: flex;
@@ -234,7 +234,7 @@ p {
 
 	a:hover {
 		opacity: 1;
-		font-weight: 600
+		//text-decoration: underline;
 	}
 
 	.circle {
@@ -252,7 +252,7 @@ p {
 }
 
 .progress-container:hover a {
-	opacity: 0.8;
+	//opacity: 0.8;
 }
 
 
@@ -406,6 +406,25 @@ p {
 
 .back-container a {
 	margin: 0 50px !important
+}
+
+.name {
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width : 1023px) {
+.name-container {
+      display: none
+    }
+
+}
+
+@media (max-width : 830px) {
+.back-container {
+      display: none
+    }
+
 }
 
 

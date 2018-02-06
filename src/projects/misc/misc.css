@@ -152,3 +152,12 @@
     vertical-align: middle; }
   #misc .back-container a {
     margin: 0 50px !important; }
+  #misc .name {
+    z-index: 2;
+    position: relative; }
+  @media (max-width: 1023px) {
+    #misc .name-container {
+      display: none; } }
+  @media (max-width: 830px) {
+    #misc .back-container {
+      display: none; } }
