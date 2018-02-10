@@ -54,6 +54,11 @@ p {
 	font-weight: 400;
 }
 
+
+
+
+
+
 .title {
 	font-weight: 600;
 }
@@ -125,7 +130,23 @@ p {
 	}
 }
 
+@media (max-width: 1500px) {
+	p {
+		font-size: 1.2rem;
+	}
 
+	.margin-top-1 {
+		margin-top: 12rem;
+	}
+
+	.margin-top-2 {
+		margin-top: 5rem;
+	}
+
+	.margin-top-3 {
+		margin-top: 3rem;
+	}
+}
 
 
 .banner-container {

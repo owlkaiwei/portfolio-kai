@@ -157,6 +157,20 @@ export class Work extends Component {
                 </div>
             </div>
 
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/rostery'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/rostery_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Rostery</div>
+                    <div className='text'>
+                        <p>Interaction Design</p>
+                        <p>Material Design</p>
+                        <p>UX Research</p>
+                    </div>
+                </div>
+            </div>
+
             <div className='row margin-top-1' style={{display: 'none'}} data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/reco'>
                     <img className='thumbnail thumbnail-dark' src={require('./src/echoit_thumbnail@2x.png')}/>

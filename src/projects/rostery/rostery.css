@@ -1,0 +1,91 @@
+#rostery-page {
+  background-color: #fff;
+  color: #303030; }
+  #rostery-page .title {
+    color: #2CB6A5; }
+  #rostery-page .title:before {
+    background-color: #FFEF76; }
+  #rostery-page .quote {
+    color: #464646; }
+  #rostery-page .emphasis:after {
+    background-color: #2CB6A5; }
+  #rostery-page .emphasis-new {
+    text-decoration-color: #2CB6A5; }
+  #rostery-page .banner-img-container {
+    z-index: 2; }
+  #rostery-page .banner-text-container {
+    z-index: 1; }
+  #rostery-page .banner-text {
+    width: 100% !important;
+    background-color: #f5f5f5; }
+  #rostery-page .banner-text h1 {
+    color: #464646; }
+  #rostery-page .banner-text p {
+    color: #464646; }
+  #rostery-page .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #rostery-page .left-vertical-line {
+    border-left: 0.4rem solid #2CB6A5; }
+  #rostery-page .progress-container a {
+    color: #464646; }
+  #rostery-page .progress-container:hover {
+    background-color: white; }
+  #rostery-page .project-navbar a {
+    color: #464646; }
+  #rostery-page .project-navbar .text-link:before {
+    background-color: #464646; }
+  #rostery-page .project-navbar .text-link:after {
+    background-color: #464646; }
+  #rostery-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #rostery-page .link-to-project {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #464646;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #rostery-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.1); }
+  #rostery-page a {
+    color: #2CB6A5;
+    cursor: pointer; }
+  #rostery-page .round {
+    border-radius: 10px; }
+  #rostery-page .project-navbar .name {
+    color: #464646; }
+  #rostery-page .scenario {
+    font-weight: 600;
+    color: #2CB6A5; }
+  #rostery-page .student {
+    font-weight: 600;
+    color: #F28282; }
+  #rostery-page .number {
+    font-size: 3rem; }
+  #rostery-page .end-image {
+    margin: 500px auto;
+    width: 20%; }
+  #rostery-page .password-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 15; }
+  #rostery-page .password {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  #rostery-page .password-btn {
+    color: white !important; }
+  #rostery-page .p-hide {
+    display: none !important; }
+  #rostery-page .p-show {
+    display: block !important; }

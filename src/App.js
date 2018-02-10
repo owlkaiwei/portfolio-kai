@@ -19,6 +19,9 @@ import AOS from 'aos';
 import '../node_modules/aos/dist/aos.css'; 
 import Headroom from 'react-headroom'
 
+import "video-react/dist/video-react.css"
+
+
 import {Intro} from './intro/intro.js'
 
 import {Work} from './work/work.js'
@@ -33,6 +36,7 @@ import Reco from './projects/reco/reco'
 import Wardrober from './projects/wardrober/wardrober'
 import Elavon from './projects/elavon/elavon'
 import LifeDash from './projects/lifedash/lifedash'
+import Rostery from './projects/rostery/rostery'
 
 
 
@@ -602,6 +606,7 @@ class App extends Component {
             <Route path="/work/wardrober" component={Wardrober}/>
             <Route path="/work/elavon" component={Elavon}/>
             <Route path="/work/lifedash" component={LifeDash}/>
+            <Route path="/work/rostery" component={Rostery}/>
             <Route path="/work/misc" component={(router)=>(<Misc router={router}/>)}/>
           </div>
         </MyScroll>

@@ -69,6 +69,15 @@
       margin-top: 4rem; }
     .project-page .margin-top-2 {
       margin-top: 2.5rem; } }
+  @media (max-width: 1500px) {
+    .project-page p {
+      font-size: 1.2rem; }
+    .project-page .margin-top-1 {
+      margin-top: 12rem; }
+    .project-page .margin-top-2 {
+      margin-top: 5rem; }
+    .project-page .margin-top-3 {
+      margin-top: 3rem; } }
   .project-page .banner-container {
     width: 100%;
     height: 100vh;
