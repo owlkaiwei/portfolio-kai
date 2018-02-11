@@ -14,6 +14,7 @@ import '../../../node_modules/aos/dist/aos.css';
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
 import Img from 'react-image'
+import Footer from '../Components/footer/footer'
 
 var Scroll  = require('react-scroll');
 
@@ -28,6 +29,17 @@ const emptyStack = {
 	imgIndex : 0,
 	imgCounter : 0,
 	images : []
+}
+
+const footer = {
+	leftProjectName: 'Wardrober',
+	leftUrl: '#/work/wardrober',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'LifeDash',
+	rightUrl: '#/work/lifedash',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
 }
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
@@ -787,6 +799,8 @@ class GtMobile extends Component {
 	        		</div>
 
 	        	</Element>
+
+	        	<Footer footer={footer}/>
 
 
 			</div>

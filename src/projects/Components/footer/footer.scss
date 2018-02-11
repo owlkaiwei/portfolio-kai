@@ -1,0 +1,47 @@
+@import '../../../_shared.scss';
+
+#footer {
+
+$color-1: #3983FF;
+  $color-2: #464646;
+  $color-3: #9BE5E3;
+  $main-text-color: #303030; 
+  $background-color: #fff;
+  $font-primary: 'Josefin Sans';
+  $font-secondary: 'Halant';
+
+  background-color: $background-color;
+  position: relative;
+
+  p {
+    font-family: $font-primary !important;
+    font-weight: 600 !important;
+    font-size: 1.8rem !important
+  }
+
+
+.footer-container-left {
+  text-align: left;
+  color: white;
+  background-color: #89C8FC
+}
+
+.footer-container-left:hover {
+  color: #89C8FC !important;
+  background-color: #FFE6B3 !important
+}
+
+.footer-container-right {
+  text-align: right;
+  color: #4A90E2;
+  background-color: #FFCB66
+}
+
+.footer-container-left:hover {
+  color: #FFCB66 !important;
+  background-color: #4A90E2 !important
+}
+
+
+
+}

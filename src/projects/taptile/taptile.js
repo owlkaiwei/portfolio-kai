@@ -12,6 +12,7 @@ import './taptile.css';
 import AOS from 'aos'; 
 import '../../../node_modules/aos/dist/aos.css'; 
 import Headroom from 'react-headroom'
+import Footer from '../Components/footer/footer'
 
 var Scroll  = require('react-scroll');
 
@@ -20,6 +21,18 @@ var Element    = Scroll.Element;
 var Events     = Scroll.Events;
 var scroll     = Scroll.animateScroll;
 var scrollSpy  = Scroll.scrollSpy;
+
+const footer = {
+	leftProjectName: 'LifeDash',
+	leftUrl: '#/work/lifedash',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'UX Internship @ Elavon',
+	rightUrl: '#/work/elavon',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
+}
+
 
 
 
@@ -585,7 +598,7 @@ class TapTile extends Component {
 		        	
 	        	</Element>
 
-
+	        	<Footer footer={footer}/>
 			</div>
 		)
 	}

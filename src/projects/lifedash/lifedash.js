@@ -14,6 +14,8 @@ import '../../../node_modules/aos/dist/aos.css';
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
 
+import Footer from '../Components/footer/footer'
+
 import Img from 'react-image'
 
 var Scroll  = require('react-scroll');
@@ -29,6 +31,17 @@ const emptyStack = {
 	imgIndex : 0,
 	imgCounter : 0,
 	images : []
+}
+
+const footer = {
+	leftProjectName: 'GT Mobile',
+	leftUrl: '#/work/gtmobile',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'TapTile',
+	rightUrl: '#/work/taptile',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
 }
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
@@ -785,11 +798,13 @@ class LifeDash extends Component {
 
 
 				<img className='width-100' 
-		        						src={require('./src/wave.jpg')}
-	        						/>
+		        	src={require('./src/wave.jpg')}
+	        	/>
+
+	        	
 
 
-
+				<Footer footer={footer}/>
 		       
 
 		        

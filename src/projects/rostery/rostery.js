@@ -14,6 +14,7 @@ import '../../../node_modules/aos/dist/aos.css';
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
 import ReactPlayer from 'react-player'
+import Footer from '../Components/footer/footer'
 
 import Img from 'react-image'
 
@@ -31,6 +32,17 @@ const emptyStack = {
 	imgCounter : 0,
 	images : []
 }
+const footer = {
+	leftProjectName: 'Wardrober',
+	leftUrl: '#/work/wardrober',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'M O o D (Music Infovis)',
+	rightUrl: '#/work/mood',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
+}
+
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
 
@@ -1215,6 +1227,8 @@ class Rostery extends Component {
 <p className='end-image container-center-inside' style={this.state.contentStyle}>
 			        			<Img className='width-100' src={require('./src/rostery-logo.png')} loader={loader} />
 			        		</p>
+
+			        		<Footer footer={footer} style={this.state.contentStyle}/>
 
 		       
 

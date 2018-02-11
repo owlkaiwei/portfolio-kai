@@ -12,6 +12,7 @@ import '../../../node_modules/aos/dist/aos.css';
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
 import './misc.css';
+import Footer from '../Components/footer/footer'
 
 import Img from 'react-image'
 
@@ -29,6 +30,18 @@ const emptyStack = {
     imgCounter : 0,
     images : []
 }
+
+const footer = {
+    leftProjectName: 'UX Internship @ Elavon',
+    leftUrl: '#/work/elavon',
+    leftBgColor: 'black',
+    leftTextColor: 'white',
+    rightProjectName: 'M O o D (Music Infovis)',
+    rightUrl: '#/work/mood',
+    rightBgColor: 'black',
+    rightTextColor: 'white'
+}
+
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
 
@@ -93,8 +106,8 @@ class Misc extends Component {
                     <a className='back-wrapper' href='#/work'>
                             <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
                     </a>
-                    <a className='text-link' href='#/work/wardrober'>
-                        U P  &nbsp; N E X T : &nbsp;  W A R D R O B E R
+                    <a className='text-link' href='#/work/mood'>
+                        U P  &nbsp; N E X T : &nbsp;  M O o D
                     </a>
                   </div>
               </div>
@@ -291,6 +304,8 @@ class Misc extends Component {
 
     		
     	</div>
+
+        <Footer footer={footer}/>
     </div>
     )
   }

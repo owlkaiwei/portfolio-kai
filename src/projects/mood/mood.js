@@ -13,6 +13,7 @@ import AOS from 'aos';
 import '../../../node_modules/aos/dist/aos.css'; 
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
+import Footer from '../Components/footer/footer'
 
 import Img from 'react-image'
 
@@ -30,6 +31,18 @@ const emptyStack = {
 	imgCounter : 0,
 	images : []
 }
+
+const footer = {
+	leftProjectName: 'UX Internship @ Elavon',
+	leftUrl: '#/work/elavon',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'Wardrober',
+	rightUrl: '#/work/wardrober',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
+}
+
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
 
@@ -95,8 +108,8 @@ class Mood extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/gtmobile'>
-				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+			                <a className='text-link' href='#/work/wardrober'>
+				                U P  &nbsp; N E X T : &nbsp; W A R D R O B E R
 				            </a>
 			              </div>
 			              </div>
@@ -1244,6 +1257,8 @@ class Mood extends Component {
 
         		<div style={{height: '200px'}}>
         		</div>
+
+        		<Footer footer={footer}/>
 
 		        
 

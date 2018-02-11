@@ -13,6 +13,7 @@ import AOS from 'aos';
 import '../../../node_modules/aos/dist/aos.css'; 
 import Headroom from 'react-headroom'
 import Lightbox from "react-image-lightbox"
+import Footer from '../Components/footer/footer'
 
 import Img from 'react-image'
 
@@ -30,6 +31,18 @@ const emptyStack = {
 	imgCounter : 0,
 	images : []
 }
+
+const footer = {
+	leftProjectName: 'TapTile',
+	leftUrl: '#/work/taptile',
+	leftBgColor: 'black',
+	leftTextColor: 'white',
+	rightProjectName: 'Miscellaneous',
+	rightUrl: '#/work/misc',
+	rightBgColor: 'black',
+	rightTextColor: 'white'
+}
+
 
 const loader = React.createElement('img', { className: 'loader', src: require('../src/loader.svg') })
 
@@ -326,6 +339,8 @@ class Elavon extends Component {
 
 				<div style={{height: '100px'}}>
 				</div>
+
+				<Footer footer={footer}/>
 
 		       
 
