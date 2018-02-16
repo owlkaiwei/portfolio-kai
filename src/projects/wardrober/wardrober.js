@@ -33,7 +33,7 @@ const emptyStack = {
 }
 
 const footer = {
-	leftProjectName: 'M O o D (Music Inforvis)',
+	leftProjectName: 'M O o D (Music Infovis)',
 	leftUrl: '#/work/mood',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
@@ -161,6 +161,12 @@ class Wardrober extends Component {
 			        <ScrollLink activeClass="scroll-active" to="design" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Design</span><span className='circle'></span>
 			        </ScrollLink>
+			        <ScrollLink activeClass="scroll-active" to="flow-1" spy={true} smooth={false} offset={-100}>
+			          <span className='label'>Flow-1</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="scroll-active" to="flow-2" spy={true} smooth={false} offset={-100}>
+			          <span className='label'>Flow-2</span><span className='circle'></span>
+			        </ScrollLink>
 			        <ScrollLink activeClass="scroll-active" to="prototype" spy={true} smooth={false} offset={-100}>
 			          <span className='label'>Prototype</span><span className='circle'></span>
 			        </ScrollLink>
@@ -195,7 +201,7 @@ class Wardrober extends Component {
 		        	<div className='banner-container-inner container-center-horizontal'>
 
 			        		<a className='link-to-project'  target='_blank'>
-				        		1 Designer  &nbsp; 7 Days
+				        		Everyone is a Fashion Icon.
 				        	</a>
 		        	</div>
 		          
@@ -288,7 +294,7 @@ class Wardrober extends Component {
 						<div className='row margin-top-2'>
 							<p className='col s12'>
 								The core of the challenge was "to streamline the process of planning outfit", which is surrounded by a number of tasks. For example, it involves keeping the wardrobe organized, finding items, determining occasion, shopping for similar items and the list 
-								can go on. Given 7 days, I did not want to jump right into ideating concepts based on assumptions. Instead, I wanted to understand as much of the outfit planning experience as I could in this limited amount of time to make sure my concept was effective and valuable to users.
+								can go on. I did not want to jump right into ideating concepts based on assumptions. Instead, I wanted to understand as much of the outfit planning experience as I could in this limited amount of time to make sure my concept was effective and valuable to users.
 							</p>
 						</div>
     			</div>
@@ -643,6 +649,8 @@ class Wardrober extends Component {
 							<Img className='width-80' src={require('./src/sketches.png')} loader={loader} />
 						</div>
 					</div>
+				</Element>
+				<Element name="flow-1" className="element">
 					<div className='my-container'>
 
 						<div className='row' data-aos='fade-up'>
@@ -688,6 +696,7 @@ class Wardrober extends Component {
 					<div className='my-container'>
 						<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>01.</p>
 					        		<p className='left-vertical-line'>
 					        			This is a small "eye candy" that I added to the homepage. It fits there perfectly because 
 					        			it initiates the two core functionalities. Having something enjoyable and even addictive here encourages 
@@ -721,6 +730,7 @@ class Wardrober extends Component {
 
 		        		<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>02.</p>
 					        		<p className='left-vertical-line'>
 					        			Scanning the label of a newly purchased item significantly expedites the process 
 					        			of registering an item in the wardrobe. But the user is also left with the option 
@@ -759,6 +769,8 @@ class Wardrober extends Component {
 		        		</div>
 
         			</div>
+        			</Element>
+        			<Element name="flow-2" className="element">
 
         			<div className='my-container-big'>
 						<div className='row container-center-inside'>
@@ -786,6 +798,7 @@ class Wardrober extends Component {
 					<div className='my-container'>
 						<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>01.</p>
 					        		<p className='left-vertical-line'>
 					        			The user can start getting inspirations by simply clicking on one of the keywords provided. The keywords are 
 					        			not random. Instead, they are provided according to the user's style, preference, and the occasion.
@@ -821,6 +834,7 @@ class Wardrober extends Component {
 
 		        		<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>02.</p>
 					        		<p className='left-vertical-line'>
 					        			As soon as the user starts scrolling, the style tab is collapsed to provide a bigger view. It can always be expanded by 
 					        			clicking on the search bar.
@@ -853,6 +867,7 @@ class Wardrober extends Component {
 
 		        		<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>03.</p>
 					        		<p className='left-vertical-line'>
 					        			This is the interaction of a specific inspiration being expanded. By making it a layer on top of the original view, 
 					        			I made sure the use does not get lost during transition.
@@ -885,6 +900,7 @@ class Wardrober extends Component {
 
 		        		<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>04.</p>
 					        		<p className='left-vertical-line'>
 					        			This is the interaction of adding all items from an inspiration.
 					        		</p>
@@ -916,6 +932,7 @@ class Wardrober extends Component {
 
 		        		<div className='row margin-top-2'>
 							<div className='col s12 l6 push-l6'>
+									<p className='number'>05.</p>
 					        		<p className='left-vertical-line'>
 					        			The user can always view their current planning in progress. They can also index the physical location 
 					        			of an item.
@@ -1089,14 +1106,13 @@ class Wardrober extends Component {
 						<div className='row' data-aos='fade-up'>
 			        		<div className='col s12 margin-top-2'>
 			        			<p>
-			        				This is definitely one of the most intense and exciting weeks for me. I gave my best and learned a ton.
+			        				I gave my best in this design project and learned a ton.
 			        			</p>
 			        			<p className='left-vertical-line key-word margin-top-3'>
 				        			The Importance of Planning
 				        		</p>
 				        		<p>
-				        			To condense what usually takes me months to just one week, I need to have a plan for almost every hour in the 7 days. After I created a timeline 
-				        			to refer to, things got so much easier than they seemed.
+				        			With a broad problem in hand, I needed to plan the research and design process in order to narrow down to the core of the challenge.
 				        		</p>
 				        		<p className='left-vertical-line key-word margin-top-3'>
 				        			The Voice of The User
@@ -1110,9 +1126,9 @@ class Wardrober extends Component {
 				        		</p>
 				        		<p>
 				        			I have always found it hard to make decisions, especially design decisions that would potentially influence 
-				        			way more people than I could imagine. This time, with such limited time, I had to force myself to use not just 
+				        			way more people than I could imagine. This time I practiced forcing myself to use not just 
 				        			what I learnd from the user, but also instincts as a designer, to quickly get the ball rolling. It is always the iterative process 
-				        			that brings a design to a better state, and I have to start somewhere.
+				        			that brings a design to a better state, and I just have to start somewhere.
 				        		</p>
 
 				        		<p className='margin-top-1 container-center-inside'>

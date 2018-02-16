@@ -90,9 +90,8 @@ export class Work extends Component {
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>Wardrober</div>
                     <div className='text'>
-                        <p>7-Day Design Challenge</p>
-                        <p>UX Research</p>
                         <p>IOS 11 Design</p>
+                        <p>UX Research</p>
                         <p>Rapid Prototyping</p>
                         <p>Motion Design</p>
                     </div>
@@ -129,6 +128,19 @@ export class Work extends Component {
                 </div>
             </div>
 
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/yelp'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/yelp_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Yelp Mobile Website Redesign</div>
+                    <div className='text'>
+                        <p>Mobile Web Design</p>
+                        <p>UI Design</p>
+                        <p>Rapid Prototyping</p>
+                    </div>
+                </div>
+            </div>
 
 
             <div className='row margin-top-1' data-aos="fade-up">
@@ -166,6 +178,7 @@ export class Work extends Component {
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>Rostery</div>
                     <div className='text'>
+                         <p>Google Design Challenge</p>
                         <p>Interaction Design</p>
                         <p>Material Design</p>
                         <p>UX Research</p>

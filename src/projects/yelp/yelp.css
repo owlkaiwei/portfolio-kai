@@ -1,0 +1,91 @@
+#yelp-page {
+  background-color: #fff;
+  color: #303030; }
+  #yelp-page .title {
+    color: #D32323; }
+  #yelp-page .title:before {
+    background-color: #FFEF76; }
+  #yelp-page .quote {
+    color: #464646; }
+  #yelp-page .emphasis:after {
+    background-color: #D32323; }
+  #yelp-page .emphasis-new {
+    text-decoration-color: #D32323; }
+  #yelp-page .banner-img-container {
+    z-index: 2; }
+  #yelp-page .banner-text-container {
+    z-index: 1; }
+  #yelp-page .banner-text {
+    width: 100% !important;
+    background-color: #f5f5f5; }
+  #yelp-page .banner-text h1 {
+    color: #464646; }
+  #yelp-page .banner-text p {
+    color: #464646; }
+  #yelp-page .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #yelp-page .left-vertical-line {
+    border-left: 0.4rem solid #D32323; }
+  #yelp-page .progress-container a {
+    color: #464646; }
+  #yelp-page .progress-container:hover {
+    background-color: white; }
+  #yelp-page .project-navbar a {
+    color: #464646; }
+  #yelp-page .project-navbar .text-link:before {
+    background-color: #464646; }
+  #yelp-page .project-navbar .text-link:after {
+    background-color: #464646; }
+  #yelp-page .project-nav-background {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12); }
+  #yelp-page .link-to-project {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: block;
+    color: #464646;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Josefin Sans";
+    transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1); }
+  #yelp-page .shadow {
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.1); }
+  #yelp-page a {
+    color: #D32323;
+    cursor: pointer; }
+  #yelp-page .round {
+    border-radius: 10px; }
+  #yelp-page .project-navbar .name {
+    color: #464646; }
+  #yelp-page .scenario {
+    font-weight: 600;
+    color: #D32323; }
+  #yelp-page .student {
+    font-weight: 600;
+    color: #F28282; }
+  #yelp-page .number {
+    font-size: 3rem; }
+  #yelp-page .end-image {
+    margin: 500px auto;
+    width: 20%; }
+  #yelp-page .password-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 15; }
+  #yelp-page .password {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  #yelp-page .password-btn {
+    color: white !important; }
+  #yelp-page .p-hide {
+    display: none !important; }
+  #yelp-page .p-show {
+    display: block !important; }

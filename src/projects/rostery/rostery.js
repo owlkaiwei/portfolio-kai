@@ -123,8 +123,7 @@ class Rostery extends Component {
 		        	<div className='password my-container'>
 			        	<div className="row">
 					        <div className="input-field col s12">
-					          <input id="password" type="password" className="validate"/>
-					          <label htmlFor="password">Password</label>
+					          <input id="password" type="password" className="validate" placeholder='Password'/>
 					        </div>
 				      </div>
 
@@ -150,8 +149,8 @@ class Rostery extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/taptile'>
-				                U P  &nbsp; N E X T : &nbsp; T A P T I L E
+			                <a className='text-link' href='#/work/mood'>
+				                U P  &nbsp; N E X T : &nbsp; M O o D
 				            </a>
 			              </div>
 		              </div>

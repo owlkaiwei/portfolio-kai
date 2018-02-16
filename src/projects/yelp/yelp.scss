@@ -1,0 +1,172 @@
+#yelp-page {
+	$color-1: #D32323;
+	$color-2: #464646;
+	$color-3: #9BE5E3;
+	$main-text-color: #303030; 
+	$background-color: #fff;
+	$font-primary: 'Josefin Sans';
+	$font-secondary: 'Halant';
+
+	background-color: $background-color;
+	color: $main-text-color;
+
+
+.title {
+	color: $color-1;
+}
+
+.title:before {
+	background-color: #FFEF76;
+}
+
+.quote {
+	color: $color-2;
+}
+
+.emphasis:after {
+	background-color: $color-1;
+}
+
+.emphasis-new {
+	text-decoration-color: $color-1
+}
+
+.banner-img-container {
+	z-index: 2
+}
+
+.banner-text-container {
+	z-index: 1
+}
+
+.banner-text {
+	width: 100% !important;
+	background-color: #f5f5f5;
+}
+
+.banner-text h1 {
+	color: $color-2;
+}
+
+.banner-text p {
+	color: $color-2;
+}
+
+.banner-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+.left-vertical-line {
+	border-left: 0.4rem solid $color-1;
+}
+
+
+.progress-container {
+
+a {
+	color: $color-2;
+}
+}
+
+.progress-container:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.project-navbar a {
+	color: $color-2;
+}
+
+.project-navbar  .text-link:before {
+	background-color: $color-2;
+}
+
+.project-navbar  .text-link:after {
+	background-color: $color-2;
+}
+
+.project-nav-background {
+	background-color: $background-color;
+	box-shadow: 0 2px 4px rgba(128, 128, 128, 0.12);
+}
+
+.link-to-project {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	display: block;
+	color: $color-2;
+	padding: 7px;
+	border-radius: 5px;
+	font-family: $font-primary;
+	transition: all 0.2s cubic-bezier(0.7, 0.3, 0, 1);
+}
+
+
+.shadow {
+	box-shadow: 0 2px 21px rgba(0, 0, 0, 0.1)
+}
+
+a {
+	color : $color-1;
+	cursor: pointer;
+}
+
+.round {
+	border-radius: 10px;
+}
+
+.project-navbar .name {
+	color: $color-2;
+}
+
+.scenario {
+	font-weight: 600;
+	color: $color-1;
+}
+
+.student {
+	font-weight: 600;
+	color: #F28282;
+}
+
+.number {
+	font-size: 3rem
+}
+
+.end-image {
+	margin: 500px auto;
+	width: 20%
+}
+
+.password-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: 15
+}
+
+.password {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+.password-btn {
+	color: white !important
+}
+
+.p-hide {
+	display: none !important;
+}
+
+.p-show {
+	display: block !important;
+}
+
+
+}

@@ -37,6 +37,7 @@ import Wardrober from './projects/wardrober/wardrober'
 import Elavon from './projects/elavon/elavon'
 import LifeDash from './projects/lifedash/lifedash'
 import Rostery from './projects/rostery/rostery'
+import Yelp from './projects/yelp/yelp'
 
 
 
@@ -607,6 +608,7 @@ class App extends Component {
             <Route path="/work/elavon" component={Elavon}/>
             <Route path="/work/lifedash" component={LifeDash}/>
             <Route path="/work/rostery" component={Rostery}/>
+            <Route path="/work/yelp" component={Yelp}/>
             <Route path="/work/misc" component={(router)=>(<Misc router={router}/>)}/>
           </div>
         </MyScroll>

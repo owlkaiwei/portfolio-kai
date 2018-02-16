@@ -62,3 +62,7 @@
     border-radius: 10px; }
   #wardrober-page .project-navbar .name {
     color: #464646; }
+  #wardrober-page .number {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ED7171; }
