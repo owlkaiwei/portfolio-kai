@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.e49a4f4e.css",
   "main.css.map": "static/css/main.e49a4f4e.css.map",
-  "main.js": "static/js/main.c1c8cc34.js",
-  "main.js.map": "static/js/main.c1c8cc34.js.map",
+  "main.js": "static/js/main.4e9793a6.js",
+  "main.js.map": "static/js/main.4e9793a6.js.map",
   "static/media/CA-1.png": "static/media/CA-1.fc4f22f3.png",
   "static/media/CA-2.png": "static/media/CA-2.0a9bc07e.png",
   "static/media/CA-3.png": "static/media/CA-3.37dad377.png",
@@ -105,6 +105,7 @@
   "static/media/iteration.png": "static/media/iteration.98fbca1f.png",
   "static/media/journey.png": "static/media/journey.2c435be1.png",
   "static/media/latex_thumbnail.png": "static/media/latex_thumbnail.c8f6d40d.png",
+  "static/media/layers.png": "static/media/layers.8ef9d348.png",
   "static/media/layout-options.png": "static/media/layout-options.07a6e620.png",
   "static/media/lifedash_thumbnail.png": "static/media/lifedash_thumbnail.02efe69f.png",
   "static/media/list-current.jpg": "static/media/list-current.00482350.jpg",
