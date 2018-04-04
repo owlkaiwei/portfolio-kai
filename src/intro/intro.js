@@ -28,7 +28,7 @@ export class Intro extends Component {
 							I am a product designer and web developer with passion for creating an interactive, useful, and delightful user experience.
 						</div>
 						<div className='intro-text intro-text-size-2'>
-							Currently I am working for Georgia Tech while pursuing my Masters degree in Human-Computer Interaction.
+							This summer I will be joining Google as an interaction designer and I am very excited to start this new chapter of my career!
 						</div>
 						<div className='intro-link intro-text-size-2 intro-margin-top-2'>
 							<a href='#/work'>
@@ -47,8 +47,8 @@ export class Intro extends Component {
 						</div>
 						<div className='intro-icon-container intro-icon-left intro-margin-top-2'>
 							<div>
-								<a>
-									<i className="fa fa-medium" aria-hidden="true"></i>
+								<a href='https://dribbble.com/kkkai' target='_blank'>
+									<i className="fa fa-dribbble" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div>
@@ -56,9 +56,10 @@ export class Intro extends Component {
 									<i className="fa fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</div>
+							
 							<div>
-								<a href='https://dribbble.com/kkkai' target='_blank'>
-									<i className="fa fa-dribbble" aria-hidden="true"></i>
+								<a>
+									<i className="fa fa-medium" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div>
@@ -72,8 +73,8 @@ export class Intro extends Component {
 						<img id='portrait' src={portrait} />
 						<div className='intro-icon-container intro-icon-right'>
 							<div>
-								<a>
-									<i className="fa fa-medium" aria-hidden="true"></i>
+								<a href='https://dribbble.com/kkkai' target='_blank'>
+									<i className="fa fa-dribbble" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div>
@@ -81,9 +82,10 @@ export class Intro extends Component {
 									<i className="fa fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</div>
+							
 							<div>
-								<a href='https://dribbble.com/kkkai' target='_blank'>
-									<i className="fa fa-dribbble" aria-hidden="true"></i>
+								<a>
+									<i className="fa fa-medium" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div>

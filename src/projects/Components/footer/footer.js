@@ -45,7 +45,7 @@ class Footer extends Component {
   render() {
     var footer = this.props.footer
     return (
-        <div id='footer' className='row footer-container-out'>
+        <div id='footer' className='row footer-container-out no-margin-bottom'>
             <a href={footer.leftUrl}  className='side-container footer-container-left col s6'>
                 <div className='col s12 push-s3'>
                     <p>PREVIOUS </p>

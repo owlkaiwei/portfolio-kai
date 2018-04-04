@@ -33,8 +33,8 @@ const emptyStack = {
 }
 
 const footer = {
-	leftProjectName: 'TapTile',
-	leftUrl: '#/work/taptile',
+	leftProjectName: 'GT Mobile',
+	leftUrl: '#/work/gtmobile',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
 	rightProjectName: 'Miscellaneous',

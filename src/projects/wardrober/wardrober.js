@@ -37,8 +37,8 @@ const footer = {
 	leftUrl: '#/work/mood',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
-	rightProjectName: 'GT Mobile',
-	rightUrl: '#/work/gtmobile',
+	rightProjectName: 'Rostery',
+	rightUrl: '#/work/rostery',
 	rightBgColor: 'black',
 	rightTextColor: 'white'
 }
@@ -111,8 +111,8 @@ class Wardrober extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/mood'>
-				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
+			                <a className='text-link' href='#/work/rostery'>
+				                U P  &nbsp; N E X T : &nbsp; R O S T E R Y
 				            </a>
 			              </div>
 		              </div>
@@ -212,7 +212,7 @@ class Wardrober extends Component {
 		          <div className='row'>
 		          	<p className='col s5 label'>Role</p>
 		          	<p className='col s7 content'>
-		          		Product Designer (Individual Challenge)
+		          		Product Designer
 		          	</p>
 		          </div>
 		          <div className='row'>
@@ -221,7 +221,7 @@ class Wardrober extends Component {
 		          </div>
 		          <div className='row'>
 		          	<p className='col s5 label'>Duration</p>
-		          	<p className='col s7 content'>01/08/2018 - 01/15/2018</p>
+		          	<p className='col s7 content'>01/2018</p>
 		          </div>
 		        </Element>
 
@@ -243,41 +243,49 @@ class Wardrober extends Component {
 							</div>
 						</div>
 
-						<div className='row'>
-							<div className='col s12 m4'>
-								
-								<div className='container-center-inside width-80'>
-									<p>
-										<Img className='shadow width-100 round' src={require('./src/Planning-Inspiration@shortened.gif')} loader={loader} />
-									</p>
-								</div>
-								<div className='container-center-inside width-80'>
-									<p>Planning outfit becomes an inspirational process.</p>
-								</div>
-							</div>
-							<div className='col s12 m4'>
-								
-								<div className='container-center-inside width-80'>
-									<p>
-										<Img className='shadow width-100 round' src={require('./src/Plan@shortened.gif')} loader={loader} />
-									</p>
-								</div>
-								<div className='container-center-inside width-80'>
-									<p>The physical location of each item is now mirrored and managed on a digital platform.</p>
-								</div>
-							</div>
-							<div className='col s12 m4'>
-								
-								<div className='container-center-inside width-80'>
-									<p>
-										<Img className='shadow width-100 round' src={require('./src/my_wardrobe-click@shortened.gif')} loader={loader} />
-									</p>
-								</div>
-								<div className='container-center-inside width-80'>
-									<p>Wardrober features engaging microinteractions that add enjoyment to a previously dull process.</p>
-								</div>
-							</div>
-						</div>
+					
+
+						<div className='row margin-top-3'>
+			        		<div className='col s12 l6 push-l6'>
+			        			<p className='scenario'>
+			        				<span className='number'>01. <br/></span>
+			        				Planning outfit becomes an inspirational process.
+			        			</p>
+			        		</div>
+			        		<div className='col s12 l5 pull-l6 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<Img className='shadow width-100 round' src={require('./src/Planning-Inspiration@shortened.gif')} loader={loader} />
+			        			</p>
+			        		</div>
+			        	</div>
+
+			        	<div className='row margin-top-3'>
+			        		<div className='col s12 l6'>
+			        			<p className='scenario'>
+			        				<span className='number'>02. <br/></span>
+			        				The physical location of each item is now mirrored and managed on a digital platform.
+			        			</p>
+			        		</div>
+			        		<div className='col s12 l5 push-l1 container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<Img className='shadow width-100 round' src={require('./src/Plan@shortened.gif')} loader={loader} />
+			        			</p>
+			        		</div>
+			        	</div>
+
+			        	<div className='row margin-top-3'>
+			        		<div className='col s12 l6 push-l6'>
+			        			<p className='scenario'>
+			        				<span className='number'>03. <br/></span>
+			        				Wardrober features engaging microinteractions that add enjoyment to a previously dull process.
+			        			</p>
+			        		</div>
+			        		<div className='col s12 l5 pull-l6  container-center-inside'>
+			        			<p className='width-100 container-center-inside'>
+			        				<Img className='shadow width-100 round' src={require('./src/my_wardrobe-click@shortened.gif')} loader={loader} />
+			        			</p>
+			        		</div>
+			        	</div>
 
 						
 					</div>
@@ -994,8 +1002,7 @@ class Wardrober extends Component {
 						<div className='row' data-aos='fade-up'>
 			        		<div className='col s12'>
 			        			<p className='margin-top-2'>
-			        				After finishing the initial prototype, I tested it with several friends. Overall they had positive reaction to the visual and interaction design. 
-			        				However, one detail of the initial prototype was complained about multiple times.
+			        				After the prototype was finished, Wardrober went through a set of usabibilility tests. One detail of the initial prototype was complained about multiple times.
 			        			</p>
 			        			<p className='left-vertical-line key-word'>
 			        				Challenge: The Single-Hand Operation
@@ -1062,7 +1069,7 @@ class Wardrober extends Component {
 						<div className='row' data-aos='fade-up'>
 			        		<div className='col s12 margin-top-2'>
 			        			<p>
-			        				I am proud of what I have created in the past 7 days, but Wardrober is no where near finished.
+			        				I am proud of what I have created, but Wardrober is no where near finished.
 			        			</p>
 			        			<p className='left-vertical-line key-word margin-top-3'>
 				        			Flesh Out The Rest Of Functionalities

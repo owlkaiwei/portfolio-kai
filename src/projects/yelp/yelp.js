@@ -33,12 +33,12 @@ const emptyStack = {
 	images : []
 }
 const footer = {
-	leftProjectName: 'Wardrober',
-	leftUrl: '#/work/wardrober',
+	leftProjectName: 'TapTile',
+	leftUrl: '#/work/taptile',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
-	rightProjectName: 'M O o D (Music Infovis)',
-	rightUrl: '#/work/mood',
+	rightProjectName: 'GT Mobile',
+	rightUrl: '#/work/gtmobile',
 	rightBgColor: 'black',
 	rightTextColor: 'white'
 }
@@ -112,8 +112,8 @@ class Yelp extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/mood'>
-				                U P  &nbsp; N E X T : &nbsp; M O o D
+			                <a className='text-link' href='#/work/gtmobile'>
+				                U P  &nbsp; N E X T : &nbsp; G T &nbsp; M O B I L E
 				            </a>
 			              </div>
 		              </div>

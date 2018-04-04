@@ -32,12 +32,12 @@ const emptyStack = {
 }
 
 const footer = {
-	leftProjectName: 'Wardrober',
-	leftUrl: '#/work/wardrober',
+	leftProjectName: 'Yelp Redesign',
+	leftUrl: '#/work/yelp',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
-	rightProjectName: 'LifeDash',
-	rightUrl: '#/work/lifedash',
+	rightProjectName: 'UX Internship @ Elavon',
+	rightUrl: '#/work/elavon',
 	rightBgColor: 'black',
 	rightTextColor: 'white'
 }
@@ -104,8 +104,8 @@ class GtMobile extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/lifedash'>
-				                U P  &nbsp; N E X T : &nbsp; L I F E D A S H
+			                <a className='text-link' href='#/work/elavon'>
+				                U P  &nbsp; N E X T : &nbsp; I N T E R N S H I P
 				            </a>
 			              </div>
 			              </div>

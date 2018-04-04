@@ -281,3 +281,5 @@
     text-decoration: underline; }
   .project-page .loader {
     width: 200px; }
+  .project-page .larger-text {
+    font-size: 2rem; }

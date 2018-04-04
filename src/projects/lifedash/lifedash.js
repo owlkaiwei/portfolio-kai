@@ -34,8 +34,8 @@ const emptyStack = {
 }
 
 const footer = {
-	leftProjectName: 'GT Mobile',
-	leftUrl: '#/work/gtmobile',
+	leftProjectName: 'Rostery',
+	leftUrl: '#/work/rostery',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
 	rightProjectName: 'TapTile',
@@ -203,16 +203,16 @@ class LifeDash extends Component {
 		          <div className='row'>
 		          	<p className='col s5 label'>Role</p>
 		          	<p className='col s7 content'>
-		          		UX Designer (Individual Design Exercise)
+		          		UX Designer
 		          	</p>
 		          </div>
 		          <div className='row'>
 		          	<p className='col s5 label'>Tool</p>
-		          	<p className='col s7 content'>Pen & Paper <br/> Sketch<br/> Marvel<br/> Principle</p>
+		          	<p className='col s7 content'>Pen & Paper <br/> Sketch<br/> Marvel<br/> Framer Studio</p>
 		          </div>
 		          <div className='row'>
 		          	<p className='col s5 label'>Duration</p>
-		          	<p className='col s7 content'>01/28/2018 - 01/30/2018</p>
+		          	<p className='col s7 content'>02/2018</p>
 		          </div>
 		        </Element>
 
@@ -797,8 +797,9 @@ class LifeDash extends Component {
     			</Element>
 
 
-				<img className='width-100' 
+				<img className='width-100' style={{display:'block'}}
 		        	src={require('./src/wave.jpg')}
+				
 	        	/>
 
 	        	

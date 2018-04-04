@@ -27,8 +27,8 @@ const footer = {
 	leftUrl: '#/work/lifedash',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
-	rightProjectName: 'UX Internship @ Elavon',
-	rightUrl: '#/work/elavon',
+	rightProjectName: 'Yelp Redesign',
+	rightUrl: '#/work/yelp',
 	rightBgColor: 'black',
 	rightTextColor: 'white'
 }
@@ -72,8 +72,8 @@ class TapTile extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/elavon'>
-				                U P  &nbsp; N E X T : &nbsp; I N T E R N S H I P
+			                <a className='text-link' href='#/work/yelp'>
+				                U P  &nbsp; N E X T : &nbsp; Y E L P &nbsp; R E D E S I G N
 				            </a>
 			              </div>
 			              </div>

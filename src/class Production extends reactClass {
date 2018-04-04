@@ -1,0 +1,7 @@
+class Production extends reactClass {
+	var BaseUrl = 'm.gatech.edu'
+
+	method_1 {
+
+	}
+}

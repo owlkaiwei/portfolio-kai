@@ -98,18 +98,16 @@ export class Work extends Component {
                 </div>
             </div>
 
-
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/gtmobile_thumbnail.png')}/>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/rostery'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/rostery_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>GT Mobile</div>
+                    <div className='title'>Rostery</div>
                     <div className='text'>
-                        <p>Responsive Web App Design</p>
-                        <p>Information Architecture</p>
                         <p>Interaction Design</p>
-                        <p>Style Guide</p>
+                        <p>Material Design</p>
+                        <p>UX Research</p>
                     </div>
                 </div>
             </div>
@@ -129,6 +127,25 @@ export class Work extends Component {
             </div>
 
             <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
+                    <img className='thumbnail thumbnail-light' src={require('./src/taptile_thumbnail.png')}/>
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>TapTile</div>
+                    <div className='text'>
+                        <p>Physical Sensor-Based Prototyping</p>
+                        <p>Interaction Design</p>
+                        <p>UX Research</p>
+                    </div>
+                </div>
+            </div>
+
+
+        
+
+            
+
+            <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/yelp'>
                     <img className='thumbnail thumbnail-dark' src={require('./src/yelp_thumbnail.png')}/>
                 </a>
@@ -142,20 +159,22 @@ export class Work extends Component {
                 </div>
             </div>
 
-
             <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/taptile'>
-                    <img className='thumbnail thumbnail-light' src={require('./src/taptile_thumbnail.png')}/>
+                <a className='col s10 push-s1 m8 xl6' href='#/work/gtmobile'>
+                    <img className='thumbnail thumbnail-dark' src={require('./src/gtmobile_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>TapTile</div>
+                    <div className='title'>GT Mobile</div>
                     <div className='text'>
-                        <p>Physical Sensor-Based Prototyping</p>
+                        <p>Responsive Web App Design</p>
+                        <p>Information Architecture</p>
                         <p>Interaction Design</p>
-                        <p>UX Research</p>
+                        <p>Style Guide</p>
                     </div>
                 </div>
             </div>
+
+        
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/elavon'>
@@ -171,20 +190,7 @@ export class Work extends Component {
                 </div>
             </div>
 
-            <div className='row margin-top-1' data-aos="fade-up">
-                <a className='col s10 push-s1 m8 xl6' href='#/work/rostery'>
-                    <img className='thumbnail thumbnail-light' src={require('./src/rostery_thumbnail.png')}/>
-                </a>
-                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
-                    <div className='title'>Rostery</div>
-                    <div className='text'>
-                         <p>Google Design Challenge</p>
-                        <p>Interaction Design</p>
-                        <p>Material Design</p>
-                        <p>UX Research</p>
-                    </div>
-                </div>
-            </div>
+        
 
             <div className='row margin-top-1' style={{display: 'none'}} data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/reco'>
@@ -338,7 +344,7 @@ export class Work extends Component {
                         Kaiwei.design will always be under construction and I am enjoying every bit of the process.
                     </p>
                     <p>
-                        I am open for job opportunities. If you are looking for a designer with skill, passion, and versatility, <span className='work-email-link'><a href='mailto:wangkw@gatech.edu' style={{color: '#fac466', fontWeight: '600'}}>let's talk!</a></span>
+                        I love connecting with minds from all specialties. If you have crazy (or any) ideas to bounce with me, <span className='work-email-link'><a href='mailto:wangkw@gatech.edu' style={{color: '#fac466', fontWeight: '600'}}>Let's talk!</a></span>
                     </p>
                     <Waypoint
                       onEnter={()=>{$('.work-email-link').addClass('text-reveal')}}

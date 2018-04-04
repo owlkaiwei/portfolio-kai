@@ -145,7 +145,7 @@ class Mood extends Component {
 
 				<div className='progress-container progress-responsive-position'>
 					<a className='link-in-progress'  href='https://gtgunsnroses.github.io/music-infovis/' target='_blank'>
-				        		View Project
+				        		TRY MOoD
 				        	</a>
 					<ScrollLink activeClass="scroll-active" to="overview" smooth={false} spy={true} offset={-100} >
 			          <span className='label'>Overview</span><span className='circle'></span>
@@ -154,7 +154,13 @@ class Mood extends Component {
 			          <span className='label'>Understanding</span><span className='circle'></span>
 			        </ScrollLink>
 			        <ScrollLink activeClass="scroll-active" to="design-process" smooth={false} spy={true} offset={-100}>
-			          <span className='label'>Design</span><span className='circle'></span>
+			          <span className='label'>Design Process</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="scroll-active" to="layout" smooth={false} spy={true} offset={-100}>
+			          <span className='label'>Layout</span><span className='circle'></span>
+			        </ScrollLink>
+			        <ScrollLink activeClass="scroll-active" to="interaction" smooth={false} spy={true} offset={-100}>
+			          <span className='label'>Interaction</span><span className='circle'></span>
 			        </ScrollLink>
 			        <ScrollLink activeClass="scroll-active" to="evaluation" smooth={false} spy={true} offset={-100}>
 			          <span className='label'>Evaluation</span><span className='circle'></span>
@@ -180,7 +186,7 @@ class Mood extends Component {
 		        	</div>
 		        	<div className='banner-container-inner container-center-horizontal'>
 			        		<a className='link-to-project' href='https://gtgunsnroses.github.io/music-infovis/' target='_blank'>
-				        		Visit Project Site
+				        		TRY MOoD
 				        	</a>
 		        	</div>
 		          
@@ -436,11 +442,12 @@ class Mood extends Component {
 				        				After the initial underdtanding of the data, we went on deciding the audience we were catering to
 				        			</p>
 				        			<p className='left-vertical-line'>
+				        				<span className='key-word'>Music school students interested in contemporary pop history</span>
+			        				</p>
+				        			<p className='left-vertical-line'>
 				        				<span className='key-word'>Non-musically-trained people who are interested in music</span>
 			        				</p>
-			        				<p className='left-vertical-line'>
-				        				<span className='key-word'>Music producers/artists</span>
-			        				</p>
+			        			
 			        				<p className='left-vertical-line'>
 				        				<span className='key-word'>Researchers from music streaming platforms/services</span>
 			        				</p>
@@ -772,18 +779,18 @@ class Mood extends Component {
 	        						/>
 			        			</p>
         					</div>
-
         				</div>
+    				</div>
 
-        				
+				</Element>
 
-        			
-
-        				<div className='row margin-top-2' data-aos='fade-up'>
+				<Element name='layout'>
+					<div className='my-container'>
+						<div className='row container-center-inside margin-top-1'>
+			        		<h2>- High-Fidelity Interface & Layout -</h2>
+			        	</div>
+        				<div className='row margin-top-3' data-aos='fade-up'>
 			        		<div className='col s12'>
-			        			<p className='title container-center-inside'>
-			        				High-Fidelity Interface Design
-			        			</p>
 			        			<p className='margin-top-2'>
 			        				<Img className='width-100 expandable shadow' 
 		        						onLoad={()=>{
@@ -807,15 +814,62 @@ class Mood extends Component {
 			        			</p>
 			        			
 	        				</div>
+
         				</div>
-
-
 
         				<div className='row margin-top-2' data-aos='fade-up'>
 			        		<div className='col s12'>
 			        			<p className='title'>
-			        				Interaction Design
+			        				Challenge: Deciding the Layout
 			        			</p>
+			        			<p>
+			        				For arranging the overview and detail, I had two options - position side-by-side or top-to-bottom.
+			        			</p>
+			        			<p className='margin-top-2'>
+			        				<Img className='width-100' 
+		        						src={require('./src/layout-options.png')}
+		        						loader={loader}
+	        						/>
+			        			</p>
+			        			<p>
+			        				The two alternatives have their own pros and cons. On one hand, the overview is a scatter plot, which feels more <span className='key-word quote'>natural to read from left to right</span>, so 
+			        				vertical layout is better for that. On the other hand, since the primary target platform is laptop, vertical layout will force the detail view outside of the 
+			        				screen and the user has to scroll up and down, which creates a <span className='key-word quote'>disjoint interaction</span>.
+			        			</p>
+			        			<p className='quote container-center-inside margin-top-3'>
+			        				How do I make the trade-off?
+			        			</p>
+			        			<p className='margin-top-3'>
+			        				I conducted an <span className='key-word quote'>A/B testing</span> and found that the average session time on the horizontal version is 7 minutes and that on vertical version 
+			        				is 4 minutes. That is definitely an insightful difference, but there are two possible explanations
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				Explanation One: The disjoint interaction(scrolling) caused by vertical layout is too exhausting.
+			        			</p>
+			        			<p className='left-vertical-line'>
+			        				Explanation Two: The user thinks he/she finishes exploring the visualization faster in the vertical version than in the horizontal version.
+			        			</p>
+			        			<p>
+			        				After conducting usability testing with several participants, it was confirmed that Explanation One was the dominant cause of difference in session time. That means &nbsp;
+			        				 <span className='key-word quote'>the disjoint interaction (scrolling) in vertical layout has a more detrimental effect on the experience than the compromied readability in horizontal 
+			        				layout.
+			        				</span> That's why I chose the horizontal layout in the final design.
+			        			</p>
+			        			
+	        				</div>
+
+        				</div>
+    				</div>
+				</Element>
+
+
+				<Element name='interaction'>
+					<div className='my-container'>
+						<div className='row container-center-inside margin-top-1'>
+			        		<h2>- Interaction Design -</h2>
+			        	</div>
+        				<div className='row margin-top-2' data-aos='fade-up'>
+			        		<div className='col s12'>
 			        			<p>
 			        				<span className='key-word'>Representation</span> and <span className='key-word'>interaction</span> 
 			        				  &nbsp;are two equally important components of an information visualization. When I was designing the interaction, something that I

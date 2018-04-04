@@ -37,8 +37,8 @@ const footer = {
 	leftUrl: '#/work/wardrober',
 	leftBgColor: 'black',
 	leftTextColor: 'white',
-	rightProjectName: 'M O o D (Music Infovis)',
-	rightUrl: '#/work/mood',
+	rightProjectName: 'L I F E D A S H',
+	rightUrl: '#/work/lifedash',
 	rightBgColor: 'black',
 	rightTextColor: 'white'
 }
@@ -149,8 +149,8 @@ class Rostery extends Component {
 			                <a className='back-wrapper' href='#/work'>
 			                        <img className='back-arrow' src={require('./src/back_arrow.svg')}/>
 			                </a>
-			                <a className='text-link' href='#/work/mood'>
-				                U P  &nbsp; N E X T : &nbsp; M O o D
+			                <a className='text-link' href='#/work/lifedash'>
+				                U P  &nbsp; N E X T : &nbsp; L I F E D A S H
 				            </a>
 			              </div>
 		              </div>
@@ -259,7 +259,7 @@ class Rostery extends Component {
 		          </div>
 		          <div className='row'>
 		          	<p className='col s5 label'>Duration</p>
-		          	<p className='col s7 content'>02/02/2018 - 02/09/2018</p>
+		          	<p className='col s7 content'>02/2018 - 03/2018</p>
 		          </div>
 		        </Element>
 
@@ -333,10 +333,10 @@ class Rostery extends Component {
 					</div>
 				</Element>
 
-				<Element name='oresearch' data-aos="fade-up" style={this.state.contentStyle}>
+				<Element name='research' data-aos="fade-up" style={this.state.contentStyle}>
 					<div className='my-container'>
 						<div className='row container-center-inside margin-top-1'>
-							<h2>- Planning the Week -</h2>
+							<h2>- Project Timeline -</h2>
 						</div>
 						
 						
@@ -1086,6 +1086,43 @@ class Rostery extends Component {
 			        			</p>
 			        		</div>
 			        	</div>
+
+			        	<div className='row margin-top-3'>
+							<div className='col s12'>
+								<p className='title'>
+									Elevation
+								</p>
+								
+
+							</div>
+
+							<div className='row margin-top-3'>
+								<div className='col s12'>
+									<p>
+										A core concept in Material design is to utilize depth and elevation to communicate the relationship between 
+										UI elements, and that is something I kept in mind throughout the process of high-fidelity design.
+									</p>
+								</div>
+							</div>
+
+						</div>
+
+						<div className='row margin-top-3'>
+
+
+							<div className='row margin-top-3'>
+								<div className='col s12'>
+									<p className='width-100 container-center-inside'>
+				        				<Img     
+											className='width-100'
+			        						src={require('./src/layers.png')}
+			        						loader={loader}
+		        						/>
+				        			</p>
+								</div>
+							</div>
+
+						</div>
 
 						<div className='row margin-top-3'>
 							<div className='col s12'>
