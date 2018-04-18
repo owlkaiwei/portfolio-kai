@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.e49a4f4e.css",
   "main.css.map": "static/css/main.e49a4f4e.css.map",
-  "main.js": "static/js/main.b98527b5.js",
-  "main.js.map": "static/js/main.b98527b5.js.map",
+  "main.js": "static/js/main.e8cfb1a5.js",
+  "main.js.map": "static/js/main.e8cfb1a5.js.map",
   "static/media/CA-1.png": "static/media/CA-1.fc4f22f3.png",
   "static/media/CA-2.png": "static/media/CA-2.0a9bc07e.png",
   "static/media/CA-3.png": "static/media/CA-3.37dad377.png",
@@ -30,6 +30,7 @@
   "static/media/annotate.png": "static/media/annotate.96deb696.png",
   "static/media/api_object_full.png": "static/media/api_object_full.163ca6aa.png",
   "static/media/api_object_short.png": "static/media/api_object_short.6e29fde4.png",
+  "static/media/artsy-poster.png": "static/media/artsy-poster.b21878d3.png",
   "static/media/avocado@2x.png": "static/media/avocado@2x.f9c30068.png",
   "static/media/avocado@3x.png": "static/media/avocado@3x.3cb995cb.png",
   "static/media/back_arrow.svg": "static/media/back_arrow.4cd0e792.svg",
