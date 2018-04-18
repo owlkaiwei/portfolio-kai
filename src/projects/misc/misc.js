@@ -159,6 +159,33 @@ class Misc extends Component {
                 <a className='col s10 push-s1 m8 xl6'>
                     <Img className='width-100 expandable' 
                         onLoad={()=>{
+                            images.push(require('./src/artsy-poster.png'))
+                            this.setState({
+                                images : images,
+                                needles_index : imgCounter,
+                                imgCounter : imgCounter + 1
+                            })
+                        }} 
+                        onClick={()=>{
+                            console.log(images)
+                            this.setState({
+                                isOpen : true,
+                                imgIndex : this.state.needles_index
+                            })
+                        }}
+                        src={require('./src/artsy-poster.png')}
+                        loader={loader}
+                    />
+                </a>
+                <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
+                    <div className='title'>Artsy</div>
+                </div>
+            </div>
+
+            <div className='row margin-top-1' data-aos="fade-up">
+                <a className='col s10 push-s1 m8 xl6'>
+                    <Img className='width-100 expandable' 
+                        onLoad={()=>{
                             images.push(require('./src/needles@2x.png'))
                             this.setState({
                                 images : images,

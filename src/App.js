@@ -373,6 +373,7 @@ class NavBar extends Component {
                   </div>
                 </div>
               }
+              
               <a className='text-link'
                 id='work-btn'
                 onClick={()=>{toWork(history)}}>

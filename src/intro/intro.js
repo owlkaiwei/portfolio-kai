@@ -52,6 +52,11 @@ export class Intro extends Component {
 								</a>
 							</div>
 							<div>
+								<a href='https://www.instagram.com/kkkkkaiw/' target='_blank'>
+									<i className="fa fa-instagram" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
 								<a href='www.linkedin.com/in/kaiwei-wang' target='_blank'>
 									<i className="fa fa-linkedin" aria-hidden="true"></i>
 								</a>
@@ -75,6 +80,11 @@ export class Intro extends Component {
 							<div>
 								<a href='https://dribbble.com/kkkai' target='_blank'>
 									<i className="fa fa-dribbble" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div>
+								<a href='https://www.instagram.com/kkkkkaiw/' target='_blank'>
+									<i className="fa fa-instagram" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div>
