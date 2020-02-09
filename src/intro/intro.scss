@@ -40,7 +40,7 @@
 	}
 
 	.name {
-		color: #fff;
+		color: $color-primary;
 		font-family: $font-primary;
 		font-weight: 600;
 	}
@@ -59,7 +59,7 @@
 
 	.intro-link a {
 		transition: all 0.75s cubic-bezier(0.1, 0.29, 0, 1);
-		color: $color-secondary
+		color: $color-primary;
 	}
 
 	.intro-link span {
@@ -79,15 +79,13 @@
 	.intro-link:hover a {
 		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
 	    padding: 1rem;
-	    box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
-	    border-radius: 10px
+
 	}
 
 	.intro-link:active a {
 		transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
 	    padding: 1rem;
-	    box-shadow: none;
-	    border-radius: 10px
+
 	}
 
 	.intro-text-size-1 {

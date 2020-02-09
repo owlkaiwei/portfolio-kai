@@ -31,7 +31,7 @@
   margin-top: 1rem; }
 
 .intro-scope .name {
-  color: #fff;
+  color: #0F3351;
   font-family: "Josefin Sans";
   font-weight: 600; }
 
@@ -47,7 +47,7 @@
 
 .intro-scope .intro-link a {
   transition: all 0.75s cubic-bezier(0.1, 0.29, 0, 1);
-  color: #fff; }
+  color: #0F3351; }
 
 .intro-scope .intro-link span {
   transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1); }
@@ -61,15 +61,11 @@
 
 .intro-scope .intro-link:hover a {
   transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
-  padding: 1rem;
-  box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
-  border-radius: 10px; }
+  padding: 1rem; }
 
 .intro-scope .intro-link:active a {
   transition: all 0.25s cubic-bezier(0.1, 0.29, 0, 1);
-  padding: 1rem;
-  box-shadow: none;
-  border-radius: 10px; }
+  padding: 1rem; }
 
 .intro-scope .intro-text-size-1 {
   font-size: 3.8rem; }
