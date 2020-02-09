@@ -28,7 +28,7 @@ export class Intro extends Component {
 							I am a product designer and web developer with passion for creating an interactive, useful, and delightful user experience.
 						</div>
 						<div className='intro-text intro-text-size-2'>
-							I am currently working at YouTube as an interaction designer. 
+							I currently work at YouTube as an interaction designer. 
 						</div>
 						<div className='intro-link intro-text-size-2 intro-margin-top-2'>
 							<a href='#/work'>
