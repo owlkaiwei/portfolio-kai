@@ -162,7 +162,7 @@ class Misc extends Component {
                             images.push(require('./src/artsy-poster.png'))
                             this.setState({
                                 images : images,
-                                needles_index : imgCounter,
+                                artsy_index : imgCounter,
                                 imgCounter : imgCounter + 1
                             })
                         }} 
@@ -170,7 +170,7 @@ class Misc extends Component {
                             console.log(images)
                             this.setState({
                                 isOpen : true,
-                                imgIndex : this.state.needles_index
+                                imgIndex : this.state.artsy_index
                             })
                         }}
                         src={require('./src/artsy-poster.png')}

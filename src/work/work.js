@@ -85,7 +85,7 @@ export class Work extends Component {
 
              <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/wardrober'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/wardrober_thumbnail@yellow.png')}/>
+                    <img className='thumbnail thumbnail-light' src={require('./src/wardrober_thumbnail@yellow.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>Wardrober</div>
@@ -114,7 +114,7 @@ export class Work extends Component {
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/lifedash'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/lifedash_thumbnail.png')}/>
+                    <img className='thumbnail thumbnail-light' src={require('./src/lifedash_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>LifeDash.com</div>
@@ -147,7 +147,7 @@ export class Work extends Component {
 
             <div className='row margin-top-1' data-aos="fade-up">
                 <a className='col s10 push-s1 m8 xl6' href='#/work/yelp'>
-                    <img className='thumbnail thumbnail-dark' src={require('./src/yelp_thumbnail.png')}/>
+                    <img className='thumbnail thumbnail-light' src={require('./src/yelp_thumbnail.png')}/>
                 </a>
                 <div className='hide-when-small col s10 push-s1 m4 xl6 thumbnail-text-container'>
                     <div className='title'>Yelp Mobile Website Redesign</div>
@@ -344,7 +344,7 @@ export class Work extends Component {
                         Kaiwei.design will always be under construction and I am enjoying every bit of the process.
                     </p>
                     <p>
-                        I love connecting with minds from all specialties. If you have crazy (or any) ideas to bounce with me, <span className='work-email-link'><a href='mailto:wangkw@gatech.edu' style={{color: '#fac466', fontWeight: '600'}}>Let's talk!</a></span>
+                        I love connecting with minds from all specialties. If you have crazy (or any) ideas to bounce with me, <span className='work-email-link'><a href='mailto:raymond.wang94@gmail.com' style={{color: '#fac466', fontWeight: '600'}}>Let's talk!</a></span>
                     </p>
                     <Waypoint
                       onEnter={()=>{$('.work-email-link').addClass('text-reveal')}}
@@ -356,7 +356,7 @@ export class Work extends Component {
              <div className='row margin-top-2'>
                  <div className='col s10 push-s1 m8 xl6 text'>
                     <p style={{fontSize: '1rem'}}>
-                        <span style={{opacity: '0.8', display: 'none'}}>Copyright</span>  <span style={{opacity: '0.8'}}>Design & Code by Kaiwei Wang</span> <span style={{color: '#fac466', fontWeight: 'bold'}}>©</span> <span style={{opacity: '0.8'}}>2018</span>
+                        <span style={{opacity: '0.8', display: 'none'}}>Copyright</span>  <span style={{opacity: '0.8'}}>Design & Code by Kaiwei Wang</span> <span style={{color: '#fac466', fontWeight: 'bold'}}>©</span> <span style={{opacity: '0.8'}}>2020</span>
                     </p>
                 </div>
             </div>

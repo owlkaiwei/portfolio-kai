@@ -38,11 +38,11 @@
 
 .work-scope .thumbnail-light:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.1); }
 
 .work-scope .thumbnail-dark:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.3); }
 
 .work-scope .thumbnail-text-container {
   display: flex;

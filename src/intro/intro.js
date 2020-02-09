@@ -28,7 +28,7 @@ export class Intro extends Component {
 							I am a product designer and web developer with passion for creating an interactive, useful, and delightful user experience.
 						</div>
 						<div className='intro-text intro-text-size-2'>
-							This summer I will be joining Google as an interaction designer and I am very excited to start this new chapter of my career!
+							I am currently working at YouTube as an interaction designer. 
 						</div>
 						<div className='intro-link intro-text-size-2 intro-margin-top-2'>
 							<a href='#/work'>
@@ -52,7 +52,7 @@ export class Intro extends Component {
 								</a>
 							</div>
 							<div>
-								<a href='https://www.instagram.com/kkkkkaiw/' target='_blank'>
+								<a href='https://www.instagram.com/kaigypop/' target='_blank'>
 									<i className="fa fa-instagram" aria-hidden="true"></i>
 								</a>
 							</div>
@@ -83,7 +83,7 @@ export class Intro extends Component {
 								</a>
 							</div>
 							<div>
-								<a href='https://www.instagram.com/kkkkkaiw/' target='_blank'>
+								<a href='https://www.instagram.com/kaigypop/' target='_blank'>
 									<i className="fa fa-instagram" aria-hidden="true"></i>
 								</a>
 							</div>

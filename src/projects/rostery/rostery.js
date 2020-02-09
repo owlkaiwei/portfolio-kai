@@ -56,9 +56,9 @@ class Rostery extends Component {
 			imgIndex : 0,
 			imgCounter : 0,
 			images : [],
-			passwordClass : 'p-show',
+			passwordClass : 'p-hide',
 			contentStyle : {
-				display: 'none'
+				display: 'block'
 			}
 		}
 		AOS.init({
@@ -1244,17 +1244,6 @@ class Rostery extends Component {
 
 
 					</div>
-					</div>
-				</Element>
-
-				<Element name='reflection' data-aos="fade-up" style={this.state.contentStyle}>
-					<div className='my-container'>
-						<div className='row container-center-inside margin-top-1'>
-							<h2>- The End -</h2>
-						</div>
-
-
-					
 					</div>
 				</Element>
 
